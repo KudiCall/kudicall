@@ -2,7 +2,7 @@
 
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineNuxtConfig({
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	app: {
 		head: {
 			title: "OnCall",
@@ -38,4 +38,5 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+	css: ["~/assets/css/main.css"],
 });

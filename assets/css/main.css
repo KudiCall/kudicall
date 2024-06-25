@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&display=swap");
+
+html {
+	font-family: "Nunito Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+.pacifico {
+	font-family: "Pacifico", cursive;
+}
+
+.v-btn {
+	text-transform: none !important;
+}
+
+div.rower {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding-bottom: 40px;
+	height: auto;
+	width: 100%;
+	position: relative;
+	overflow-x: scroll;
+	/* max-width: 1168px; */
+	scrollbar-width: thin; /* For Firefox */
+	scrollbar-color: #cecece transparent; /* For Firefox */
+
+	white-space: nowrap;
+}
+div.rower::-webkit-scrollbar {
+	width: 6px; /* For Chrome, Safari, and Opera */
+	height: 3px;
+	cursor: e-resize;
+	transition: all 0.5s ease-in-out;
+}
+div.rower:hover::-webkit-scrollbar {
+	height: 8px;
+}
+div.rower::-webkit-scrollbar-thumb {
+	background-color: #2c6e63; /* For Chrome, Safari, and Opera */
+	border-radius: 47px;
+	cursor: e-resize;
+	width: 100px;
+}
+
+div.rower::-webkit-scrollbar-track {
+	border-radius: 47px;
+	background-color: #d9d9d9; /* For Chrome, Safari, and Opera */
+}
