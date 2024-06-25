@@ -6,7 +6,7 @@
 			</v-avatar>
 
 			<div class="d-none d-md-flex">
-				<v-btn :to="n.route" variant="text" class="mx-1" flat v-for="n in urls" :key="n.title" style="font-size: 16px">
+				<v-btn :to="n.route" :href="n.route" variant="text" class="mx-1" flat v-for="n in urls" :key="n.title" style="font-size: 16px">
 					{{ n.title }}
 				</v-btn>
 			</div>

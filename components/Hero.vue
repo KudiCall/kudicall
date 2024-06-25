@@ -22,12 +22,14 @@
 				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719271541/OnCall/Frame_25_1_obekis.png"
 				width="100%"
 				height="100%"
+				lazy
 			></v-img>
 			<v-img
 				class="d-block d-md-none"
 				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719271531/OnCall/Frame_26_vspyd4.png"
 				width="100%"
 				height="100%"
+				lazy
 			></v-img>
 		</div>
 	</v-container>

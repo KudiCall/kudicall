@@ -1,5 +1,5 @@
 <template>
-	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center text-center container">
+	<v-container id="features" style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center text-center container">
 		<div class="header-container">
 			<v-img
 				width="181"
