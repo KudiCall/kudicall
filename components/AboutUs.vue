@@ -4,12 +4,11 @@
 		style="position: relative; max-width: 1400px; width: 100%"
 	>
 		<div>
-			<h1 class="quote">
+			<h1 class="quote text--white">
 				"Incredible variety and personalized service. OnCall has revolutionized shopping with live videos, product uploads, and seamless payments for
 				an interactive experience."
 			</h1>
 		</div>
-		<!-- <v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719231351/OnCall/Frame_25_zzougd.png" class="background-image" /> -->
 		<v-img v-for="(bubble, index) in bubblesDesktop" :key="index" :src="bubble.src" :style="bubble.style" class="bubble-image d-none d-md-block" />
 		<v-img v-for="(bubble, index) in bubblesMobile" :key="index" :src="bubble.src" :style="bubble.style" class="bubble-image d-block d-md-none" />
 	</v-container>
@@ -95,7 +94,7 @@ export default {
 <style scoped>
 .quote {
 	font-size: 40px;
-	color: #ffffff;
+	/* color: #ffffff; */
 	max-width: 1127px;
 	margin: auto;
 	line-height: 56px;

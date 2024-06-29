@@ -1,7 +1,7 @@
 <template>
 	<v-container style="max-width: 1400px; width: 100%; margin-top: 80px" class="d-flex flex-column justify-center align-center text-center">
 		<div>
-			<span class="chip--outlined">
+			<span class="chip--outlined text--white">
 				<v-img
 					class="mr-3"
 					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719266720/OnCall/Lightning_zrneu0.svg"
@@ -50,7 +50,6 @@ export default {
 	font-size: 14px;
 	background: rgba(19, 136, 252, 0.05);
 	border-radius: 100px;
-	color: #ffffff;
 	font-weight: 600;
 	margin: auto;
 	text-align: left;
