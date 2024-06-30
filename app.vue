@@ -8,7 +8,7 @@
 		<FAQ />
 		<Testimonials />
 		<Contact />
-		<!--<Footer /> -->
+		<Footer />
 	</v-app>
 </template>
 

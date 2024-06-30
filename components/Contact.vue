@@ -27,6 +27,22 @@
 				</div>
 			</v-col>
 		</v-row>
+		<div class="w-100 mt-16 d-flex flex-col items-center justify-center backgroundImgCont">
+			<div class="w-100 w-md-66 px-5 px-md-0">
+				<h2 class="text-white text-center title">
+					Unlock exclusive deals, personalized recommendations, and a world of exciting
+					<span class="pacifico" style="font-weight: 400">live commerce.</span>
+				</h2>
+				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-md-center mx-auto">
+					<!-- <div class="w-100"> -->
+					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691153/OnCall/BTN_1_oegkqr.png" width="50%" height="50" />
+					<!-- </div> -->
+					<!-- <div class="w-100"> -->
+					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691154/OnCall/BTN_2_nkjih3.png" width="50%" height="50" />
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
 	</v-container>
 </template>
 
@@ -45,3 +61,35 @@ export default {
 	},
 };
 </script>
+
+<style>
+.backgroundImgCont {
+	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1719690512/OnCall/Frame_20_k79ibi.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 530px;
+	overflow: hidden;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 57.6px;
+}
+
+@media screen and (max-width: 768px) {
+	.title {
+		font-size: 32px;
+		font-weight: 400;
+		line-height: 38.4px;
+	}
+	.backgroundImgCont {
+		height: 450px;
+	}
+}
+</style>

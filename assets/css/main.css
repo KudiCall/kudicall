@@ -3,8 +3,18 @@
 
 html {
 	font-family: "Nunito Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-variation-settings: "wdth" 100, "YTLC" 500;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Nunito Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .pacifico {
@@ -17,6 +27,12 @@ html {
 
 .v-btn {
 	text-transform: none !important;
+}
+
+.logo {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 38.4px;
 }
 
 div.rower {

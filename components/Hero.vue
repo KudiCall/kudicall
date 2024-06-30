@@ -1,7 +1,7 @@
 <template>
 	<v-container style="max-width: 1400px; width: 100%; margin-top: 80px" class="d-flex flex-column justify-center align-center text-center">
 		<div>
-			<span class="chip--outlined">
+			<span class="chip--outlined text--white">
 				<v-img
 					class="mr-3"
 					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719266720/OnCall/Lightning_zrneu0.svg"
@@ -10,10 +10,10 @@
 				></v-img>
 				<span>The seamless shopping experience you didn't know you needed</span>
 			</span>
-			<h1 class="title title1" style="font-weight: 400">Discover a new way to</h1>
+			<h1 class="title title1" style="font-weight: 700">Discover a new way to</h1>
 			<br />
-			<h1 class="pacifico text-primary title title2" style="font-weight: 400">Shop, Connect, and Experience!</h1>
-			<p class="subTitle mt-6">We bring your favorite vendors and services to life through immersive live video interactions.</p>
+			<h1 class="pacifico text-primary title title2" style="font-weight: 700">Shop, Connect, and Experience!</h1>
+			<p class="subTitle mt-10">We bring your favorite vendors and services to life through immersive live video interactions.</p>
 			<v-btn color="primary" rounded class="" style="font-size: 16px">Download Now</v-btn>
 		</div>
 		<div style="width: 100%; height: auto; margin: 100px auto">
@@ -50,7 +50,6 @@ export default {
 	font-size: 14px;
 	background: rgba(19, 136, 252, 0.05);
 	border-radius: 100px;
-	color: #ffffff;
 	font-weight: 600;
 	margin: auto;
 	text-align: left;
@@ -104,7 +103,7 @@ export default {
 	}
 
 	.title1 {
-		width: 70%;
+		width: 80%;
 		margin: auto;
 	}
 	.title2 {
@@ -117,36 +116,4 @@ export default {
 		width: 90%;
 	}
 }
-
-/* @media (max-width: 992px) {
-	.title {
-		font-size: 50px;
-		line-height: 64px;
-	}
-
-	.subTitle {
-		font-size: 20px;
-		line-height: 28px;
-		width: 90%;
-	}
-} */
-
-/* @media (max-width: 576px) {
-	.chip--outlined {
-		width: 100%;
-		padding: 8px 10px;
-		font-size: 10px;
-	}
-
-	.title {
-		font-size: 30px;
-		line-height: 42px;
-	}
-
-	.subTitle {
-		font-size: 16px;
-		line-height: 24px;
-		width: 100%;
-	}
-} */
 </style>
