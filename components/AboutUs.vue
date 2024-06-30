@@ -67,11 +67,11 @@ export default {
 				},
 				{
 					src: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719272493/OnCall/Frame_1171275582_c6cgg7.svg",
-					style: "position: absolute; top: 10%; right: 0%; width: 230px; height: 50px;",
+					style: "position: absolute; top: 10%; right: 2%; width: 230px; height: 50px;",
 				},
 				{
 					src: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719276087/OnCall/Frame_25_kdyv7x.svg",
-					style: "position: absolute; bottom: 5%; right: 0%; width: 230px; height: 58px;",
+					style: "position: absolute; bottom: 5%; right: 2%; width: 230px; height: 58px;",
 				},
 				{
 					src: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719272495/OnCall/Rectangle_3198_bvwys9.svg",
@@ -79,11 +79,11 @@ export default {
 				},
 				{
 					src: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719272493/OnCall/Frame_1171275581_pzpohj.svg",
-					style: "position: absolute; bottom: 20%; left: 0%; width: 311px; height: 50px;",
+					style: "position: absolute; bottom: 20%; left: 2%; width: 311px; height: 50px;",
 				},
 				{
 					src: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719272494/OnCall/Rectangle_3196_y7bemf.svg",
-					style: "position: absolute; bottom: 30%; right: 3%; width: 50px; height: 50px;",
+					style: "position: absolute; bottom: 30%; right: 4%; width: 50px; height: 50px;",
 				},
 			],
 		};
@@ -121,6 +121,7 @@ export default {
 	.container {
 		height: 729px;
 		margin-top: 10px;
+		/* padding: 0 10px; */
 	}
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<v-container id="features" style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center text-center container">
+	<v-container id="features" style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center text-center container overflow-hidden">
 		<div class="header-container">
 			<v-img
 				width="181"
@@ -11,16 +11,11 @@
 				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">OnCall</span>
 			</h1>
 		</div>
-		<div
-			class="px-10 text-left my-16 d-none d-md-block"
-			style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444; height: 680px; border-radius: 20px"
-		>
+		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
 			<v-row dense class="mx-auto h-100 mb-0">
-				<v-col cols="12" md="4" class="text-section py-10 pr-10">
-					<h1 class="mb-3 text-black" style="font-size: 40px; font-weight: 700; line-height: 57.6px">Live Commerce</h1>
-					<p style="font-size: 24px; font-weight: 400; line-height: 32.74px">
-						Engage in real-time calls with vendors for a personalized and interactive shopping experience
-					</p>
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
+					<h1 class="mb-3 text-black" style="">Live Commerce</h1>
+					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
 					<v-btn color="black" rounded class="text-white download-btn">Download Now </v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
@@ -48,16 +43,11 @@
 			</v-row>
 		</div>
 
-		<div
-			class="px-10 text-left mb-16 d-none d-md-block"
-			style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%); height: 680px; border-radius: 20px"
-		>
+		<div class="px-10 text-left mb-16 features-section d-none d-md-block" style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
-				<v-col cols="12" md="4" class="text-section py-10 pr-16">
-					<h1 class="mb-3" style="font-size: 40px; font-weight: 700; line-height: 57.6px">Vendor Catalogs</h1>
-					<p style="font-size: 24px; font-weight: 400; line-height: 32.74px">
-						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
-					</p>
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
+					<h1 class="mb-3" style="">Vendor Catalogs</h1>
+					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
@@ -80,15 +70,13 @@
 		</div>
 
 		<div
-			class="px-10 text-left mb-16 d-none d-md-block"
+			class="px-10 text-left mb-16 features-section d-none d-md-block"
 			style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%); height: 680px; border-radius: 20px"
 		>
 			<v-row dense class="mx-auto h-100 mb-0">
-				<v-col cols="12" md="4" class="text-section py-10 pr-16">
-					<h1 class="mb-3" style="font-size: 40px; font-weight: 700; line-height: 57.6px">Uploading Real Time Product Videos</h1>
-					<p style="font-size: 24px; font-weight: 400; line-height: 32.74px">
-						Plan your live commerce experience by scheduling video calls with vendors in advance.
-					</p>
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
+					<h1 class="mb-3" style="">Uploading Real Time Product Videos</h1>
+					<p style="">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
@@ -111,13 +99,13 @@
 		</div>
 
 		<div
-			class="px-10 text-left mb-16 d-none d-md-block"
+			class="px-10 text-left mb-16 features-section d-none d-md-block"
 			style="background: linear-gradient(270deg, #9f86ff 0%, #8e70ff 100%); height: 680px; border-radius: 20px"
 		>
 			<v-row dense class="mx-auto h-100 mb-0">
-				<v-col cols="12" md="4" class="text-section py-10 pr-16">
-					<h1 class="mb-3" style="font-size: 40px; font-weight: 700; line-height: 57.6px">Secure Transactions and Data Protection</h1>
-					<p style="font-size: 24px; font-weight: 400; line-height: 32.74px">
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
+					<h1 class="mb-3" style="">Secure Transactions and Data Protection</h1>
+					<p style="">
 						Utilize industry-standard encryption and work with trusted payment processors to ensure the security of user transactions and financial
 						information.
 					</p>
@@ -143,15 +131,13 @@
 		</div>
 
 		<div
-			class="px-10 text-left mb-16 d-none d-md-block"
+			class="px-10 text-left mb-16 features-section"
 			style="background: linear-gradient(270deg, #ff688f 0%, #f04a75 100%); height: 680px; border-radius: 20px"
 		>
 			<v-row dense class="mx-auto h-100 mb-0">
-				<v-col cols="12" md="4" class="text-section py-10 pr-16">
-					<h1 class="mb-3" style="font-size: 40px; font-weight: 700; line-height: 57.6px">Comprehensive Order Tracking</h1>
-					<p style="font-size: 24px; font-weight: 400; line-height: 32.74px">
-						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
-					</p>
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
+					<h1 class="mb-3" style="">Comprehensive Order Tracking</h1>
+					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
@@ -195,6 +181,24 @@ export default {
 	letter-spacing: -2%;
 }
 
+.features-section {
+	height: 680px;
+	border-radius: 20px;
+}
+
+.text-section h1 {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 57.6px;
+}
+
+.text-section p {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32.74px;
+	/* margin-top: auto; */
+}
+
 /* Responsive Styles */
 @media (max-width: 1400px) {
 }
@@ -209,6 +213,27 @@ export default {
 	.header-title {
 		font-size: 32px;
 		line-height: 44.48px;
+	}
+
+	.features-section {
+		height: 670px;
+		border-radius: 20px;
+	}
+
+	.text-section {
+		align-items: center;
+	}
+
+	.text-section h1 {
+		font-size: 32px;
+		line-height: 38.4px;
+		text-align: center;
+	}
+
+	.text-section p {
+		font-size: 16px;
+		line-height: 21.82px;
+		text-align: center;
 	}
 }
 
