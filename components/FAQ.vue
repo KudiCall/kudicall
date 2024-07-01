@@ -6,7 +6,7 @@
 				<h1 class="mt-5">Frequently asked questions</h1>
 			</v-col>
 			<v-col cols="12" md="9">
-				<v-expansion-panels class="d-flex flex-column ga-4">
+				<v-expansion-panels class="d-flex flex-column ga-4 border-0">
 					<v-expansion-panel v-for="n of faq" :key="n.id">
 						<v-expansion-panel-title class="custom-panel-title">
 							{{ n.title }}

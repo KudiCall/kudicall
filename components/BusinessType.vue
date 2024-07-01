@@ -15,7 +15,7 @@
 		</v-row>
 
 		<div class="rower my-8 d-none d-md-block" style="width: 100%">
-			<div class="d-inline-block mr-4" style="width: 616.08px" v-for="(n, i) in 10" :key="i">
+			<div class="d-inline-block mr-4" style="width: 616.08px">
 				<div
 					class="text-black pa-5"
 					style="
@@ -43,17 +43,148 @@
 					/>
 				</div>
 			</div>
+			<div class="d-inline-block mr-4" style="width: 616.08px">
+				<div
+					class="text-black pa-3"
+					style="
+						background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f9df42 0%, #d42e21 100%);
+						height: 377px;
+						border-radius: 20px;
+						position: relative;
+						overflow: hidden;
+					"
+				>
+					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+					</div>
+
+					<v-img
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
+						width="90%"
+						height="100%"
+						style="position: absolute; bottom: 0; right: -12%"
+					/>
+				</div>
+			</div>
+			<div class="d-inline-block mr-4" style="width: 616.08px">
+				<div class="text-black pa-3" style="background-color: #575e67; height: 377px; border-radius: 20px; position: relative; overflow: hidden">
+					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+					</div>
+
+					<v-img
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
+						width="100%"
+						height="100%"
+						style="position: absolute; bottom: 0; right: -8%"
+					/>
+				</div>
+			</div>
+			<div class="d-inline-block mr-4" style="width: 616.08px">
+				<div class="text-black pa-3 cardDesktop">
+					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+					</div>
+
+					<v-img
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
+						width="100%"
+						height="100%"
+						style="position: absolute; top: 0; left: -19%"
+					/>
+					<v-img
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
+						width="100%"
+						height="100%"
+						style="position: absolute; bottom: -30%; left: -20%"
+					/>
+				</div>
+			</div>
+			<div class="d-inline-block mr-4" style="width: 616.08px">
+				<div
+					class="text-black pa-5"
+					style="
+						background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f1ae7c 0%, #47afb8 100%);
+						height: 377px;
+						border-radius: 20px;
+						position: relative;
+						overflow: hidden;
+					"
+				>
+					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+					</div>
+					<v-img
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
+						width="100%"
+						height="100%"
+						style="position: absolute; bottom: 0; right: -15%"
+					/>
+				</div>
+			</div>
+			<div class="d-inline-block mr-4" style="width: 616.08px">
+				<div
+					class="text-black pa-5"
+					style="
+						background: radial-gradient(102.69% 273.45% at 102.69% 100%, #091114 0%, #83c6fc 100%);
+						height: 377px;
+						border-radius: 20px;
+						position: relative;
+						overflow: hidden;
+					"
+				>
+					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+					</div>
+					<v-img
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
+						width="100%"
+						height="100%"
+						style="position: absolute; bottom: 0; right: -25%"
+					/>
+				</div>
+			</div>
 		</div>
 		<!-- For mobile View -->
-		<div class="d-flex flex-column d-md-none my-8">
-			<v-row>
-				<v-col cols="12" v-for="(item, i) in 2" :key="i">
+		<div class="d-flex flex-column d-md-none my-8 ga-4">
+			<v-row dense>
+				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
 					<div
 						class="text-black pa-3"
 						style="
 							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f1ae7c 0%, #8f441d 100%);
-							height: 292px;
-							border-radius: 20px;
+							height: 252px;
+							border-radius: 8px;
 							position: relative;
 							width: 100%;
 							overflow: hidden;
@@ -71,9 +202,152 @@
 						</div>
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png"
-							width="80%"
+							width="95%"
 							height="100%"
-							style="position: absolute; top: 0; right: -60px"
+							style="position: absolute; bottom: 0; right: -70px"
+						/>
+					</div>
+				</v-col>
+				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
+					<div
+						class="text-black pa-3"
+						style="
+							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f9df42 0%, #d42e21 100%);
+							height: 252px;
+							border-radius: 8px;
+							position: relative;
+							width: 100%;
+							overflow: hidden;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+						"
+					>
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+						<v-img
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
+							width="90%"
+							height="100%"
+							style="position: absolute; bottom: 0; right: -30px"
+						/>
+					</div>
+				</v-col>
+				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
+					<div
+						class="text-black pa-3"
+						style="
+							background-color: #575e67;
+							height: 252px;
+							border-radius: 8px;
+							position: relative;
+							width: 100%;
+							overflow: hidden;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+						"
+					>
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+						<v-img
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
+							width="100%"
+							height="100%"
+							style="position: absolute; bottom: 0; right: -10px"
+						/>
+					</div>
+				</v-col>
+				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
+					<div class="text-black pa-3 card" style="">
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+						<v-img
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
+							width="100%"
+							height="100%"
+							style="position: absolute; top: 0; left: -20%"
+						/>
+						<v-img
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
+							width="100%"
+							height="100%"
+							style="position: absolute; bottom: -30%; left: -10%"
+						/>
+					</div>
+				</v-col>
+				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
+					<div
+						class="text-black pa-3"
+						style="
+							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f1ae7c 0%, #47afb8 100%);
+							height: 252px;
+							border-radius: 8px;
+							position: relative;
+							width: 100%;
+							overflow: hidden;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+						"
+					>
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+						<v-img
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
+							width="100%"
+							height="100%"
+							style="position: absolute; bottom: 0; right: -10%"
+						/>
+					</div>
+				</v-col>
+				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
+					<div
+						class="text-black pa-3"
+						style="
+							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #091114 0%, #83c6fc 100%);
+							height: 252px;
+							border-radius: 8px;
+							position: relative;
+							width: 100%;
+							overflow: hidden;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+						"
+					>
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
+							<p>If you're in the business of tantalizing</p>
+							<p>taste buds, offering delightful cuisines,</p>
+							<p>or crafting refreshing beverages,</p>
+							<p>this category is for you.</p>
+						</div>
+						<v-img
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
+							width="100%"
+							height="100%"
+							style="position: absolute; bottom: 0; right: -20%"
 						/>
 					</div>
 				</v-col>
@@ -91,7 +365,7 @@ export default {
 					title: "Food & Drink",
 					subTitle:
 						"If you're in the business of tantalizing taste buds, offering delightful cuisines, or crafting refreshing beverages, this category is for you.",
-					img: "",
+					img: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png",
 				},
 				{
 					title: "Clothing",
@@ -144,6 +418,30 @@ export default {
 	line-height: 32px;
 	font-weight: 400;
 	color: #c8c8c8;
+}
+
+.card {
+	height: 252px;
+	border-radius: 8px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1719841922/OnCall/Rectangle_14_zrcla4.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.cardDesktop {
+	height: 377px;
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1719841922/OnCall/Rectangle_14_zrcla4.png");
+	background-size: cover;
+	background-position: center;
 }
 
 @media (max-width: 768px) {

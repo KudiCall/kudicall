@@ -10,11 +10,16 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
+*,
+::before,
+::after {
 	font-family: "Nunito Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-variation-settings: "wdth" 100, "YTLC" 500;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .pacifico {
@@ -68,4 +73,8 @@ div.rower::-webkit-scrollbar-thumb {
 div.rower::-webkit-scrollbar-track {
 	border-radius: 47px;
 	background-color: #d9d9d9; /* For Chrome, Safari, and Opera */
+}
+
+.v-expansion-panel:not(:first-child)::after {
+	border: none !important;
 }
