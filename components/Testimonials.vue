@@ -14,7 +14,16 @@
 			<v-col v-for="(testimony, index) in testimonies" :key="index" cols="12" md="4">
 				<v-card class="testimony-card pa-4 pa-md-8">
 					<div class="d-flex mb-2">
-						<v-rating :value="testimony.rating" color="orange" background-color="orange" dense readonly width="20" height="20" />
+						<v-rating
+							:value="testimony.rating"
+							active-color="orange"
+							color="orange"
+							background-color="orange"
+							dense
+							readonly
+							width="20"
+							height="20"
+						/>
 					</div>
 					<v-card-text class="text-white" style="font-size: 20px; font-weight: 400; line-height: 28px">
 						{{ testimony.text }}

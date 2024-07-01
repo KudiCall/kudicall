@@ -74,3 +74,7 @@ div.rower::-webkit-scrollbar-track {
 	border-radius: 47px;
 	background-color: #d9d9d9; /* For Chrome, Safari, and Opera */
 }
+
+.v-expansion-panel:not(:first-child)::after {
+	border: none !important;
+}
