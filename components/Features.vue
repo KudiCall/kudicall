@@ -11,15 +11,23 @@
 				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">OnCall</span>
 			</h1>
 		</div>
-		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
-			<v-row dense class="mx-auto h-100 mb-0">
+		<div
+			class="px-10 text-left my-16 features-section"
+			style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444 padding-bottom: 0px !important;"
+		>
+			<v-row dense class="mx-auto mb-0" style="padding-bottom: 0px !important; height: 100%; margin-bottom: 0px !important">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
 					<h1 class="mb-3 text-black" style="">Live Commerce</h1>
 					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
 					<v-btn color="black" rounded class="text-white download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278324/OnCall/iphone_15_xa1t8m.png" class="phone-mockup"></v-img>
+				<v-col cols="12" md="8" class="image-section mt-auto mb-0" style="padding-bottom: 0px !important">
+					<v-img
+						style="margin-bottom: 0px !important"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278324/OnCall/iphone_15_xa1t8m.png"
+						class="phone-mockup"
+					></v-img>
+
 					<!-- Overlay images -->
 					<v-img
 						width="50%"
@@ -50,7 +58,7 @@
 					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
+				<v-col cols="12" md="8" class="image-section mt-auto mb-0" style="padding-bottom: 0px !important">
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
@@ -73,26 +81,27 @@
 			class="px-10 text-left mb-16 features-section d-none d-md-block"
 			style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%); height: 680px; border-radius: 20px"
 		>
-			<v-row dense class="mx-auto h-100 mb-0">
+			<v-row dense class="mx-auto h-100 mb-0 pb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
 					<h1 class="mb-3" style="">Uploading Real Time Product Videos</h1>
 					<p style="">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
+				<v-col cols="12" md="8" class="image-section mt-auto mb-0 pb-0" style="padding-bottom: 0px !important">
+					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/iphone_15_xmstw3.png" class="phone-mockup"></v-img>
+
 					<!-- Overlay images -->
 					<v-img
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282984/OnCall/Hanging_call_modal_-_RECEIVER_1_hh6scf.svg"
-						class="overlay-img add"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846614/OnCall/Frame_1171275569_ji91m3.svg"
+						class="overlay-img edit"
 					></v-img>
 					<v-img
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282986/OnCall/Hanging_call_modal_-_RECEIVER_gkksqr.svg"
-						class="overlay-img edit"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/Frame_1171275570_oqvou6.svg"
+						class="overlay-img add"
 					></v-img>
 				</v-col>
 			</v-row>
@@ -111,20 +120,14 @@
 					</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
+				<v-col cols="12" md="8" class="image-section mt-auto mb-0" style="padding-bottom: 0px !important">
+					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847617/OnCall/iphone_16_j3qbat.png" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282984/OnCall/Hanging_call_modal_-_RECEIVER_1_hh6scf.svg"
-						class="overlay-img add"
-					></v-img>
-					<v-img
-						width="40%"
-						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282986/OnCall/Hanging_call_modal_-_RECEIVER_gkksqr.svg"
-						class="overlay-img edit"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847616/OnCall/Frame_1171275571_mbd3uw.svg"
+						class="overlay-img payment"
 					></v-img>
 				</v-col>
 			</v-row>
@@ -140,20 +143,21 @@
 					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
+				<v-col cols="12" md="8" class="image-section mt-auto mb-0 pb-0" style="padding-bottom: 0px !important">
+					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847961/OnCall/iphone_18_f47hmp.png" class="phone-mockup"></v-img>
+
 					<!-- Overlay images -->
 					<v-img
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282984/OnCall/Hanging_call_modal_-_RECEIVER_1_hh6scf.svg"
-						class="overlay-img add"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847962/OnCall/status_wewg3r.svg"
+						class="overlay-img status"
 					></v-img>
 					<v-img
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282986/OnCall/Hanging_call_modal_-_RECEIVER_gkksqr.svg"
-						class="overlay-img edit"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847960/OnCall/delivery_date_rtc0r6.svg"
+						class="overlay-img delivery"
 					></v-img>
 				</v-col>
 			</v-row>
@@ -256,7 +260,7 @@ export default {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 }
 
 .phone-mockup {
@@ -290,6 +294,31 @@ export default {
 }
 
 .edit {
+	top: 20%;
+	left: 3%;
+}
+
+.success {
+	bottom: -5%;
+	right: 6%;
+}
+
+.uplaod {
+	top: 20%;
+	left: 3%;
+}
+
+.payment {
+	bottom: -5%;
+	right: 6%;
+}
+
+.status {
+	bottom: -5%;
+	right: 6%;
+}
+
+.delivery {
 	top: 20%;
 	left: 3%;
 }
