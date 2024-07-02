@@ -216,7 +216,7 @@ export default {
 }
 
 .first-image {
-	bottom: -35px;
+	bottom: 4px;
 }
 
 .overlay-img {
@@ -319,6 +319,10 @@ export default {
 		font-size: 16px;
 		line-height: 21.82px;
 		text-align: center;
+	}
+
+	.first-image {
+		bottom: -40px;
 	}
 
 	.phone-mockup {
