@@ -1,8 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
-import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
 	devtools: { enabled: false },
+	ssr: false,
 	app: {
 		head: {
 			title: "OnCall",
@@ -25,18 +24,20 @@ export default defineNuxtConfig({
 	modules: [
 		(_options, nuxt) => {
 			nuxt.hooks.hook("vite:extendConfig", (config) => {
-				// @ts-expect-error
-				config.plugins.push(vuetify({ autoImport: true }));
+				if (!config.plugins) {
+					config.plugins = [];
+				}
+				config.plugins.push(vuetify({}));
 			});
 		},
-		//...
 	],
-	vite: {
-		vue: {
-			template: {
-				transformAssetUrls,
-			},
-		},
-	},
+	// vite: {
+	// 	vue: {
+	// 		template: {
+	// 			transformAssetUrls,
+	// 		},
+	// 	},
+	// },
+	vite: { ssr: { noExternal: ["vuetify"] } },
 	css: ["~/assets/css/main.css"],
 });
