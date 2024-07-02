@@ -40,6 +40,14 @@ html {
 	line-height: 38.4px;
 }
 
+.topbar {
+	top: 0;
+	overflow: hidden;
+	z-index: 999;
+	background: rgb(0, 0, 0 / 95%);
+	backdrop-filter: blur(8px);
+}
+
 div.rower {
 	overflow-x: scroll;
 	overflow-y: hidden;
