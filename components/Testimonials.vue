@@ -15,7 +15,7 @@
 				<v-card class="testimony-card pa-4 pa-md-8">
 					<div class="d-flex mb-2">
 						<v-rating
-							:value="testimony.rating"
+							:model-value="testimony.rating"
 							active-color="orange"
 							color="orange"
 							background-color="orange"

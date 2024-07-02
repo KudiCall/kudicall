@@ -12,13 +12,13 @@
 			</h1>
 		</div>
 		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
-			<v-row dense class="mx-auto h-100 mb-0">
+			<v-row dense class="mx-auto h-75 h-md-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
-					<h1 class="mb-3 text-black" style="">Live Commerce</h1>
+					<h1 class="text-black" style="">Live Commerce</h1>
 					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
 					<v-btn color="black" rounded class="text-white download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
+				<v-col cols="12" md="8" class="image-section first-image mt-auto mb-0">
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278324/OnCall/iphone_15_xa1t8m.png" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
@@ -47,11 +47,11 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="mb-3" style="">Vendor Catalogs</h1>
+					<h1 class="" style="">Vendor Catalogs</h1>
 					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
+				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
@@ -73,11 +73,11 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%)">
 			<v-row dense class="mx-auto h-100 mb-0 pb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="mb-3" style="">Uploading Real Time Product Videos</h1>
+					<h1 class="" style="">Uploading Real Time Product Videos</h1>
 					<p style="">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0 pb-0">
+				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/iphone_15_xmstw3.png" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
@@ -100,14 +100,14 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #9f86ff 0%, #8e70ff 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="mb-3" style="">Secure Transactions and Data Protection</h1>
+					<h1 class="" style="">Secure Transactions and Data Protection</h1>
 					<p style="">
 						Utilize industry-standard encryption and work with trusted payment processors to ensure the security of user transactions and financial
 						information.
 					</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0">
+				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847617/OnCall/iphone_16_j3qbat.png" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
@@ -123,11 +123,11 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #ff688f 0%, #f04a75 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="mb-3" style="">Comprehensive Order Tracking</h1>
+					<h1 class="" style="">Comprehensive Order Tracking</h1>
 					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
 					<v-btn color="white" rounded class="download-btn">Download Now </v-btn>
 				</v-col>
-				<v-col cols="12" md="8" class="image-section mt-auto mb-0 pb-0">
+				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847961/OnCall/iphone_18_f47hmp.png" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
@@ -174,6 +174,13 @@ export default {
 	border-radius: 20px;
 }
 
+.text-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
 .text-section h1 {
 	font-size: 40px;
 	font-weight: 700;
@@ -184,52 +191,6 @@ export default {
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 32.74px;
-	/* margin-top: auto; */
-}
-
-/* Responsive Styles */
-@media (max-width: 1400px) {
-}
-
-@media (max-width: 768px) {
-	.container {
-		margin-top: 100px;
-	}
-	.header-container {
-		width: 100%;
-	}
-	.header-title {
-		font-size: 32px;
-		line-height: 44.48px;
-	}
-
-	.features-section {
-		height: 670px;
-		border-radius: 20px;
-		overflow: hidden;
-	}
-
-	.text-section {
-		align-items: center;
-	}
-
-	.text-section h1 {
-		font-size: 32px;
-		line-height: 38.4px;
-		text-align: center;
-	}
-
-	.text-section p {
-		font-size: 16px;
-		line-height: 21.82px;
-		text-align: center;
-	}
-}
-
-.text-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	/* margin-top: auto; */
 }
 
@@ -248,12 +209,14 @@ export default {
 	align-items: flex-end;
 	overflow: hidden;
 	padding-bottom: 0px !important;
+}
+
+.bottom {
 	bottom: -4px;
 }
 
-.phone-mockup {
-	width: 100%;
-	max-width: 400px;
+.first-image {
+	bottom: -35px;
 }
 
 .overlay-img {
@@ -309,5 +272,110 @@ export default {
 .delivery {
 	top: 20%;
 	left: 3%;
+}
+
+.phone-mockup {
+	/* Default styles */
+	/* width: 100%; */
+	max-width: 400px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) and (max-width: 1400px) {
+	.phone-mockup {
+		width: 100%;
+		max-width: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		margin-top: 100px;
+	}
+	.header-container {
+		width: 100%;
+	}
+	.header-title {
+		font-size: 32px;
+		line-height: 44.48px;
+	}
+
+	.features-section {
+		height: 600px;
+		overflow: hidden;
+	}
+
+	.text-section {
+		align-items: center;
+	}
+
+	.text-section h1 {
+		font-size: 32px;
+		line-height: 38.4px;
+		text-align: center;
+	}
+
+	.text-section p {
+		font-size: 16px;
+		line-height: 21.82px;
+		text-align: center;
+	}
+
+	.phone-mockup {
+		width: auto !important;
+		height: auto;
+		max-width: 70%;
+		margin-top: auto;
+	}
+
+	.call-notification {
+		top: 0%;
+		left: 0%;
+	}
+
+	.shoe-offer {
+		bottom: 10%;
+		left: -9%;
+	}
+
+	.call {
+		top: 10%;
+		right: -27%;
+	}
+
+	.add {
+		bottom: -5%;
+		right: 6%;
+	}
+
+	.edit {
+		top: 20%;
+		left: 3%;
+	}
+
+	.success {
+		bottom: -5%;
+		right: 6%;
+	}
+
+	.uplaod {
+		top: 20%;
+		left: 3%;
+	}
+
+	.payment {
+		bottom: -5%;
+		right: 6%;
+	}
+
+	.status {
+		bottom: -5%;
+		right: 6%;
+	}
+
+	.delivery {
+		top: 20%;
+		left: 3%;
+	}
 }
 </style>

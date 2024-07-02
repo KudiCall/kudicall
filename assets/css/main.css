@@ -48,10 +48,8 @@ div.rower {
 	width: 100%;
 	position: relative;
 	overflow-x: scroll;
-	/* max-width: 1168px; */
 	scrollbar-width: thin; /* For Firefox */
 	scrollbar-color: #cecece transparent; /* For Firefox */
-
 	white-space: nowrap;
 }
 div.rower::-webkit-scrollbar {
