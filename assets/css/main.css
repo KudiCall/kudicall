@@ -1,19 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-html {
-	font-family: "Nunito Sans", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-variation-settings: "wdth" 100, "YTLC" 500;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-}
-
 *,
 ::before,
 ::after {
-	font-family: "Nunito Sans", sans-serif;
+	font-family: "Nunito Sans", Roboto, sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-variation-settings: "wdth" 100, "YTLC" 500;
@@ -21,13 +12,23 @@ html {
 	margin: 0;
 	padding: 0;
 }
+*/ html {
+	font-family: "Nunito Sans", Roboto, "sans-serif", "Noto Color Emoji" !important;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-variation-settings: "wdth" 100, "YTLC" 500;
+}
 
 .pacifico {
 	font-family: "Pacifico", cursive;
 }
 
 .manrope {
-	font-family: "Manrope", sans-serif;
+	font-family: "Manrope", Roboto, sans-serif;
 }
 
 .v-btn {
