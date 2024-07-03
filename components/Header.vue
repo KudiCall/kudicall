@@ -19,7 +19,7 @@
 							height="24"
 						></v-img>
 					</v-btn>
-					<v-btn v-if="$vuetify.display.mobile" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
+					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
 						<v-icon color="white" size="32" icon="mdi:mdi-sort-variant"></v-icon>
 					</v-btn>
 					<v-btn icon @click="toggleTheme">
