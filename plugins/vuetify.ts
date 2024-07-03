@@ -8,24 +8,10 @@ import "vuetify/styles";
 export default defineNuxtPlugin((nuxtApp) => {
 	const vuetify = createVuetify({
 		theme: {
-			defaultTheme: "dark",
+			defaultTheme: "darkThemeConfig",
 			themes: {
-				dark: {
-					colors: {
-						primary: "#1388FC",
-						background: "#0C0D0D",
-						black: "#1C1C1C",
-						white: "#fff",
-					},
-				},
-				light: {
-					colors: {
-						primary: "#1388FC",
-						background: "#fff",
-						black: "#1C1C1C",
-						white: "#000",
-					},
-				},
+				darkThemeConfig,
+				lightThemeConfig,
 			},
 		},
 		icons: {
@@ -40,3 +26,23 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 	nuxtApp.vueApp.use(vuetify);
 });
+
+const darkThemeConfig = {
+	dark: true,
+	colors: {
+		primary: "#1388FC",
+		background: "#0C0D0D",
+		black: "#1C1C1C",
+		white: "#fff",
+	},
+};
+
+const lightThemeConfig = {
+	dark: false,
+	colors: {
+		primary: "#1388FC",
+		background: "#fff",
+		black: "#1C1C1C",
+		white: "#000",
+	},
+};
