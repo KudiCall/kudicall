@@ -8,7 +8,7 @@
 			>
 				<h2 class="logo text-white pacifico">OnCall</h2>
 				<div class="d-flex justify-center text--white ga-3" style="font-size: 16px; font-weight: 400">
-					<v-btn :to="n.route" :href="n.route" variant="text" class="px-0" flat v-for="n in urls" :key="n.title" style="font-size: 16px">
+					<v-btn :to="n.route" :href="n.route" variant="text" class="px-0 px-md-4" flat v-for="n in urls" :key="n.title" style="font-size: 16px">
 						{{ n.title }}
 					</v-btn>
 				</div>

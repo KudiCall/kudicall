@@ -1,5 +1,6 @@
 <template>
 	<v-container
+		id="aboutUs"
 		class="d-flex flex-column justify-center align-center text-center container"
 		style="position: relative; max-width: 1400px; width: 100%"
 	>

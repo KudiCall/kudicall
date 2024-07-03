@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .backgroundImgCont {
 	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1719690512/OnCall/Frame_20_k79ibi.svg");
 	background-size: cover;

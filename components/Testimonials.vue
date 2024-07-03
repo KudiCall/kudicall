@@ -5,7 +5,7 @@
 				width="181"
 				height="44"
 				class="mx-auto my-5"
-				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719276448/OnCall/Frame_1171275577_xhzcrp.svg"
+				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009297/OnCall/Frame_1171275577_dpibme.png"
 			/>
 			<h1 class="header-title" style="font-weight: 700">Positive feedback from users</h1>
 			<p>Explore a curated collection of products and services from passionate vendors. From fashion to electronics.</p>

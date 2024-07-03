@@ -28,7 +28,7 @@
 				>
 					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
 						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
-						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: 220px; z-index: 1">
 							<p>If you're in the business of tantalizing</p>
 							<p>taste buds, offering delightful cuisines,</p>
 							<p>or crafting refreshing beverages,</p>
@@ -45,7 +45,7 @@
 			</div>
 			<div class="d-inline-block mr-4" style="width: 616.08px">
 				<div
-					class="text-black pa-3"
+					class="text-black pa-5"
 					style="
 						background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f9df42 0%, #d42e21 100%);
 						height: 377px;
@@ -55,12 +55,12 @@
 					"
 				>
 					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
-						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
-						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+						<h1 class="text-white" style="font-size: 12px; font-weight: 400; line-height: 16.6px">CLOTHING</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: 220px; z-index: 1">
+							<p>Fashion is your passion? Whether it's</p>
+							<p>trendy apparel, custom designs, or</p>
+							<p>unique accessories, this category is your</p>
+							<p>runway.</p>
 						</div>
 					</div>
 
@@ -73,14 +73,14 @@
 				</div>
 			</div>
 			<div class="d-inline-block mr-4" style="width: 616.08px">
-				<div class="text-black pa-3" style="background-color: #575e67; height: 377px; border-radius: 20px; position: relative; overflow: hidden">
+				<div class="text-black pa-5" style="background-color: #575e67; height: 377px; border-radius: 20px; position: relative; overflow: hidden">
 					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
-						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
-						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+						<h1 class="text-white" style="font-size: 12px; font-weight: 400; line-height: 16.6px">TRANSPORT</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: 220px; z-index: 1">
+							<p>If you're in the business of getting</p>
+							<p>people or goods from one place to</p>
+							<p>another, whether it's a ride service or</p>
+							<p>delivery, this is your category.</p>
 						</div>
 					</div>
 
@@ -93,14 +93,15 @@
 				</div>
 			</div>
 			<div class="d-inline-block mr-4" style="width: 616.08px">
-				<div class="text-black pa-3 cardDesktop">
+				<div class="text-black pa-5 cardDesktop">
 					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
-						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
-						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+						<h1 class="text-black" style="font-size: 12px; font-weight: 400; line-height: 16.6px; z-index: 20">ACCOMMODATION</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: 220px; z-index: 1">
+							<p>Open your doors to travelers and those</p>
+							<p>seeking a comfortable stay. Whether it's</p>
+							<p>a cozy B&B or a luxurious hotel, this</p>
+							<p>category is for accommodation</p>
+							<p>providers</p>
 						</div>
 					</div>
 
@@ -130,12 +131,12 @@
 					"
 				>
 					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
-						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
-						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">ELECTRICIAN</h1>
+						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: 220px; z-index: 1">
+							<p>Spark up connections! If you're an</p>
+							<p>electrician offering services for electrical</p>
+							<p>installations, repairs, or consultations,</p>
+							<p>this category is your platform.</p>
 						</div>
 					</div>
 					<v-img
@@ -148,7 +149,7 @@
 			</div>
 			<div class="d-inline-block mr-4" style="width: 616.08px">
 				<div
-					class="text-black pa-5"
+					class="text-black pa-5 pb-8"
 					style="
 						background: radial-gradient(102.69% 273.45% at 102.69% 100%, #091114 0%, #83c6fc 100%);
 						height: 377px;
@@ -158,12 +159,12 @@
 					"
 				>
 					<div style="width: 100px; display: flex; flex-direction: column; justify-content: center">
-						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">FOOD & DRINT</h1>
+						<h1 class="text-white uppercase" style="font-size: 12px; font-weight: 400; line-height: 16.6px">PHARMACY</h1>
 						<div class="text-white" style="font-size: 18px; font-weight: 700; line-height: 1; margin-top: 220px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+							<p>If you're in the business of health and</p>
+							<p>wellness, providing pharmaceutical</p>
+							<p>products or consultation services, this</p>
+							<p>category is dedicated to you.</p>
 						</div>
 					</div>
 					<v-img
@@ -180,7 +181,7 @@
 			<v-row dense>
 				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
 					<div
-						class="text-black pa-3"
+						class="text-black pa-4 pb-8"
 						style="
 							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f1ae7c 0%, #8f441d 100%);
 							height: 252px;
@@ -193,7 +194,7 @@
 							justify-content: center;
 						"
 					>
-						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINT</h1>
+						<h1 class="text-white" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINT</h1>
 						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
 							<p>If you're in the business of tantalizing</p>
 							<p>taste buds, offering delightful cuisines,</p>
@@ -204,13 +205,13 @@
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png"
 							width="95%"
 							height="100%"
-							style="position: absolute; bottom: 0; right: -70px"
+							style="position: absolute; bottom: 0; right: -90px"
 						/>
 					</div>
 				</v-col>
 				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
 					<div
-						class="text-black pa-3"
+						class="text-black pa-4 pb-8"
 						style="
 							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f9df42 0%, #d42e21 100%);
 							height: 252px;
@@ -223,12 +224,12 @@
 							justify-content: center;
 						"
 					>
-						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">CLOTHING</h1>
 						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+							<p>Fashion is your passion? Whether it's</p>
+							<p>trendy apparel, custom designs, or</p>
+							<p>unique accessories, this category is your</p>
+							<p>runway.</p>
 						</div>
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
@@ -240,7 +241,7 @@
 				</v-col>
 				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
 					<div
-						class="text-black pa-3"
+						class="text-black pa-4 pb-8"
 						style="
 							background-color: #575e67;
 							height: 252px;
@@ -253,12 +254,12 @@
 							justify-content: center;
 						"
 					>
-						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<h1 class="text-white" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px; z-index: 20">TRANSPORT</h1>
 						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+							<p>If you're in the business of getting</p>
+							<p>people or goods from one place to</p>
+							<p>another, whether it's a ride service or</p>
+							<p>delivery, this is your category.</p>
 						</div>
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
@@ -269,13 +270,14 @@
 					</div>
 				</v-col>
 				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
-					<div class="text-black pa-3 card" style="">
-						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+					<div class="text-black pa-4 pb-8 card" style="">
+						<h1 class="text-black" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px; z-index: 20">ACCOMMODATION</h1>
 						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+							<p>Open your doors to travelers and those</p>
+							<p>seeking a comfortable stay. Whether it's</p>
+							<p>a cozy B&B or a luxurious hotel, this</p>
+							<p>category is for accommodation</p>
+							<p>providers</p>
 						</div>
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
@@ -293,7 +295,7 @@
 				</v-col>
 				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
 					<div
-						class="text-black pa-3"
+						class="text-black pa-4 pb-8"
 						style="
 							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #f1ae7c 0%, #47afb8 100%);
 							height: 252px;
@@ -306,12 +308,12 @@
 							justify-content: center;
 						"
 					>
-						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
+						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">ELECTRICIAN</h1>
 						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+							<p>Spark up connections! If you're an</p>
+							<p>electrician offering services for electrical</p>
+							<p>installations, repairs, or consultations,</p>
+							<p>this category is your platform.</p>
 						</div>
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
@@ -323,7 +325,7 @@
 				</v-col>
 				<v-col cols="12" class="px-0 mx-0 py-0 mb-5">
 					<div
-						class="text-black pa-3"
+						class="text-black pa-4 pb-8"
 						style="
 							background: radial-gradient(102.69% 273.45% at 102.69% 100%, #091114 0%, #83c6fc 100%);
 							height: 252px;
@@ -338,10 +340,10 @@
 					>
 						<h1 class="text-white uppercase" style="font-size: 7.6px; font-weight: 400; line-height: 10.6px">FOOD & DRINK</h1>
 						<div class="text-white mt-auto" style="font-size: 14px; font-weight: 700; line-height: 18px; z-index: 1">
-							<p>If you're in the business of tantalizing</p>
-							<p>taste buds, offering delightful cuisines,</p>
-							<p>or crafting refreshing beverages,</p>
-							<p>this category is for you.</p>
+							<p>If you're in the business of health and</p>
+							<p>wellness, providing pharmaceutical</p>
+							<p>products or consultation services, this</p>
+							<p>category is dedicated to you.</p>
 						</div>
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"

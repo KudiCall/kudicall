@@ -1,4 +1,4 @@
-import vuetify from "vite-plugin-vuetify";
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineNuxtConfig({
 	devtools: { enabled: false },
 	ssr: false,
@@ -31,13 +31,12 @@ export default defineNuxtConfig({
 			});
 		},
 	],
-	// vite: {
-	// 	vue: {
-	// 		template: {
-	// 			transformAssetUrls,
-	// 		},
-	// 	},
-	// },
-	vite: { ssr: { noExternal: ["vuetify"] } },
+	vite: {
+		vue: {
+			template: {
+				transformAssetUrls,
+			},
+		},
+	},
 	css: ["~/assets/css/main.css"],
 });

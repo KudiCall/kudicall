@@ -55,7 +55,6 @@ div.rower {
 	height: auto;
 	width: 100%;
 	position: relative;
-	overflow-x: scroll;
 	scrollbar-width: thin; /* For Firefox */
 	scrollbar-color: #cecece transparent; /* For Firefox */
 	white-space: nowrap;
