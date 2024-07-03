@@ -2,7 +2,7 @@
 	<v-container id="faq" style="max-width: 1400px; width: 100%; margin: 50px auto">
 		<v-row>
 			<v-col cols="12" md="3" class="faq-header">
-				<v-img width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719284706/OnCall/Frame_1171275577_aarbs8.svg" />
+				<v-img width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009222/OnCall/Frame_1171275577_aza04y.svg" />
 				<h1 class="mt-5">Frequently asked questions</h1>
 			</v-col>
 			<v-col cols="12" md="9">
