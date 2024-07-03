@@ -23,7 +23,7 @@
 						<v-icon color="white" size="32" icon="mdi:mdi-sort-variant"></v-icon>
 					</v-btn>
 					<v-btn icon @click="toggleTheme">
-						<v-icon>{{ darkMode === "dark" ? "mdi mdi-weather-night" : "mdi mdi-white-balance-sunny" }}</v-icon>
+						<v-icon>{{ darkMode ? "mdi mdi-weather-night" : "mdi mdi-white-balance-sunny" }}</v-icon>
 					</v-btn>
 				</div>
 			</div>
@@ -72,7 +72,6 @@ export default {
 		stickyw() {
 			return this.sticky !== undefined ? this.sticky : false;
 		},
-
 		inpwidth() {
 			return this.maxwidth == undefined ? "300px" : "295px";
 		},
@@ -90,8 +89,9 @@ export default {
 			this.drawer = true;
 		},
 		toggleTheme() {
-			this.theme.global.name.value = this.theme.global.current.value.dark ? "light" : "dark";
-			this.darkMode = !this.darkMode;
+			const isDark = this.theme.global.current.dark;
+			this.theme.global.name = isDark ? "lightThemeConfig" : "darkThemeConfig";
+			this.darkMode = !isDark;
 		},
 	},
 };
