@@ -18,7 +18,7 @@
 				>
 					<v-icon :icon="n.icon" color="primary" size="60" />
 
-					<div class="d-flex align-center w-full mt-auto" style="justify-content: space-between">
+					<div class="d-flex align-center w-full mt-auto" style="justify-content: space-between; color: #fff">
 						<p style="font-size: 24px">{{ n.value }}</p>
 						<div>
 							<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719326024/OnCall/Frame_1000007886_neoj6x.svg" width="40" height="40" />
@@ -29,17 +29,14 @@
 		</v-row>
 		<div class="w-100 mt-16 d-flex flex-col items-center justify-center backgroundImgCont">
 			<div class="w-100 w-md-66 px-5 px-md-0">
-				<h2 class="text-white text-center title">
+				<h2 class="text-center title" style="color: #fff">
 					Unlock exclusive deals, personalized recommendations, and a world of exciting
 					<span class="pacifico" style="font-weight: 400">live commerce.</span>
 				</h2>
 				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-md-center mx-auto">
-					<!-- <div class="w-100"> -->
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691153/OnCall/BTN_1_oegkqr.png" width="50%" height="50" />
-					<!-- </div> -->
-					<!-- <div class="w-100"> -->
+
 					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691154/OnCall/BTN_2_nkjih3.png" width="50%" height="50" />
-					<!-- </div> -->
 				</div>
 			</div>
 		</div>

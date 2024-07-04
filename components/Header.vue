@@ -2,7 +2,7 @@
 	<div :style="stickyw ? 'position: relative;' : 'position: sticky;'" class="topbar">
 		<v-container class="py-0" style="max-width: 1400px">
 			<div class="d-flex justify-space-between align-center my-5">
-				<h2 class="logo text--white pacifico" color="primary">OnCall</h2>
+				<h2 class="logo pacifico" color="primary">OnCall</h2>
 
 				<div class="d-none d-md-flex">
 					<v-btn :to="n.route" :href="n.route" variant="text" class="mx-1" flat v-for="n in urls" :key="n.title" style="font-size: 16px">
@@ -22,7 +22,7 @@
 					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
 						<v-icon color="white" size="32" icon="mdi:mdi-sort-variant"></v-icon>
 					</v-btn>
-					<v-btn icon @click="toggleTheme">
+					<v-btn icon @click="toggleTheme" class="ml-4">
 						<v-icon>{{ darkMode ? "mdi mdi-weather-night" : "mdi mdi-white-balance-sunny" }}</v-icon>
 					</v-btn>
 				</div>

@@ -11,12 +11,12 @@
 				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">OnCall</span>
 			</h1>
 		</div>
-		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
+		<v-sheet class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
 			<v-row dense class="mx-auto h-75 h-md-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
 					<h1 class="text-black" style="">Live Commerce</h1>
 					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
-					<v-btn color="black" rounded class="text-white download-btn px-4" size="x-large" style="font-size: 16px">
+					<v-btn color="#000" rounded class="download-btn px-4 mb-2" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"
@@ -50,14 +50,16 @@
 					></v-img>
 				</v-col>
 			</v-row>
-		</div>
+		</v-sheet>
 
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="" style="">Vendor Catalogs</h1>
-					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
-					<v-btn color="white" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<h1 style="color: #fff">Vendor Catalogs</h1>
+					<p style="color: #fff">
+						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
+					</p>
+					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
@@ -89,9 +91,9 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%)">
 			<v-row dense class="mx-auto h-100 mb-0 pb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="" style="">Uploading Real Time Product Videos</h1>
-					<p style="">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
-					<v-btn color="white" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<h1 style="color: #fff">Uploading Real Time Product Videos</h1>
+					<p style="color: #fff">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
+					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
@@ -124,12 +126,12 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #9f86ff 0%, #8e70ff 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="" style="">Secure Transactions and Data Protection</h1>
-					<p style="">
+					<h1 style="color: #fff">Secure Transactions and Data Protection</h1>
+					<p style="color: #fff">
 						Utilize industry-standard encryption and work with trusted payment processors to ensure the security of user transactions and financial
 						information.
 					</p>
-					<v-btn color="white" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
@@ -155,9 +157,11 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #ff688f 0%, #f04a75 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 class="" style="">Comprehensive Order Tracking</h1>
-					<p style="">Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.</p>
-					<v-btn color="white" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<h1 style="color: #fff">Comprehensive Order Tracking</h1>
+					<p style="color: #fff">
+						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
+					</p>
+					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"

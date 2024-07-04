@@ -73,6 +73,7 @@ export default {
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 20px;
+	color: #fff;
 }
 
 .custom-panel-text {
@@ -82,6 +83,7 @@ export default {
 	background-color: #1c1c1c;
 	padding-bottom: 10px;
 	padding-right: 250px;
+	color: #fff;
 }
 
 .custom-panel-title .v-icon {

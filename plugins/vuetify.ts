@@ -31,6 +31,7 @@ const darkThemeConfig = {
 	dark: true,
 	colors: {
 		primary: "#1388FC",
+		secondary: "#c8c8c8",
 		background: "#0C0D0D",
 		black: "#1C1C1C",
 		white: "#fff",
@@ -41,6 +42,7 @@ const lightThemeConfig = {
 	dark: false,
 	colors: {
 		primary: "#1388FC",
+		secondary: "#c8c",
 		background: "#fff",
 		black: "#1C1C1C",
 		white: "#000",

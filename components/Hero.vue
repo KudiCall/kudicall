@@ -14,7 +14,7 @@
 			<br />
 			<h1 class="pacifico text-primary title title2" style="font-weight: 700">Shop, Connect, and Experience!</h1>
 			<p class="subTitle mt-10">We bring your favorite vendors and services to life through immersive live video interactions.</p>
-			<v-btn color="primary" rounded class="text-white px-4" size="x-large" style="font-size: 16px">
+			<v-btn color="primary" rounded class="px-4" size="x-large" style="font-size: 16px">
 				Download Now
 				<v-img
 					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"

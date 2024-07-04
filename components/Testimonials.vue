@@ -25,7 +25,7 @@
 							height="20"
 						/>
 					</div>
-					<v-card-text class="text-white" style="font-size: 20px; font-weight: 400; line-height: 28px">
+					<v-card-text style="font-size: 20px; font-weight: 400; line-height: 28px">
 						{{ testimony.text }}
 					</v-card-text>
 					<v-card-actions class="d-flex mt-4">
@@ -33,7 +33,7 @@
 							<img :src="testimony.avatar" alt="Avatar" />
 						</v-avatar>
 						<div class="ml-3">
-							<div class="text-white font-weight-normal manrope" style="font-size: 14px">{{ testimony.name }}</div>
+							<div class="font-weight-normal manrope" style="font-size: 14px">{{ testimony.name }}</div>
 							<div class="font-weight-normal manrope" style="color: #939393; font-size: 14px">{{ testimony.title }}</div>
 						</div>
 					</v-card-actions>
@@ -99,6 +99,7 @@ export default {
 .testimony-card {
 	background-color: #1c1c1c;
 	border-radius: 20px;
+	color: #fff;
 }
 
 @media (max-width: 768px) {
