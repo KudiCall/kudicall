@@ -17,7 +17,7 @@
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
 					<h1 class="text-black" style="">Live Commerce</h1>
 					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
-					<v-btn color="#000" rounded class="download-btn px-4 mb-2" size="x-large" style="font-size: 16px">
+					<v-btn color="#000" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
@@ -64,7 +64,7 @@
 					<p style="color: #fff">
 						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
 					</p>
-					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
@@ -101,7 +101,7 @@
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
 					<h1 style="color: #fff">Uploading Real Time Product Videos</h1>
 					<p style="color: #fff">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
-					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
@@ -142,7 +142,7 @@
 						Utilize industry-standard encryption and work with trusted payment processors to ensure the security of user transactions and financial
 						information.
 					</p>
-					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
@@ -174,7 +174,7 @@
 					<p style="color: #fff">
 						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
 					</p>
-					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
+					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager

@@ -1,5 +1,5 @@
 <template>
-	<v-container id="businessType" style="max-width: 1400px; width: 100%">
+	<v-container id="businessType" style="max-width: 1400px; width: 100%; padding-top: 80px">
 		<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719284706/OnCall/Frame_1171275577_aarbs8.svg" />
 
 		<v-row dense class="businesstype-header">
@@ -243,7 +243,7 @@
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
 							width="90%"
 							height="100%"
-							style="position: absolute; bottom: 0; right: -30px"
+							style="position: absolute; bottom: 0; right: -45px"
 						/>
 					</div>
 				</v-col>
@@ -274,7 +274,7 @@
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
 							width="100%"
 							height="100%"
-							style="position: absolute; bottom: 0; right: -10px"
+							style="position: absolute; bottom: 0; right: -30px"
 						/>
 					</div>
 				</v-col>
@@ -293,14 +293,14 @@
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
 							width="100%"
 							height="100%"
-							style="position: absolute; top: 0; left: -20%"
+							style="position: absolute; top: 0; left: -19%"
 						/>
 						<v-img
 							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
 							width="100%"
 							height="100%"
-							style="position: absolute; bottom: -30%; left: -10%"
+							style="position: absolute; bottom: -30%; left: -20%"
 						/>
 					</div>
 				</v-col>
@@ -331,7 +331,7 @@
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
 							width="100%"
 							height="100%"
-							style="position: absolute; bottom: 0; right: -10%"
+							style="position: absolute; bottom: 0; right: -15%"
 						/>
 					</div>
 				</v-col>
@@ -362,7 +362,7 @@
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
 							width="100%"
 							height="100%"
-							style="position: absolute; bottom: 0; right: -20%"
+							style="position: absolute; bottom: 0; right: -25%"
 						/>
 					</div>
 				</v-col>
@@ -375,43 +375,43 @@
 export default {
 	data() {
 		return {
-			items: [
-				{
-					title: "Food & Drink",
-					subTitle:
-						"If you're in the business of tantalizing taste buds, offering delightful cuisines, or crafting refreshing beverages, this category is for you.",
-					img: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png",
-				},
-				{
-					title: "Clothing",
-					subTitle: "Fashion is your passion? Whether it's trendy apparel, custom designs, or unique accessories, this category is your runway.",
-					img: "",
-				},
-				{
-					title: "Transport",
-					subTitle:
-						"If you're in the business of getting people or goods from one place to another, whether it's a ride service or delivery, this is your category.",
-					img: "",
-				},
-				{
-					title: "Accommodation",
-					subTitle:
-						"Open your doors to travelers and those seeking a comfortable stay. Whether it's a cozy B&B or a luxurious hotel, this category is for accommodation providers.",
-					img: "",
-				},
-				{
-					title: "Electrician",
-					subTitle:
-						"Spark up connections! If you're an electrician offering services for electrical installations, repairs, or consultations, this category is your platform.",
-					img: "",
-				},
-				{
-					title: "Pharmacy",
-					subTitle:
-						"If you're in the business of health and wellness, providing pharmaceutical products or consultation services, this category is dedicated to you.",
-					img: "",
-				},
-			],
+			// items: [
+			// 	{
+			// 		title: "Food & Drink",
+			// 		subTitle:
+			// 			"If you're in the business of tantalizing taste buds, offering delightful cuisines, or crafting refreshing beverages, this category is for you.",
+			// 		img: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png",
+			// 	},
+			// 	{
+			// 		title: "Clothing",
+			// 		subTitle: "Fashion is your passion? Whether it's trendy apparel, custom designs, or unique accessories, this category is your runway.",
+			// 		img: "",
+			// 	},
+			// 	{
+			// 		title: "Transport",
+			// 		subTitle:
+			// 			"If you're in the business of getting people or goods from one place to another, whether it's a ride service or delivery, this is your category.",
+			// 		img: "",
+			// 	},
+			// 	{
+			// 		title: "Accommodation",
+			// 		subTitle:
+			// 			"Open your doors to travelers and those seeking a comfortable stay. Whether it's a cozy B&B or a luxurious hotel, this category is for accommodation providers.",
+			// 		img: "",
+			// 	},
+			// 	{
+			// 		title: "Electrician",
+			// 		subTitle:
+			// 			"Spark up connections! If you're an electrician offering services for electrical installations, repairs, or consultations, this category is your platform.",
+			// 		img: "",
+			// 	},
+			// 	{
+			// 		title: "Pharmacy",
+			// 		subTitle:
+			// 			"If you're in the business of health and wellness, providing pharmaceutical products or consultation services, this category is dedicated to you.",
+			// 		img: "",
+			// 	},
+			// ],
 		};
 	},
 };

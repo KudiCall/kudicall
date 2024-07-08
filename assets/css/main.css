@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 /* *,
@@ -13,14 +13,14 @@
 	padding: 0;
 } */
 html {
-	font-family: "Nunito Sans", Roboto, "sans-serif", "Noto Color Emoji" !important;
+	font-family: "Nunito", Roboto, "sans-serif", "Noto Color Emoji" !important;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-	font-optical-sizing: auto;
+	/* font-optical-sizing: auto;
 	font-weight: 400;
-	font-variation-settings: "wdth" 100, "YTLC" 500;
+	font-variation-settings: "wdth" 100, "YTLC" 500; */
 }
 
 .pacifico {

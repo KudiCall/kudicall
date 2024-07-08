@@ -11,11 +11,11 @@
 				></v-img>
 				<span>The seamless shopping experience you didn't know you needed</span>
 			</span>
-			<span class="title title1">Discover a new way to</span>
-			<br />
-			<span class="pacifico text-primary title title2">Shop, Connect, and Experience!</span>
+			<p class="title title1">Discover a new way to</p>
+
+			<p class="pacifico text-primary title title2">Shop, Connect, and Experience!</p>
 			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive live video interactions.</p>
-			<v-btn color="primary" rounded class="px-4" size="x-large" style="font-size: 16px">
+			<v-btn color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 				Download Now
 				<v-img
 					eager
@@ -78,8 +78,12 @@ export default {
 
 .title {
 	font-size: 70px;
-	letter-spacing: -2px;
+	/* letter-spacing: -2px; */
 	font-weight: 700;
+}
+
+.title2 {
+	line-height: 60px;
 }
 
 .subTitle {
@@ -92,10 +96,9 @@ export default {
 }
 
 /* Responsive Styles */
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
 	.title {
 		font-size: 70px;
-		line-height: 50px;
 		letter-spacing: -2px;
 	}
 
@@ -103,7 +106,7 @@ export default {
 		font-size: 22px;
 		line-height: 30px;
 	}
-}
+} */
 
 @media (max-width: 768px) {
 	.chip--outlined {
@@ -120,8 +123,7 @@ export default {
 		line-height: 60px;
 	}
 	.title2 {
-		font-size: 40px;
-		line-height: 53px;
+		line-height: 60px;
 	}
 
 	.subTitle {
