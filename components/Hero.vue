@@ -128,7 +128,7 @@ export default {
 
 	.subTitle {
 		font-size: 18px;
-		line-height: 26px;
+		line-height: 28.8px;
 		width: 90%;
 	}
 }
