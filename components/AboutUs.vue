@@ -129,7 +129,7 @@ export default {
 /* Adjust bubble sizes for smaller screens */
 @media (max-width: 768px) {
 	.quote {
-		font-size: 22px;
+		font-size: 24px;
 		max-width: 100%;
 		line-height: 33.6px;
 	}
