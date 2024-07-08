@@ -2,6 +2,7 @@
 	<v-container id="features" style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center text-center container overflow-hidden">
 		<div class="header-container">
 			<v-img
+				eager
 				width="181"
 				height="44"
 				class="mx-auto my-5"
@@ -19,6 +20,7 @@
 					<v-btn color="#000" rounded class="download-btn px-4 mb-2" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"
 							class="ml-2"
 							width="24"
@@ -27,22 +29,25 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section first-image mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278324/OnCall/iphone_15_xa1t8m.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278324/OnCall/iphone_15_xa1t8m.png" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
+						eager
 						width="50%"
 						height="50%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278315/OnCall/Hanging_call_modal_-_RECEIVER_lrlecr.png"
 						class="overlay-img call-notification"
 					></v-img>
 					<v-img
+						eager
 						width="60%"
 						height="60%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278316/OnCall/BUYER_PRODUCT_CARD_MODAL_y4os3v.png"
 						class="overlay-img shoe-offer"
 					></v-img>
 					<v-img
+						eager
 						width="100%"
 						height="80%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278316/OnCall/side_bar_wvhvuj.png"
@@ -62,6 +67,7 @@
 					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
 							class="ml-2"
 							width="24"
@@ -70,15 +76,17 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
+						eager
 						width="60%"
 						height="40%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282984/OnCall/Hanging_call_modal_-_RECEIVER_1_hh6scf.svg"
 						class="overlay-img add"
 					></v-img>
 					<v-img
+						eager
 						width="60%"
 						height="40%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282986/OnCall/Hanging_call_modal_-_RECEIVER_gkksqr.svg"
@@ -96,6 +104,7 @@
 					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
 							class="ml-2"
 							width="24"
@@ -104,16 +113,18 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/iphone_15_xmstw3.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/iphone_15_xmstw3.png" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
+						eager
 						width="40%"
 						height="100%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846614/OnCall/Frame_1171275569_ji91m3.svg"
 						class="overlay-img uplaod"
 					></v-img>
 					<v-img
+						eager
 						width="40%"
 						height="40%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/Frame_1171275570_oqvou6.svg"
@@ -134,6 +145,7 @@
 					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
 							class="ml-2"
 							width="24"
@@ -142,9 +154,10 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847617/OnCall/iphone_16_j3qbat.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847617/OnCall/iphone_16_j3qbat.png" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
+						eager
 						width="40%"
 						height="40%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847616/OnCall/Frame_1171275571_mbd3uw.svg"
@@ -164,6 +177,7 @@
 					<v-btn color="#fff" rounded class="download-btn px-4" size="x-large" style="font-size: 16px">
 						Download Now
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
 							class="ml-2"
 							width="24"
@@ -172,16 +186,18 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847961/OnCall/iphone_18_f47hmp.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847961/OnCall/iphone_18_f47hmp.png" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
+						eager
 						width="40%"
 						height="40%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847962/OnCall/status_wewg3r.svg"
 						class="overlay-img status"
 					></v-img>
 					<v-img
+						eager
 						width="40%"
 						height="40%"
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847960/OnCall/delivery_date_rtc0r6.svg"

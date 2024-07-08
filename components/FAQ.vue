@@ -2,12 +2,12 @@
 	<v-container id="faq" style="max-width: 1400px; width: 100%; margin: 50px auto">
 		<v-row>
 			<v-col cols="12" md="3" class="faq-header">
-				<v-img width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009222/OnCall/Frame_1171275577_aza04y.svg" />
+				<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009222/OnCall/Frame_1171275577_aza04y.svg" />
 				<h1 class="mt-5">Frequently asked questions</h1>
 			</v-col>
 			<v-col cols="12" md="9">
-				<v-expansion-panels class="d-flex flex-column ga-4 border-0">
-					<v-expansion-panel v-for="n of faq" :key="n.id">
+				<v-expansion-panels variant="accordion" class="d-flex flex-column ga-4 expansion">
+					<v-expansion-panel v-for="n of faq" :key="n.id" class="expansion" style="border-radius: 15px !important; overflow: hidden">
 						<v-expansion-panel-title class="custom-panel-title">
 							{{ n.title }}
 							<template v-slot:actions="{ expanded }">
@@ -66,14 +66,18 @@ export default {
 </script>
 
 <style scoped>
+.v-expansion-panels div.v-expansion-panel {
+	border-radius: 15px !important;
+}
 .custom-panel-title {
 	padding: 40px 20px;
 	background-color: #1c1c1c;
-	border-radius: 15px;
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 20px;
 	color: #fff;
+	border-radius: 15px !important;
+	height: 104px;
 }
 
 .custom-panel-text {
@@ -84,6 +88,7 @@ export default {
 	padding-bottom: 10px;
 	padding-right: 250px;
 	color: #fff;
+	border-radius: 15px !important;
 }
 
 .custom-panel-title .v-icon {
@@ -107,6 +112,7 @@ export default {
 		font-size: 16px;
 		line-height: 22.4px;
 		padding: 20px 20px;
+		height: 84px;
 	}
 
 	.custom-panel-text {

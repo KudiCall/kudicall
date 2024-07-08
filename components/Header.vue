@@ -13,6 +13,7 @@
 					<v-btn color="primary" rounded class="d-none d-md-inline" size="large" style="font-size: 16px">
 						Download
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"
 							class="ml-2"
 							width="24"

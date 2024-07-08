@@ -1,6 +1,6 @@
 <template>
 	<v-container id="businessType" style="max-width: 1400px; width: 100%">
-		<v-img width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719284706/OnCall/Frame_1171275577_aarbs8.svg" />
+		<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719284706/OnCall/Frame_1171275577_aarbs8.svg" />
 
 		<v-row dense class="businesstype-header">
 			<v-col cols="12" md="4">
@@ -36,6 +36,7 @@
 						</div>
 					</div>
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png"
 						width="100%"
 						height="100%"
@@ -65,6 +66,7 @@
 					</div>
 
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
 						width="90%"
 						height="100%"
@@ -106,12 +108,14 @@
 					</div>
 
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
 						width="100%"
 						height="100%"
 						style="position: absolute; top: 0; left: -19%"
 					/>
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
 						width="100%"
 						height="100%"
@@ -140,6 +144,7 @@
 						</div>
 					</div>
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
 						width="100%"
 						height="100%"
@@ -168,6 +173,7 @@
 						</div>
 					</div>
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
 						width="100%"
 						height="100%"
@@ -202,6 +208,7 @@
 							<p>this category is for you.</p>
 						</div>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png"
 							width="95%"
 							height="100%"
@@ -232,6 +239,7 @@
 							<p>runway.</p>
 						</div>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
 							width="90%"
 							height="100%"
@@ -262,6 +270,7 @@
 							<p>delivery, this is your category.</p>
 						</div>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
 							width="100%"
 							height="100%"
@@ -280,12 +289,14 @@
 							<p>providers</p>
 						</div>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
 							width="100%"
 							height="100%"
 							style="position: absolute; top: 0; left: -20%"
 						/>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
 							width="100%"
 							height="100%"
@@ -316,6 +327,7 @@
 							<p>this category is your platform.</p>
 						</div>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
 							width="100%"
 							height="100%"
@@ -346,6 +358,7 @@
 							<p>category is dedicated to you.</p>
 						</div>
 						<v-img
+							eager
 							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
 							width="100%"
 							height="100%"

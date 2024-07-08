@@ -10,8 +10,22 @@
 				an interactive experience."
 			</h1>
 		</div>
-		<v-img v-for="(bubble, index) in bubblesDesktop" :key="index" :src="bubble.src" :style="bubble.style" class="bubble-image d-none d-md-block" />
-		<v-img v-for="(bubble, index) in bubblesMobile" :key="index" :src="bubble.src" :style="bubble.style" class="bubble-image d-block d-md-none" />
+		<v-img
+			eager
+			v-for="(bubble, index) in bubblesDesktop"
+			:key="index"
+			:src="bubble.src"
+			:style="bubble.style"
+			class="bubble-image d-none d-md-block"
+		/>
+		<v-img
+			eager
+			v-for="(bubble, index) in bubblesMobile"
+			:key="index"
+			:src="bubble.src"
+			:style="bubble.style"
+			class="bubble-image d-block d-md-none"
+		/>
 	</v-container>
 </template>
 

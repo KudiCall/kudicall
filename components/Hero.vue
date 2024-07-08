@@ -3,6 +3,7 @@
 		<div>
 			<span class="chip--outlined text--white">
 				<v-img
+					eager
 					class="mr-3"
 					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719266720/OnCall/Lightning_zrneu0.svg"
 					width="24"
@@ -10,13 +11,14 @@
 				></v-img>
 				<span>The seamless shopping experience you didn't know you needed</span>
 			</span>
-			<h1 class="title title1" style="font-weight: 700">Discover a new way to</h1>
+			<span class="title title1">Discover a new way to</span>
 			<br />
-			<h1 class="pacifico text-primary title title2" style="font-weight: 700">Shop, Connect, and Experience!</h1>
-			<p class="subTitle mt-10">We bring your favorite vendors and services to life through immersive live video interactions.</p>
+			<span class="pacifico text-primary title title2">Shop, Connect, and Experience!</span>
+			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive live video interactions.</p>
 			<v-btn color="primary" rounded class="px-4" size="x-large" style="font-size: 16px">
 				Download Now
 				<v-img
+					eager
 					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"
 					class="ml-2"
 					width="24"
@@ -26,6 +28,7 @@
 		</div>
 		<div style="width: 100%; height: auto; margin: 100px auto">
 			<v-img
+				eager
 				class="d-none d-md-block"
 				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719271541/OnCall/Frame_25_1_obekis.png"
 				alt="Frame 25 1"
@@ -33,6 +36,7 @@
 				height="100%"
 			/>
 			<v-img
+				eager
 				class="d-block d-md-none"
 				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719271531/OnCall/Frame_26_vspyd4.png"
 				alt="Frame 26"
@@ -74,8 +78,8 @@ export default {
 
 .title {
 	font-size: 70px;
-	line-height: 55px;
-	letter-spacing: -2;
+	letter-spacing: -2px;
+	font-weight: 700;
 }
 
 .subTitle {
@@ -91,7 +95,8 @@ export default {
 @media (max-width: 1400px) {
 	.title {
 		font-size: 70px;
-		line-height: 84px;
+		line-height: 50px;
+		letter-spacing: -2px;
 	}
 
 	.subTitle {
@@ -107,15 +112,16 @@ export default {
 
 	.title {
 		font-size: 48px;
-		line-height: 40px;
 	}
 
 	.title1 {
 		width: 80%;
 		margin: auto;
+		line-height: 60px;
 	}
 	.title2 {
 		font-size: 40px;
+		line-height: 53px;
 	}
 
 	.subTitle {
