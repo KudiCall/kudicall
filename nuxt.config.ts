@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 				{
 					hid: "description",
 					name: "description",
-					content: "The world first and largest e-commerce platform",
+					content: "Discover a new way to Shop, Connect, and Experience!!",
 				},
 			],
 			link: [{ rel: "icon", type: "image/x-icon", href: "" }],
