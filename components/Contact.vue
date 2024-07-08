@@ -38,7 +38,7 @@
 					Unlock exclusive deals, personalized recommendations, and a world of exciting
 					<span class="pacifico" style="font-weight: 400">live commerce.</span>
 				</h2>
-				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-md-center mx-auto">
+				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
 					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691153/OnCall/BTN_1_oegkqr.png" width="50%" height="50" />
 
 					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691154/OnCall/BTN_2_nkjih3.png" width="50%" height="50" />
@@ -87,7 +87,6 @@ export default {
 @media screen and (max-width: 768px) {
 	.title {
 		font-size: 32px;
-		font-weight: 400;
 		line-height: 38.4px;
 	}
 	.backgroundImgCont {

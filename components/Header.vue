@@ -10,7 +10,7 @@
 					</v-btn>
 				</div>
 				<div class="d-flex align-center">
-					<v-btn color="primary" rounded class="d-none d-md-inline" size="large" style="font-size: 16px">
+					<v-btn color="primary" rounded class="px-5 d-none d-md-inline" size="large" style="font-size: 16px; line-height: 21.82px">
 						Download
 						<v-img
 							eager
@@ -32,7 +32,12 @@
 	</div>
 
 	<!-- Responsive navbar -->
-	<v-navigation-drawer v-if="$vuetify.display.mobile" v-model="drawer" temporary style="z-index: 2000; position: fixed; background-color: #0c0d0d">
+	<v-navigation-drawer
+		v-if="$vuetify.display.mobile"
+		v-model="drawer"
+		temporary
+		style="z-index: 2000; position: fixed; background-color: #0c0d0d; color: white"
+	>
 		<div class="d-flex align-center justify-end px-4 py-5">
 			<!-- <h2 class="logo text--white pacifico" color="primary">OnCall</h2> -->
 			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
