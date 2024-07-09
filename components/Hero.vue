@@ -1,5 +1,5 @@
 <template>
-	<v-container style="max-width: 1400px; width: 100%; margin-top: 80px" class="d-flex flex-column justify-center align-center text-center">
+	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center align-center text-center mt-md-16 mt-6">
 		<div>
 			<span class="chip--outlined text--white">
 				<v-img
@@ -15,7 +15,7 @@
 
 			<p class="pacifico text-primary title title2">Shop, Connect, and Experience!</p>
 			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive live video interactions.</p>
-			<v-btn color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
+			<!-- <v-btn color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 				Download Now
 				<v-img
 					eager
@@ -24,7 +24,12 @@
 					width="24"
 					height="24"
 				></v-img>
-			</v-btn>
+			</v-btn> -->
+			<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
+				<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691153/OnCall/BTN_1_oegkqr.png" width="50%" height="50" />
+
+				<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691154/OnCall/BTN_2_nkjih3.png" width="50%" height="50" />
+			</div>
 		</div>
 		<div style="width: 100%; height: auto; margin: 100px auto">
 			<v-img
