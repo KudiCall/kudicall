@@ -60,9 +60,9 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Vendor Catalogs</h1>
+					<h1 style="color: #fff">Catalogs</h1>
 					<p style="color: #fff">
-						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
+						Anyone can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
 					</p>
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now

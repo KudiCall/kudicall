@@ -1,14 +1,19 @@
 <template>
-	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center align-center text-center mt-md-16 mt-6">
-		<div>
-			<span class="chip--outlined text--white">
-				<v-img
-					eager
-					class="mr-3"
-					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719266720/OnCall/Lightning_zrneu0.svg"
-					width="24"
-					height="24"
-				></v-img>
+	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center align-center text-center mt-4 bg-pattern">
+		<div class="mt-md-16 mt-6">
+			<span class="chip--outlined text--white ">
+				<v-img class="d-flex align-center justify-center" eager width="50px" height="50px" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720611263/OnCall/Vector_k5lnlf.svg">
+					<v-container>
+						<v-img
+							eager
+							class="mr-3"
+							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719266720/OnCall/Lightning_zrneu0.svg"
+							width="24"
+							height="24"
+						></v-img>
+					</v-container>
+				</v-img>
+			
 				<span>The seamless shopping experience you didn't know you needed</span>
 			</span>
 			<p class="title title1">Discover a new way to</p>
@@ -71,6 +76,12 @@ export default {
 </script>
 
 <style scoped>
+.bg-pattern{
+	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1720617849/OnCall/Background_pattern_bwo9yj.svg");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .chip--outlined {
 	border: 1px solid;
 	border-image-source: linear-gradient(90deg, rgba(19, 136, 252, 0.3) 0%, rgba(12, 13, 13, 0.3) 53.5%, rgba(19, 136, 252, 0.3) 99%);
@@ -86,6 +97,7 @@ export default {
 	align-items: center;
 	width: fit-content;
 	margin-bottom: 30px;
+	backdrop-filter: blur(10px);
 }
 
 .chip--outlined:hover {
@@ -96,7 +108,7 @@ export default {
 .title {
 	font-size: 70px;
 	/* letter-spacing: -2px; */
-	font-weight: 700;
+	font-weight: 400;
 }
 
 .title2 {
