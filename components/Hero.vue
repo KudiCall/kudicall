@@ -1,8 +1,14 @@
 <template>
 	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center align-center text-center mt-4 bg-pattern">
 		<div class="mt-md-16 mt-6">
-			<span class="chip--outlined text--white ">
-				<v-img class="d-flex align-center justify-center" eager width="50px" height="50px" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720611263/OnCall/Vector_k5lnlf.svg">
+			<span class="chip--outlined text--white">
+				<v-img
+					class="d-flex align-center justify-center"
+					eager
+					width="50px"
+					height="50px"
+					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720611263/OnCall/Vector_k5lnlf.svg"
+				>
 					<v-container>
 						<v-img
 							eager
@@ -13,7 +19,7 @@
 						></v-img>
 					</v-container>
 				</v-img>
-			
+
 				<span>The seamless shopping experience you didn't know you needed</span>
 			</span>
 			<p class="title title1">Discover a new way to</p>
@@ -76,11 +82,11 @@ export default {
 </script>
 
 <style scoped>
-.bg-pattern{
+.bg-pattern {
 	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1720617849/OnCall/Background_pattern_bwo9yj.svg");
 	background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .chip--outlined {
 	border: 1px solid;
@@ -108,7 +114,7 @@ export default {
 .title {
 	font-size: 70px;
 	/* letter-spacing: -2px; */
-	font-weight: 400;
+	font-weight: 700;
 }
 
 .title2 {

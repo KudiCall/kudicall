@@ -12,8 +12,8 @@
 				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">OnCall</span>
 			</h1>
 		</div>
-		<v-sheet class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
-			<v-row dense class="mx-auto h-75 h-md-100 mb-0">
+		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
+			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
 					<h1 class="text-black" style="">Live Commerce</h1>
 					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
@@ -36,26 +36,26 @@
 						eager
 						width="50%"
 						height="50%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278315/OnCall/Hanging_call_modal_-_RECEIVER_lrlecr.png"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716206/OnCall/hanging_call_b5f2ve.png"
 						class="overlay-img call-notification"
 					></v-img>
 					<v-img
 						eager
-						width="60%"
-						height="60%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278316/OnCall/BUYER_PRODUCT_CARD_MODAL_y4os3v.png"
+						width="55%"
+						height="65%"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716207/OnCall/shoe_tr9cmv.png"
 						class="overlay-img shoe-offer"
 					></v-img>
 					<v-img
 						eager
 						width="100%"
 						height="80%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278316/OnCall/side_bar_wvhvuj.png"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716212/OnCall/sidebar_pxpb5d.png"
 						class="overlay-img call"
 					></v-img>
 				</v-col>
 			</v-row>
-		</v-sheet>
+		</div>
 
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
@@ -82,14 +82,14 @@
 						eager
 						width="60%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282984/OnCall/Hanging_call_modal_-_RECEIVER_1_hh6scf.svg"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716536/OnCall/add_z21zhx.png"
 						class="overlay-img add"
 					></v-img>
 					<v-img
 						eager
 						width="60%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282986/OnCall/Hanging_call_modal_-_RECEIVER_gkksqr.svg"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716536/OnCall/edit_kssg8o.png"
 						class="overlay-img edit"
 					></v-img>
 				</v-col>
@@ -120,14 +120,14 @@
 						eager
 						width="40%"
 						height="100%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846614/OnCall/Frame_1171275569_ji91m3.svg"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716765/OnCall/upload_vb4uto.png"
 						class="overlay-img uplaod"
 					></v-img>
 					<v-img
 						eager
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/Frame_1171275570_oqvou6.svg"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716765/OnCall/success_o0gfvn.png"
 						class="overlay-img success"
 					></v-img>
 				</v-col>
@@ -158,9 +158,9 @@
 					<!-- Overlay images -->
 					<v-img
 						eager
-						width="40%"
-						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847616/OnCall/Frame_1171275571_mbd3uw.svg"
+						width="50%"
+						height="50%"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716884/OnCall/payment_t9fdj3.png"
 						class="overlay-img payment"
 					></v-img>
 				</v-col>
@@ -191,16 +191,16 @@
 					<!-- Overlay images -->
 					<v-img
 						eager
-						width="40%"
-						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847962/OnCall/status_wewg3r.svg"
+						width="50%"
+						height="50%"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720717007/OnCall/status_kg20z2.png"
 						class="overlay-img status"
 					></v-img>
 					<v-img
 						eager
-						width="40%"
+						width="50%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847960/OnCall/delivery_date_rtc0r6.svg"
+						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720717006/OnCall/delivery_date_tozdfk.png"
 						class="overlay-img delivery"
 					></v-img>
 				</v-col>
@@ -285,13 +285,13 @@ export default {
 }
 
 .call-notification {
-	top: 0%;
+	top: -3%;
 	left: 0%;
 }
 
 .shoe-offer {
-	bottom: 10%;
-	left: -9%;
+	bottom: 8%;
+	left: -6%;
 }
 
 .call {
@@ -300,8 +300,8 @@ export default {
 }
 
 .add {
-	bottom: -8%;
-	right: -4%;
+	bottom: -6%;
+	right: -7%;
 }
 
 .edit {
@@ -311,7 +311,7 @@ export default {
 
 .success {
 	bottom: -3%;
-	right: 6%;
+	right: 9%;
 }
 
 .uplaod {
@@ -373,6 +373,7 @@ export default {
 		font-size: 32px;
 		line-height: 38.4px;
 		text-align: center;
+		letter-spacing: -2px;
 	}
 
 	.text-section p {
@@ -381,13 +382,13 @@ export default {
 		text-align: center;
 	}
 
-	.first-image {
+	/* .first-image {
 		bottom: -15%;
-	}
+	} */
 
 	.phone-mockup {
 		width: auto !important;
-		height: auto;
+		/* height: auto; */
 		max-width: 70%;
 		margin-top: auto;
 	}
@@ -398,8 +399,8 @@ export default {
 	}
 
 	.shoe-offer {
-		bottom: 10%;
-		left: -22%;
+		bottom: 9%;
+		left: -20%;
 	}
 
 	.call {
@@ -408,7 +409,7 @@ export default {
 	}
 
 	.add {
-		bottom: -6%;
+		bottom: -5%;
 		right: -10%;
 	}
 
@@ -419,7 +420,7 @@ export default {
 
 	.success {
 		bottom: -3%;
-		right: -6%;
+		right: 0%;
 	}
 
 	.uplaod {
@@ -438,8 +439,8 @@ export default {
 	}
 
 	.delivery {
-		bottom: 5%;
-		left: -8%;
+		bottom: 10%;
+		left: -16%;
 	}
 }
 </style>
