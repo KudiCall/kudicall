@@ -1,7 +1,7 @@
 <template>
 	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center align-center text-center mt-4 bg-pattern">
 		<div class="mt-md-16 mt-6">
-			<span class="chip--outlined text--white">
+			<!-- <span class="chip--outlined text--white">
 				<v-img
 					class="d-flex align-center justify-center"
 					eager
@@ -21,7 +21,21 @@
 				</v-img>
 
 				<span>The seamless shopping experience you didn't know you needed</span>
-			</span>
+			</span> -->
+			<v-img
+				eager
+				width="486"
+				height="44"
+				class="d-none d-md-block mx-auto"
+				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720720461/OnCall/desktop_a3pkrs.png"
+			></v-img>
+			<v-img
+				eager
+				width="339"
+				height="58"
+				class="d-block d-md-none mx-auto mb-4"
+				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720720461/OnCall/mobile_zzsnrx.png"
+			></v-img>
 			<p class="title title1">Discover a new way to</p>
 
 			<p class="pacifico text-primary title title2">Shop, Connect, and Experience!</p>
@@ -113,12 +127,15 @@ export default {
 
 .title {
 	font-size: 70px;
-	/* letter-spacing: -2px; */
+}
+
+.title1 {
 	font-weight: 700;
 }
 
 .title2 {
 	line-height: 60px;
+	font-weight: 400;
 }
 
 .subTitle {
@@ -129,19 +146,6 @@ export default {
 	width: 624px;
 	margin: 30px auto;
 }
-
-/* Responsive Styles */
-/* @media (max-width: 1400px) {
-	.title {
-		font-size: 70px;
-		letter-spacing: -2px;
-	}
-
-	.subTitle {
-		font-size: 22px;
-		line-height: 30px;
-	}
-} */
 
 @media (max-width: 768px) {
 	.chip--outlined {
