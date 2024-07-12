@@ -1,5 +1,5 @@
 <template>
-	<v-container id="faq" style="max-width: 1400px; width: 100%; padding-top: 50px" class="mx-auto">
+	<v-container id="faq" style="max-width: 1400px; width: 100%; padding-top: 100px" class="mx-auto">
 		<v-row>
 			<v-col cols="12" md="3" class="faq-header">
 				<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009222/OnCall/Frame_1171275577_aza04y.svg" />

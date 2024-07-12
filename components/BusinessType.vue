@@ -1,5 +1,5 @@
 <template>
-	<v-container id="businessType" style="max-width: 1400px; width: 100%; padding-top: 80px">
+	<v-container id="businessType" style="max-width: 1400px; width: 100%; padding-top: 100px">
 		<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719284706/OnCall/Frame_1171275577_aarbs8.svg" />
 
 		<v-row dense class="businesstype-header">

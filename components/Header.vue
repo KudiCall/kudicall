@@ -1,16 +1,31 @@
 <template>
-	<div :style="stickyw ? 'position: relative;' : 'position: sticky;'" class="topbar" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+	<div :style="stickyw ? 'position: relative;' : 'position: sticky;'" class="topbar" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)">
 		<v-container class="py-0" style="max-width: 1400px">
 			<div class="d-flex justify-space-between align-center my-5">
 				<h2 class="logo pacifico" color="primary">OnCall</h2>
 
 				<div class="d-none d-md-flex">
-					<v-btn :to="n.route" :href="n.route" variant="text" class="mx-1" flat v-for="n in urls" :key="n.title" style="font-size: 16px; letter-spacing: normal;">
+					<v-btn
+						:to="n.route"
+						:href="n.route"
+						variant="text"
+						class="mx-1"
+						flat
+						v-for="n in urls"
+						:key="n.title"
+						style="font-size: 16px; letter-spacing: normal"
+					>
 						{{ n.title }}
 					</v-btn>
 				</div>
 				<div class="d-flex align-center">
-					<v-btn color="primary" rounded class="px-5 d-none d-md-inline" size="large" style="font-size: 16px; letter-spacing: normal; line-height: 21.82px">
+					<v-btn
+						color="primary"
+						rounded
+						class="px-5 d-none d-md-inline"
+						size="large"
+						style="font-size: 16px; letter-spacing: normal; line-height: 21.82px"
+					>
 						Download
 						<v-img
 							eager
@@ -38,8 +53,9 @@
 		temporary
 		style="z-index: 2000; position: fixed; background-color: #0c0d0d; color: white"
 	>
-		<div class="d-flex align-center justify-end px-4 py-5">
+		<div class="d-flex align-center justify-space-between px-4 py-5">
 			<!-- <h2 class="logo text--white pacifico" color="primary">OnCall</h2> -->
+			<h2 class="logo pacifico" color="primary">OnCall</h2>
 			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
 		</div>
 		<v-divider></v-divider>
