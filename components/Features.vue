@@ -217,7 +217,8 @@ export default {
 
 <style scoped>
 .container {
-	margin-top: 150px;
+	padding-top: 100px;
+	margin-top: 50px;
 }
 .header-container {
 	width: 708px;

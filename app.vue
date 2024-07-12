@@ -1,14 +1,8 @@
 <template>
 	<v-app>
-		<Header />
-		<Hero />
-		<AboutUs />
-		<Features />
-		<BusinessType />
-		<FAQ />
-		<Testimonials />
-		<Contact />
-		<Footer />
+		<KeepAlive>
+			<Home />
+		</KeepAlive>
 	</v-app>
 </template>
 
