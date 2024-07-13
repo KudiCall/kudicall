@@ -53,9 +53,9 @@
 		temporary
 		style="z-index: 2000; position: fixed; background-color: #0c0d0d; color: white"
 	>
-		<div class="d-flex align-center justify-space-between px-4 py-5">
+		<div class="d-flex align-center justify-space-between px-4 py-4">
 			<!-- <h2 class="logo text--white pacifico" color="primary">OnCall</h2> -->
-			<h2 class="logo pacifico" color="primary">OnCall</h2>
+			<h2 class="logo pacifico" style="font-size: 24px" color="primary">OnCall</h2>
 			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
 		</div>
 		<v-divider></v-divider>
