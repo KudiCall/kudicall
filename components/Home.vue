@@ -2,7 +2,7 @@
 	<div>
 		<Header />
 		<Hero />
-		<div id="aboutUs" style="margin-bottom: 100px" />
+		<div id="aboutUs" style="margin-bottom: 120px" />
 		<AboutUs />
 		<Features />
 		<BusinessType />
