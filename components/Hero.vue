@@ -22,6 +22,7 @@
 
 				<span>The seamless shopping experience you didn't know you needed</span>
 			</span> -->
+
 			<v-img
 				eager
 				width="486"
@@ -39,7 +40,7 @@
 			<p class="title title1">Discover a new way to</p>
 
 			<p class="pacifico text-primary title title2">Shop, Connect, and Experience!</p>
-			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive real-time comment interactions.</p>
+			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive real-time commerce.</p>
 			<!-- <v-btn color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 				Download Now
 				<v-img
