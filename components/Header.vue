@@ -38,9 +38,9 @@
 					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
 						<v-icon color="white" size="32" icon="mdi:mdi-sort-variant"></v-icon>
 					</v-btn>
-					<v-btn icon @click="toggleTheme" class="ml-4">
+					<!-- <v-btn icon @click="toggleTheme" class="ml-4">
 						<v-icon>{{ darkMode ? "mdi mdi-weather-night" : "mdi mdi-white-balance-sunny" }}</v-icon>
-					</v-btn>
+					</v-btn> -->
 				</div>
 			</div>
 		</v-container>

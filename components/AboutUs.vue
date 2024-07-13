@@ -1,6 +1,5 @@
 <template>
 	<v-container
-		id="aboutUs"
 		class="d-flex flex-column justify-center align-center text-center container"
 		style="position: relative; max-width: 1400px; width: 100%"
 	>
@@ -119,7 +118,7 @@ export default {
 
 .container {
 	height: 594px;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 
 .bubble-image {
