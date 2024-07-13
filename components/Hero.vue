@@ -61,7 +61,7 @@
 				</v-btn>
 			</div>
 		</div>
-		<div style="width: 100%; height: auto; margin: 100px auto">
+		<div class="heroImgContainer">
 			<v-img
 				eager
 				class="d-none d-md-block"
@@ -140,6 +140,12 @@ export default {
 	margin: 30px auto;
 }
 
+.heroImgContainer {
+	width: 100%;
+	height: auto;
+	margin: 100px auto 100px;
+}
+
 @media (max-width: 768px) {
 	.chip--outlined {
 		width: 350px;
@@ -162,6 +168,12 @@ export default {
 		font-size: 18px;
 		line-height: 28.8px;
 		width: 90%;
+	}
+
+	.heroImgContainer {
+		width: 100%;
+		height: auto;
+		margin: 100px auto 0px;
 	}
 }
 </style>
