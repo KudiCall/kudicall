@@ -14,7 +14,8 @@
 				</div>
 				<div>
 					<v-avatar v-for="s in social" :key="s.title" class="mx-2" size="40">
-						<v-icon size="20" style="color: #fff" class="cursor-pointer">{{ s.icon }}</v-icon>
+						<v-btn :icon="s.icon" variant="text"> </v-btn>
+						<!-- <v-icon size="20" style="color: #fff" class="cursor-pointer">{{ s.icon }}</v-icon> -->
 					</v-avatar>
 				</div>
 			</v-container>

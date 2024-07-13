@@ -52,21 +52,13 @@
 				></v-img>
 			</v-btn> -->
 			<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
-				<v-img
-					eager
-					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691153/OnCall/BTN_1_oegkqr.png"
-					class="cursor-pointer"
-					width="50%"
-					height="50"
-				/>
+				<v-btn color="white" size="x-large" class="" rounded="lg">
+					<v-img eager height="28" width="120" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720885363/OnCall/App_Store_edkcx2.png" />
+				</v-btn>
 
-				<v-img
-					eager
-					src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719691154/OnCall/BTN_2_nkjih3.png"
-					class="cursor-pointer"
-					width="50%"
-					height="50"
-				/>
+				<v-btn color="white" size="x-large" rounded="lg">
+					<v-img eager height="28" width="120" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720885363/OnCall/Play_Store_rmjj8b.png" />
+				</v-btn>
 			</div>
 		</div>
 		<div style="width: 100%; height: auto; margin: 100px auto">
