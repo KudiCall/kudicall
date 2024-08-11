@@ -59,13 +59,13 @@ div.rower {
 	scrollbar-width: thin; /* For Firefox */
 	scrollbar-color: #cecece transparent; /* For Firefox */
 	white-space: nowrap;
-	border-radius: 47px;
 }
 div.rower::-webkit-scrollbar {
 	width: 6px; /* For Chrome, Safari, and Opera */
 	height: 3px;
 	cursor: e-resize;
 	transition: all 0.5s ease-in-out;
+	border-radius: 47px;
 }
 div.rower:hover::-webkit-scrollbar {
 	height: 8px;

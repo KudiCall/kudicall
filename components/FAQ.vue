@@ -76,7 +76,7 @@ export default {
 	font-weight: 600;
 	line-height: 20px;
 	color: #fff;
-	border-radius: 15px !important;
+	/* border-radius: 15px !important; */
 	height: 104px;
 }
 
@@ -88,7 +88,9 @@ export default {
 	padding-bottom: 10px;
 	padding-right: 250px;
 	color: #fff;
-	border-radius: 15px !important;
+	border-radius: 0px !important;
+	border-bottom-right-radius: 15px !important;
+	border-bottom-left-radius: 15px !important;
 }
 
 .custom-panel-title .v-icon {
