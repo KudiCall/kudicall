@@ -5,18 +5,16 @@
 				<h2 class="logo pacifico" color="primary">OnCall</h2>
 
 				<div class="d-none d-md-flex">
-					<v-btn
-						:to="n.route"
-						:href="n.route"
-						variant="text"
-						class="mx-1"
+					<p
+						@click="$router.push(n.route)"
+						class="mx-4 cursor-pointer"
 						flat
 						v-for="n in urls"
 						:key="n.title"
 						style="font-size: 16px; letter-spacing: normal"
 					>
 						{{ n.title }}
-					</v-btn>
+					</p>
 				</div>
 				<div class="d-flex align-center">
 					<v-btn
@@ -59,7 +57,7 @@
 			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
 		</div>
 		<v-divider></v-divider>
-		<v-list :items="urls" class="d-flex flex-column align-start">
+		<v-list :items="urls" class="d-flex flex-column align-start ga-3">
 			<v-btn
 				@click.stop="drawer = false"
 				:to="n.route"
