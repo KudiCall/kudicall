@@ -32,8 +32,8 @@
 					min
 				>
 					<div
-						class="d-flex justify-space-between align-center px-8"
-						style="height: 96px; background-color: transparent; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
+						class="d-flex justify-space-between align-center px-5"
+						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
 						<div v-if="currentPage != 'User details' && currentPage != 'Add Products'" class="h-100 d-flex align-center">
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
@@ -86,7 +86,7 @@
 					</div>
 					<v-window :touch="false" style="padding-top: 6px; background-color: #0c0d0d" v-model="currentPage">
 						<v-window-item :value="'Dashboard'">
-							<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pa-8">Welcome Maris,</p>
+							<AdminDashboard />
 						</v-window-item>
 						<v-window-item :value="'Users'">
 							<p class="pa-8">Users page</p>
