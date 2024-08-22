@@ -1,6 +1,6 @@
 <template>
-	<v-row class="my-10">
-		<v-col cols="12" md="6" style="background-color: #111212; border-radius: 12px">
+	<v-row class="d-flex my-10 ga-4">
+		<v-col cols="12" md="6" class="px-4" style="background-color: #111212; border-radius: 12px; flex: 1">
 			<div class="wallet-chart">
 				<div class="d-flex justify-space-between align-center mb-1">
 					<p class="title">Wallet bal.</p>
@@ -8,13 +8,13 @@
 				</div>
 				<p class="balance">$334,657,900</p>
 				<client-only placeholder="Loading...">
-					<div class="chart-container">
+					<div class="chart-container px-10">
 						<Bar :options="barOptions" :data="barData" />
 					</div>
 				</client-only>
 			</div>
 		</v-col>
-		<v-col cols="12" md="6" style="background-color: #111212; border-radius: 12px">
+		<v-col cols="12" md="6" class="px-4" style="background-color: #111212; border-radius: 12px; flex: 1">
 			<div class="wallet-chart">
 				<v-row>
 					<v-col cols="6" class="d-flex flex-column justify-space-between pb-8">
@@ -39,7 +39,9 @@
 					</v-col>
 					<v-col cols="6">
 						<client-only placeholder="Loading...">
-							<Pie :options="pieOptions" :data="pieData" />
+							<div>
+								<Pie :options="pieOptions" :data="pieData" />
+							</div>
 						</client-only>
 					</v-col>
 				</v-row>

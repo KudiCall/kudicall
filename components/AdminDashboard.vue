@@ -25,7 +25,7 @@
 							<SearchComponent placeholder="Search" />
 						</div>
 					</div>
-					<v-table height="220px" fixed-header style="background-color: transparent">
+					<v-table density="default" height="300px" fixed-header style="background-color: transparent">
 						<thead style="background-color: #141515">
 							<tr>
 								<th class="text-left">Date</th>
@@ -38,13 +38,19 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="item in disputes" :key="item.disputeID" class="mb-2" style="background-color: #0f1010">
+							<tr v-for="item in disputes" :key="item.disputeID" class="py-4" style="background-color: #0f1010">
 								<td>{{ item.date }}</td>
 								<td class="text-decoration-underline cursor-pointer" style="color: #00b4a0">#{{ item.disputeID }}</td>
 								<td>#{{ item.orderID }}</td>
 								<td>{{ item.buyerEmail }}</td>
 								<td>{{ item.storeEmail }}</td>
-								<td>{{ item.status }}</td>
+								<!-- <td class="dispute-status" :class="getStatusClass(item.status)">{{ item.status }}</td> -->
+								<td>
+									<v-chip class="dispute-status" :class="getStatusClass(item.status)">
+										{{ item.status }}
+									</v-chip>
+								</td>
+
 								<td>
 									<v-icon icon="mdi mdi-dots-vertical" color="#ECECEC"></v-icon>
 								</td>
@@ -124,7 +130,7 @@ const disputes = [
 		orderID: 123456,
 		buyerEmail: "sandraapeh@gmail.com",
 		storeEmail: "sandraapeh@gmail.com",
-		status: "pending",
+		status: "Cancelled",
 	},
 	{
 		date: "24/08/24",
@@ -132,7 +138,7 @@ const disputes = [
 		orderID: 123456,
 		buyerEmail: "sandraapeh@gmail.com",
 		storeEmail: "sandraapeh@gmail.com",
-		status: "pending",
+		status: "Pending",
 	},
 	{
 		date: "24/08/24",
@@ -140,7 +146,75 @@ const disputes = [
 		orderID: 123456,
 		buyerEmail: "sandraapeh@gmail.com",
 		storeEmail: "sandraapeh@gmail.com",
-		status: "pending",
+		status: "Resolved",
+	},
+	{
+		date: "24/08/24",
+		disputeID: 123458,
+		orderID: 123456,
+		buyerEmail: "sandraapeh@gmail.com",
+		storeEmail: "sandraapeh@gmail.com",
+		status: "In progress",
 	},
 ];
+
+const getStatusClass = (status) => {
+	switch (status) {
+		case "Cancelled":
+			return "dispute-status-cancelled";
+		case "In progress":
+			return "dispute-status-inprogress";
+		case "Resolved":
+			return "dispute-status-resolved";
+		case "Pending":
+			return "dispute-status-pending";
+		default:
+			return "";
+	}
+};
 </script>
+
+<style scoped>
+.dispute-status {
+	border-radius: 6px;
+	padding: 4px 10px;
+	font-size: 16px;
+	line-height: 22.4px;
+	font-weight: 500;
+	width: 89px;
+	text-align: center;
+}
+.dispute-status-cancelled {
+	background: linear-gradient(180deg, rgba(249, 112, 102, 0.1) 2.68%, rgba(180, 35, 24, 0.1) 84.82%);
+	color: #f97066;
+	/* color-scheme: linear-gradient(180deg, #f97066 2.68%, #b42318 84.82%); */
+}
+.dispute-status-inprogress {
+	background: linear-gradient(180deg, rgba(211, 122, 57, 0.1) 2.68%, rgba(180, 80, 7, 0.1) 84.82%);
+	color: #d37a39;
+}
+
+.dispute-status-resolved {
+	background: linear-gradient(185.49deg, rgba(0, 180, 160, 0.1) 15%, rgba(0, 108, 96, 0.1) 85.96%);
+	color: #00b4a0;
+}
+
+.dispute-status-pending {
+	background: #8f8f8f1a;
+	color: #8f8f8f;
+}
+
+.v-table--density-default > .v-table__wrapper > table > thead > tr > th {
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	line-height: 22.4px;
+	color: #fff;
+}
+
+.v-table--density-default > .v-table__wrapper > table > tbody > tr > td {
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	line-height: 22.4px;
+	color: #fff;
+}
+</style>
