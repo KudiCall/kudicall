@@ -89,7 +89,7 @@
 							<AdminDashboard />
 						</v-window-item>
 						<v-window-item :value="'Users'">
-							<p class="pa-8">Users page</p>
+							<AdminUsers />
 						</v-window-item>
 						<v-window-item :value="'Finance'">
 							<p class="pa-8">Finance page</p>
