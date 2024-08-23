@@ -85,3 +85,25 @@ div.rower::-webkit-scrollbar-track {
 .v-expansion-panel:not(:first-child)::after {
 	border: none !important;
 }
+
+.v-input__control .v-field {
+	border-radius: 50px;
+	background-color: #1c1c1c;
+}
+
+.v-input__control .v-input__slot {
+	border-radius: 50px;
+	background-color: #1c1c1c;
+}
+
+.v-select .dropdown-toggle {
+	border: none !important;
+}
+
+#textarea .v-input__control .v-field {
+	border-radius: 20px !important;
+}
+
+#textarea .v-input__control .v-input__slot {
+	border-radius: 20px !important;
+}

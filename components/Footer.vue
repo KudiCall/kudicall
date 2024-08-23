@@ -4,13 +4,22 @@
 		<div class="content-container">
 			<v-container
 				style="width: 100%; max-width: 1400px; color: #fff"
-				class="d-flex flex-column flex-md-row justify-space-between ga-4 ga-md-0 py-6 py-md-16 px-4"
+				class="d-flex flex-column flex-md-row align-md-center justify-space-between ga-4 ga-md-0 py-6 py-md-16 px-4"
 			>
 				<h2 class="logo pacifico">OnCall</h2>
-				<div class="d-flex justify-center text--white ga-3" style="font-size: 16px; font-weight: 400">
-					<v-btn :to="n.route" :href="n.route" variant="text" class="px-0 px-md-4" flat v-for="n in urls" :key="n.title" style="font-size: 16px">
+				<div class="d-flex justify-center ga-4" style="font-size: 16px; font-weight: 400">
+					<p
+						:to="n.route"
+						:href="n.route"
+						variant="text"
+						class="px-0 px-md-4 cursor-pointer"
+						style="line-height: 19.09px"
+						flat
+						v-for="n in urls"
+						:key="n.title"
+					>
 						{{ n.title }}
-					</v-btn>
+					</p>
 				</div>
 				<div>
 					<v-avatar v-for="s in social" :key="s.title" class="mx-2" size="40">

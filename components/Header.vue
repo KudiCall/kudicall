@@ -5,18 +5,16 @@
 				<h2 class="logo pacifico" color="primary">OnCall</h2>
 
 				<div class="d-none d-md-flex">
-					<v-btn
-						:to="n.route"
-						:href="n.route"
-						variant="text"
-						class="mx-1"
+					<p
+						@click="$router.push(n.route)"
+						class="mx-4 cursor-pointer"
 						flat
 						v-for="n in urls"
 						:key="n.title"
 						style="font-size: 16px; letter-spacing: normal"
 					>
 						{{ n.title }}
-					</v-btn>
+					</p>
 				</div>
 				<div class="d-flex align-center">
 					<v-btn
@@ -36,7 +34,7 @@
 						></v-img>
 					</v-btn>
 					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
-						<v-icon color="white" size="32" icon="mdi:mdi-sort-variant"></v-icon>
+						<v-icon color="white" size="32" icon="mdi:mdi-text"></v-icon>
 					</v-btn>
 					<!-- <v-btn icon @click="toggleTheme" class="ml-4">
 						<v-icon>{{ darkMode ? "mdi mdi-weather-night" : "mdi mdi-white-balance-sunny" }}</v-icon>
@@ -59,20 +57,17 @@
 			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
 		</div>
 		<v-divider></v-divider>
-		<v-list :items="urls" class="d-flex flex-column align-start">
-			<v-btn
-				@click.stop="drawer = false"
-				:to="n.route"
-				:href="n.route"
-				variant="text"
-				class="mx-1"
+		<v-list :items="urls" class="d-flex flex-column align-start ga-5">
+			<p
+				@click="$router.push(n.route)"
+				class="mx-4 cursor-pointer"
 				flat
 				v-for="n in urls"
 				:key="n.title"
-				style="font-size: 16px"
+				style="font-size: 16px; letter-spacing: normal"
 			>
 				{{ n.title }}
-			</v-btn>
+			</p>
 		</v-list>
 	</v-navigation-drawer>
 </template>

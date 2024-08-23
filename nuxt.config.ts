@@ -14,7 +14,9 @@ export default defineNuxtConfig({
 					content: "Discover a new way to Shop, Connect, and Experience!!",
 				},
 			],
-			link: [{ rel: "icon", type: "image/x-icon", href: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1720905161/OnCall/On_uktqbe.png" }],
+			link: [
+				{ rel: "icon", type: "image/x-icon", href: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1724390100/OnCall/oncall_favicon_bepigs.png" },
+			],
 		},
 	},
 
@@ -22,6 +24,7 @@ export default defineNuxtConfig({
 		transpile: ["vuetify"],
 	},
 	modules: [
+		"@pinia/nuxt",
 		(_options, nuxt) => {
 			nuxt.hooks.hook("vite:extendConfig", (config) => {
 				if (!config.plugins) {
