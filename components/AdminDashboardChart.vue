@@ -1,5 +1,5 @@
 <template>
-	<v-row class="d-flex my-10 ga-4">
+	<v-row class="d-flex flex-column flex-md-row my-10 ga-4">
 		<v-col cols="12" md="6" class="px-4" style="background-color: #111212; border-radius: 12px; flex: 1">
 			<div class="wallet-chart">
 				<div class="d-flex justify-space-between align-center mb-1">
