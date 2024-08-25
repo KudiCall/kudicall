@@ -89,10 +89,13 @@
 							<AdminDashboard />
 						</v-window-item>
 						<v-window-item :value="'Users'">
-							<p class="pa-8">Users page</p>
+							<AdminUsers @changePage="changePage" />
+						</v-window-item>
+						<v-window-item :value="'User details'">
+							<Table />
 						</v-window-item>
 						<v-window-item :value="'Finance'">
-							<p class="pa-8">Finance page</p>
+							<!-- <p class="pa-8">Finance page</p> -->
 						</v-window-item>
 						<v-window-item :value="'Dispute'">
 							<p class="pa-8">Dispute page</p>
@@ -126,14 +129,14 @@ const router = useRouter();
 const route = useRoute();
 
 const curPageValue = computed(() => {
-	if (currentPage.value === "Add Products" || currentPage.value === "Import Product" || currentPage.value === "Edit Product") {
-		return "Products";
+	if (currentPage.value === "User details") {
+		return "Users";
 	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
 		return "Posts";
 	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
 		return "Articles";
 	} else {
-		return "Orders";
+		return "Users";
 	}
 });
 const currentPage = ref(route.params.name ? route.params.name : "Dashboard");
@@ -146,14 +149,14 @@ watch(
 );
 
 const handleClick = () => {
-	if (currentPage.value === "Add Products" || currentPage.value === "Import Product" || currentPage.value === "Edit Product") {
-		router.push("/admin/dashboard/Products");
+	if (currentPage.value === "User details") {
+		router.push("/admin/dashboard/Users");
 	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
 		router.push("/admin/dashboard/Posts");
 	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
 		router.push("/admin/dashboard/Articles");
 	} else {
-		router.push("/admin/dashboard/Orders");
+		router.push("/admin/dashboard/Users");
 	}
 };
 
