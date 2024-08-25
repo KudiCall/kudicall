@@ -81,6 +81,7 @@ export default {
 	methods: {
 		selectItem(n) {
 			this.selectedSubItem = "";
+			this.adminStore.selectedItem = n;
 
 			this.$emit("changePage", n);
 		},

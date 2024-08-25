@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 				},
 			],
 			link: [
-				{ rel: "icon", type: "image/x-icon", href: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1724390100/OnCall/oncall_favicon_bepigs.png" },
+				{ rel: "icon", type: "image/x-icon", href: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1724414160/OnCall/Oncall_Fav-01_iceq6z.png" },
 			],
 		},
 	},

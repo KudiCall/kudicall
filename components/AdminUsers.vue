@@ -2,14 +2,14 @@
 	<div class="px-4 px-md-5">
 		<div class="d-flex justify-space-between align-center mb-4">
 			<v-sheet rounded="lg" style="background-color: transparent">
-				<v-tabs v-model="tab" :items="tabs" align-tabs="center" color="white" height="50">
+				<v-tabs v-model="tab" :items="tabs" slider-color="transparent">
 					<template v-slot:tab="{ item }">
 						<v-tab
 							:text="item.text"
 							:value="item.value"
 							rounded
 							:class="tab === item.value ? 'my-chip--active' : 'my-chip'"
-							class="mx-3 d-flex align-center justify-center"
+							class="d-flex align-center justify-center mx-1"
 							style="font-size: 14px; line-height: 19.4px; font-weight: 500; color: #ececec"
 						>
 							<v-icon v-if="tab === item.value" left class="mr-2">fas fa-circle-check</v-icon>
@@ -75,52 +75,35 @@
 							</v-row>
 
 							<div class="d-flex mb-4">
-								<div class="d-flex align-center ml-auto">
-									<span style="font-size: 18px; font-weight: 500; color: #b5b5b5">2 0f 10,000 Selected</span>
+								<div class="d-flex align-center ga-5 ml-auto">
+									<span style="font-size: 18px; font-weight: 500; color: #b5b5b5">{{ selected.length }} 0f {{ users.length }} Selected</span>
 									<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1723461122/OnCall/delete_dbkf9b.svg" width="28" height="28"></v-img>
 								</div>
 							</div>
-
-							<v-data-table :items="disputes" item-value="name" show-select style="background-color: transparent">
-								<template v-slot:header="{ props }">
-									<tr>
-										<th>
-											<v-checkbox-btn
-												:indeterminate="props.someSelected && !props.allSelected"
-												:model-value="props.allSelected"
-												color="primary"
-												@update:model-value="props.selectAll(!props.allSelected)"
-											/>
-										</th>
-										<th>Date</th>
-										<th>Dispute ID</th>
-										<th>Order ID</th>
-										<th>Buyer Email</th>
-										<th>Store Email</th>
-										<th>Status</th>
-										<th>Action</th>
-									</tr>
+							<v-data-table
+								class="custom-table"
+								v-model="selected"
+								:headers="headers"
+								:items="users"
+								item-value="UserID"
+								items-per-page="6"
+								:hide-default-footer="users.length < 5"
+								show-select
+								style="background-color: transparent"
+							>
+								<template v-slot:[`item.UserID`]="{ item }">
+									<span @click="$router.push('/admin/dashboard/User%20details')" class="cursor-pointer">{{ item.UserID }}</span>
 								</template>
-
-								<template v-slot:item="{ item, props }">
-									<tr>
-										<td>
-											<v-checkbox-btn :model-value="props.isSelected(item)" color="primary" @update:model-value="props.toggleSelect(item)" />
-										</td>
-										<td>{{ item.date }}</td>
-										<td>#{{ item.disputeID }}</td>
-										<td>#{{ item.orderID }}</td>
-										<td>{{ item.buyerEmail }}</td>
-										<td>{{ item.storeEmail }}</td>
-										<td>
-											<v-chip :class="getStatusClass(item.status)">
-												{{ item.status }}
-											</v-chip>
-										</td>
-										<td>
-											<v-icon icon="mdi-dots-vertical" color="#ECECEC" @click="console.log(item)" />
-										</td>
-									</tr>
+								<template v-slot:[`item.status`]="{ item }">
+									<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
+								</template>
+								<template v-slot:[`item.actions`]="{ item }">
+									<v-icon icon="mdi mdi-dots-vertical" color="#ECECEC" @click="console.log(item.UserID)" />
+								</template>
+								<template #no-data>
+									<div class="text-center py-16" style="font-size: 20px; color: #ececec">
+										<p>No user yet</p>
+									</div>
 								</template>
 							</v-data-table>
 						</v-card>
@@ -139,6 +122,21 @@
 </template>
 
 <script setup>
+const users = ref([]);
+const selected = ref([]);
+const headers = ref([
+	{
+		title: "UserID",
+		align: "start",
+		sortable: false,
+		key: "UserID",
+	},
+	{ title: "Country", key: "country" },
+	{ title: "Phone number", key: "phoneNo" },
+	{ title: "User category", key: "category" },
+	{ title: "Status", key: "status" },
+	{ title: "", key: "actions", sortable: false },
+]);
 const tab = ref("tab-1");
 const tabs = [
 	{
@@ -162,51 +160,129 @@ const tabs = [
 		value: "tab-5",
 	},
 ];
-const disputes = [
-	{
-		date: "24/08/24",
-		disputeID: 123456,
-		orderID: 123456,
-		buyerEmail: "sandraapeh@gmail.com",
-		storeEmail: "sandraapeh@gmail.com",
-		status: "Cancelled",
-	},
-	{
-		date: "24/08/24",
-		disputeID: 123457,
-		orderID: 123456,
-		buyerEmail: "sandraapeh@gmail.com",
-		storeEmail: "sandraapeh@gmail.com",
-		status: "Pending",
-	},
-	{
-		date: "24/08/24",
-		disputeID: 123458,
-		orderID: 123456,
-		buyerEmail: "sandraapeh@gmail.com",
-		storeEmail: "sandraapeh@gmail.com",
-		status: "Resolved",
-	},
-	{
-		date: "24/08/24",
-		disputeID: 123458,
-		orderID: 123456,
-		buyerEmail: "sandraapeh@gmail.com",
-		storeEmail: "sandraapeh@gmail.com",
-		status: "In progress",
-	},
-];
+
+const choose = (x) => {
+	ctx.emit("changePage", x);
+};
+
+const initialize = () => {
+	users.value = [
+		{
+			UserID: 1234567898,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "Active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "Suspended",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+		{
+			UserID: 1234567899,
+			country: "Nigeria",
+			phoneNo: "+2348193789403",
+			category: "Buyer",
+			status: "In active",
+		},
+	];
+};
+
+onMounted(() => {
+	initialize();
+});
 
 const getStatusClass = (status) => {
 	switch (status) {
-		case "Cancelled":
-			return "dispute-status-cancelled";
-		case "In progress":
-			return "dispute-status-inprogress";
-		case "Resolved":
-			return "dispute-status-resolved";
-		case "Pending":
-			return "dispute-status-pending";
+		case "Suspended":
+			return "user-status-suspended";
+		case "In active":
+			return "user-status-inactive";
+		case "Active":
+			return "user-status-active";
 		default:
 			return "";
 	}
@@ -214,7 +290,7 @@ const getStatusClass = (status) => {
 </script>
 
 <style scoped>
-.dispute-status {
+.user-status {
 	border-radius: 6px;
 	padding: 4px 10px;
 	font-size: 16px;
@@ -223,23 +299,18 @@ const getStatusClass = (status) => {
 	width: 89px;
 	text-align: center;
 }
-.dispute-status-cancelled {
+.user-status-suspended {
 	background: linear-gradient(180deg, rgba(249, 112, 102, 0.1) 2.68%, rgba(180, 35, 24, 0.1) 84.82%);
 	color: #f97066;
 }
-.dispute-status-inprogress {
+.user-status-inactive {
 	background: linear-gradient(180deg, rgba(211, 122, 57, 0.1) 2.68%, rgba(180, 80, 7, 0.1) 84.82%);
 	color: #d37a39;
 }
 
-.dispute-status-resolved {
+.user-status-active {
 	background: linear-gradient(185.49deg, rgba(0, 180, 160, 0.1) 15%, rgba(0, 108, 96, 0.1) 85.96%);
 	color: #00b4a0;
-}
-
-.dispute-status-pending {
-	background: #8f8f8f1a;
-	color: #8f8f8f;
 }
 
 .my-chip {
@@ -249,8 +320,16 @@ const getStatusClass = (status) => {
 
 .my-chip--active {
 	background: linear-gradient(185.49deg, rgba(0, 180, 160, 0.2) 15%, rgba(0, 108, 96, 0.2) 85.96%);
-	border: 1px solid;
-	border-image-source: linear-gradient(185.49deg, #00b4a0 15%, #006c60 85.96%);
+	/* border: 1px solid; */
+	/* border-image-source: linear-gradient(185.49deg, #00b4a0 15%, #006c60 85.96%); */
 	border-radius: 16px !important;
+}
+
+.custom-table :deep(.v-data-table-footer__items-per-page) {
+	display: none;
+}
+.custom-table :deep(.v-data-table__checkbox) {
+	border: 1.5px solid #292929;
+	border-radius: 4px;
 }
 </style>
