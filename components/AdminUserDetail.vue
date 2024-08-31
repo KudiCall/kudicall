@@ -94,6 +94,7 @@
 			</v-col>
 
 			<v-col cols="12" md="4">
+				<v-btn class="btn mb-10" size="x-large" rounded append-icon="mdi mdi-menu-down">Actions</v-btn>
 				<v-card variant="outlined" class="pa-5" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pb-8">Users analytics</p>
 					<AdminUsersChart />
@@ -184,10 +185,6 @@ const tabs = [
 	},
 ];
 
-const choose = (x) => {
-	ctx.emit("changePage", x);
-};
-
 const initialize = () => {
 	users.value = [
 		{
@@ -240,50 +237,6 @@ const initialize = () => {
 			status: "In active",
 		},
 
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
 		{
 			UserID: 1234567899,
 			country: "Nigeria",
@@ -354,5 +307,13 @@ const getStatusClass = (status) => {
 .custom-table :deep(.v-data-table__checkbox) {
 	border: 1.5px solid #292929;
 	border-radius: 4px;
+}
+
+.btn {
+	background: linear-gradient(185.49deg, #1288fc 15%, #0b5297 85.96%);
+}
+
+.btn :deep(.v-icon) {
+	font-size: 36px;
 }
 </style>
