@@ -38,18 +38,18 @@
 						<div v-if="currentPage != 'User details' && currentPage != 'Add Products'" class="h-100 d-flex align-center">
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
 						</div>
-						<div v-else class="h-100 px-8 d-flex align-center">
+						<div v-else class="h-100 d-flex align-center">
 							<v-btn
 								v-if="!(currentPage == 'Create Post') || currentPage == 'Create Article'"
 								@click="handleClick"
 								size="large"
 								v-bind="props"
-								style="border: 1px solid #e5e5e5"
-								variant="outlined"
-								class="text-grey-darken-3"
+								variant="text"
+								class="pa-0"
 							>
-								<v-icon size="16" class="mr-2" icon="mdi mdi-arrow-left-top"></v-icon>
-								Back to {{ curPageValue }}
+								<v-icon size="24" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
+								1234567879
+								<!-- Back to {{ curPageValue }} -->
 							</v-btn>
 						</div>
 
@@ -92,10 +92,10 @@
 							<AdminUsers @changePage="changePage" />
 						</v-window-item>
 						<v-window-item :value="'User details'">
-							<Table />
+							<AdminUserDetail />
 						</v-window-item>
 						<v-window-item :value="'Finance'">
-							<!-- <p class="pa-8">Finance page</p> -->
+							<p class="pa-8">Finance page</p>
 						</v-window-item>
 						<v-window-item :value="'Dispute'">
 							<p class="pa-8">Dispute page</p>

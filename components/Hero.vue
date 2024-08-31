@@ -52,11 +52,17 @@
 				></v-img>
 			</v-btn> -->
 			<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
-				<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">
+				<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg" href="https://on-call-alpha.vercel.app/">
 					<v-img height="28" width="120" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720885363/OnCall/App_Store_edkcx2.png" />
 				</v-btn>
 
-				<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">
+				<v-btn
+					color="white"
+					size="x-large"
+					class="px-2 px-md-6"
+					rounded="lg"
+					href="https://drive.google.com/file/d/11bys3OTqi65LgLx3zogqi7We_R4qCpgO/view?usp=sharing"
+				>
 					<v-img height="28" width="120" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720885363/OnCall/Play_Store_rmjj8b.png" />
 				</v-btn>
 			</div>
