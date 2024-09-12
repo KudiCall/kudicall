@@ -92,7 +92,7 @@
 								style="background-color: transparent"
 							>
 								<template v-slot:[`item.UserID`]="{ item }">
-									<span @click="$router.push('/admin/dashboard/User%20details')" class="cursor-pointer">{{ item.UserID }}</span>
+									<span @click="$router.push(`/admin/dashboard/User%20details/${item.UserID}`)" class="cursor-pointer">{{ item.UserID }}</span>
 								</template>
 								<template v-slot:[`item.status`]="{ item }">
 									<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>

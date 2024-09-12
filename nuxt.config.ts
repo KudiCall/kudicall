@@ -14,9 +14,7 @@ export default defineNuxtConfig({
 					content: "Discover a new way to Shop, Connect, and Experience!!",
 				},
 			],
-			link: [
-				{ rel: "icon", type: "image/x-icon", href: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1724414160/OnCall/Oncall_Fav-01_iceq6z.png" },
-			],
+			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon1.png" }],
 		},
 	},
 

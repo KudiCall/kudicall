@@ -5,12 +5,12 @@
 				<v-card variant="outlined" class="pa-5 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">About user</p>
 					<v-row>
-						<v-col cols="3">
+						<v-col cols="4">
 							<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
 								<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
 							</v-avatar>
 						</v-col>
-						<v-col cols="9">
+						<v-col cols="8">
 							<div class="d-flex flex-column ga-2">
 								<p class="mb-3">
 									<span class="mr-5" style="color: rgba(143, 143, 143, 1)">#1234567879</span>
@@ -39,17 +39,17 @@
 				<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="">Activity history</p>
 				<div class="my-4">
 					<v-sheet rounded="lg" style="background-color: transparent">
-						<v-tabs v-model="tab" :items="tabs" slider-color="transparent">
+						<v-tabs v-model="tab" :items="tabs" slider-color="transparent" class="tabs">
 							<template v-slot:tab="{ item }">
 								<v-tab
 									:text="item.text"
-									:value="item.value"
+									:value="item.text"
 									rounded
-									:class="tab === item.value ? 'my-chip--active' : 'my-chip'"
+									:class="tab === item.text ? 'my-chip--active' : 'my-chip'"
 									class="d-flex align-center justify-center mx-1"
 									style="font-size: 14px; line-height: 19.4px; font-weight: 500; color: #ececec"
 								>
-									<v-icon v-if="tab === item.value" left class="mr-2">fas fa-circle-check</v-icon>
+									<v-icon v-if="tab === item.text" left class="mr-2">fas fa-circle-check</v-icon>
 									{{ item.text }}
 								</v-tab>
 							</template>
@@ -157,31 +157,31 @@ const tab = ref("tab-1");
 const tabs = [
 	{
 		text: "Purchases",
-		value: "tab-1",
+		value: "Purchases",
 	},
 	{
 		text: "Sales",
-		value: "tab-2",
+		value: "Sales",
 	},
 	{
 		text: "Dispute",
-		value: "tab-3",
+		value: "Dispute",
 	},
 	{
 		text: "Collaborator",
-		value: "tab-4",
+		value: "Collaborator",
 	},
 	{
 		text: "Deposits",
-		value: "tab-5",
+		value: "Deposits",
 	},
 	{
 		text: "Withdrawals",
-		value: "tab-5",
+		value: "Withdrawals",
 	},
 	{
 		text: "Transfers",
-		value: "tab-5",
+		value: "Transfers",
 	},
 ];
 
@@ -315,5 +315,9 @@ const getStatusClass = (status) => {
 
 .btn :deep(.v-icon) {
 	font-size: 36px;
+}
+
+.tabs :deep(.v-slide-group__next, .v-slide-group__prev) {
+	display: none !important;
 }
 </style>

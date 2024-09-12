@@ -1,8 +1,8 @@
 <template>
-	<v-card width="calc(100% - 100px)" height="100vh" class="rounded-0 p style-0" flat="" color="#0F1010" min="">
-		<div style="position: absolute; z-index: 99; left: 0px; background: ; padding-top: 32px">
+	<v-card width="calc(100% - 100px)" height="100vh" class="rounded-0 style-0" flat="" color="#0F1010" min="">
+		<div class="" style="position: absolute; z-index: 99; left: 0px; background: ; padding-top: 32px">
 			<div class="d-flex align-center justify-space-between px-8 ga-10">
-				<h2 v-show="sidebar" class="logo pacifico" color="primary">OnCall</h2>
+				<h4 v-show="sidebar" class="logo pacifico" color="primary">OnCall</h4>
 				<v-icon
 					class="d-none d-md-block"
 					@click="adminStore.sideBtn = !adminStore.sideBtn"

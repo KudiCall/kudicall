@@ -1,14 +1,14 @@
 <template>
 	<div>
-		<Header />
-		<Hero />
+		<LazyHeader />
+		<LazyHero />
 		<div id="aboutUs" style="margin-bottom: 120px" />
-		<AboutUs />
-		<Features />
-		<BusinessType />
-		<FAQ />
-		<Testimonials />
-		<Contact />
-		<Footer />
+		<LazyAboutUs />
+		<LazyFeatures />
+		<LazyBusinessType />
+		<LazyFAQ />
+		<LazyTestimonials />
+		<LazyContact />
+		<LazyFooter />
 	</div>
 </template>
