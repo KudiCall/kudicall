@@ -1,4 +1,20 @@
 <template>
+	<!-- <v-sheet rounded="lg" style="background-color: transparent">
+		<v-tabs v-model="tab" :items="[1, 2, 3, 4]" slider-color="transparent" class="tabs">
+			<div class="wallet-chart">
+				<div class="d-flex justify-space-between align-center mb-1">
+					<p class="title">Wallet bal.</p>
+					<v-btn icon-size="24" color="#161818" append-icon="mdi mdi-chevron-down"> Daily </v-btn>
+				</div>
+				<p class="balance">$334,657,900</p>
+				<client-only placeholder="Loading...">
+					<div class="chart-container px-10">
+						<Bar :options="barOptions" :data="barData" />
+					</div>
+				</client-only>
+			</div>
+		</v-tabs>
+	</v-sheet> -->
 	<v-row class="d-flex flex-column flex-md-row my-10 ga-4">
 		<v-col cols="12" md="6" class="px-4" style="background-color: #111212; border-radius: 12px; flex: 1">
 			<div class="wallet-chart">

@@ -150,7 +150,7 @@ watch(
 
 const handleClick = () => {
 	if (currentPage.value === "User details") {
-		router.push("/admin/dashboard/Users");
+		router.push("/Users");
 	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
 		router.push("/admin/dashboard/Posts");
 	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
