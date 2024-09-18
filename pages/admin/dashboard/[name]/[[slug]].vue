@@ -89,11 +89,12 @@
 							<AdminDashboard />
 						</v-window-item>
 						<v-window-item :value="'Users'">
-							<AdminUsers @changePage="changePage" />
+							<p class="pa-8">User page</p>
+							<!-- <AdminUsers @changePage="changePage" /> -->
 						</v-window-item>
-						<v-window-item :value="'User details'">
+						<!-- <v-window-item :value="'User details'">
 							<AdminUserDetail />
-						</v-window-item>
+						</v-window-item> -->
 						<v-window-item :value="'Finance'">
 							<p class="pa-8">Finance page</p>
 						</v-window-item>
