@@ -6,7 +6,7 @@
 	</v-app>
 </template>
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 const title = ref("My App");
 const description = ref("My App Description");
 
@@ -29,6 +29,17 @@ useHead({
 		{ name: "twitter:image", content: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1727115612/OnCall/favicon1_owh5zd.png" }, // Use absolute URL
 	],
 	link: [{ rel: "icon", type: "image/x-icon", href: "/favicon1.png" }],
+});
+</script> -->
+
+<script setup lang="ts">
+useSeoMeta({
+	title: "OnCall",
+	ogTitle: "OnCall",
+	description: "Discover a new way to Shop, Connect, and Experience!!",
+	ogDescription: "Discover a new way to Shop, Connect, and Experience!!",
+	ogImage: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1727115612/OnCall/favicon1_owh5zd.png",
+	twitterCard: "summary_large_image",
 });
 </script>
 
