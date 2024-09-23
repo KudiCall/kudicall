@@ -26,26 +26,25 @@ export default defineNuxtConfig({
 					name: "description",
 					content: "Discover a new way to Shop, Connect, and Experience!!",
 				},
-				// Open Graph tags for better SEO on social sharing
+				// Open Graph tags
 				{ hid: "og:title", property: "og:title", content: "OnCall" },
+				{ hid: "og:description", property: "og:description", content: "Discover a new way to Shop, Connect, and Experience!!" },
 				{
-					hid: "og:description",
-					property: "og:description",
-					content: "Discover a new way to Shop, Connect, and Experience!!",
+					hid: "og:image",
+					property: "og:image",
+					content: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1727115612/OnCall/favicon1_owh5zd.png",
 				},
-				{ hid: "og:image", property: "og:image", content: "/favicon1.png" },
 				{ hid: "og:type", property: "og:type", content: "website" },
 				{ hid: "og:url", property: "og:url", content: "https://www.oncall-shop.netlify.app" },
-
-				// Twitter card tags for better SEO on Twitter
+				// Twitter card tags
 				{ hid: "twitter:card", name: "twitter:card", content: "summary_large_image" },
 				{ hid: "twitter:title", name: "twitter:title", content: "OnCall" },
+				{ hid: "twitter:description", name: "twitter:description", content: "Discover a new way to Shop, Connect, and Experience!!" },
 				{
-					hid: "twitter:description",
-					name: "twitter:description",
-					content: "Discover a new way to Shop, Connect, and Experience!!",
+					hid: "twitter:image",
+					name: "twitter:image",
+					content: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1727115612/OnCall/favicon1_owh5zd.png",
 				},
-				{ hid: "twitter:image", name: "twitter:image", content: "/favicon1.png" },
 			],
 			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon1.png" }],
 		},
