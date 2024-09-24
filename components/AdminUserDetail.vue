@@ -5,12 +5,12 @@
 				<v-card variant="outlined" class="pa-5 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">About user</p>
 					<v-row>
-						<v-col cols="4">
+						<v-col md="4" sm="12">
 							<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
 								<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
 							</v-avatar>
 						</v-col>
-						<v-col cols="8">
+						<v-col md="8" sm="12">
 							<div class="d-flex flex-column ga-2">
 								<p class="mb-3">
 									<span class="mr-5" style="color: rgba(143, 143, 143, 1)">#1234567879</span>
@@ -39,7 +39,7 @@
 				<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="">Activity history</p>
 				<div class="my-4">
 					<v-sheet rounded="lg" style="background-color: transparent">
-						<v-tabs v-model="tab" :items="tabs" slider-color="transparent" class="tabs">
+						<v-tabs v-model="tab" :items="tabs" slider-color="transparent" class="tabs" id="tabs">
 							<template v-slot:tab="{ item }">
 								<v-tab
 									:text="item.text"
@@ -317,7 +317,11 @@ const getStatusClass = (status) => {
 	font-size: 36px;
 }
 
-.tabs :deep(.v-slide-group__next, .v-slide-group__prev) {
+#tabs :deep(.v-slide-group__next) {
+	display: none !important;
+}
+
+#tabs :deep(.v-slide-group__prev) {
 	display: none !important;
 }
 </style>

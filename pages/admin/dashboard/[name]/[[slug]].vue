@@ -35,7 +35,10 @@
 						class="d-flex justify-space-between align-center px-5"
 						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
-						<div v-if="currentPage != 'User details' && currentPage != 'Add Products'" class="h-100 d-flex align-center">
+						<div
+							v-if="currentPage != 'User details' || (currentPage != 'Finance Detail' && currentPage != 'Add Products')"
+							class="h-100 d-flex align-center"
+						>
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
 						</div>
 						<div v-else class="h-100 d-flex align-center">
@@ -89,17 +92,22 @@
 							<AdminDashboard />
 						</v-window-item>
 						<v-window-item :value="'Users'">
-							<!-- <p class="pa-8">User page</p> -->
 							<AdminUsers @changePage="changePage" />
 						</v-window-item>
-						<!-- <v-window-item :value="'User details'">
+						<v-window-item :value="'User details'">
 							<AdminUserDetail />
-						</v-window-item> -->
+						</v-window-item>
 						<v-window-item :value="'Finance'">
-							<p class="pa-8">Finance page</p>
+							<AdminFinance />
+						</v-window-item>
+						<v-window-item :value="'Finance Detail'">
+							<AdminFinanceDetail />
 						</v-window-item>
 						<v-window-item :value="'Dispute'">
-							<p class="pa-8">Dispute page</p>
+							<AdminDispute />
+						</v-window-item>
+						<v-window-item :value="'Dispute Detail'">
+							<AdminDisputeDetail />
 						</v-window-item>
 						<v-window-item :value="'Admin'">
 							<p class="pa-8">Admin page</p>
@@ -117,6 +125,28 @@
 				</v-card>
 			</v-col>
 		</v-row>
+
+		<!-- <v-dialog v-model="confirmLogout" persistent>
+			<v-card class="d-flex flex-column ga-6" flat rounded="xl" max-width="400" style="background-color: #1c1c1c; padding: 20px 20px 30px">
+				<div class="d-flex align-center ga-2" style="width: fit-content">
+					<v-img src="/images/icons/logout.svg" width="24" height="24" />
+					<p style="font-weight: 500; color: #d92d20; font-size: 20px">Logout</p>
+				</div>
+				<p style="color: #ececec">Are you sure you want to logout of OnCall?</p>
+				<v-card-actions>
+					<v-btn class="px-4" @click="confirmLogout = false" style="font-weight: 600; font-size: 16px; background-color: #3e3e3e" rounded="xl">
+						No
+					</v-btn>
+					<v-btn
+						class="px-4"
+						style="font-weight: 600; font-size: 16px; background: linear-gradient(180deg, #f97066 2.68%, #b42318 84.82%)"
+						rounded="xl"
+					>
+						Yes
+					</v-btn>
+				</v-card-actions>
+			</v-card>
+		</v-dialog> -->
 	</div>
 </template>
 
@@ -128,6 +158,7 @@ import SearchComponent from "~/components/SearchComponent.vue";
 const sidebar = computed(() => useAdminStore().sideBtn);
 const router = useRouter();
 const route = useRoute();
+const confirmLogout = ref(false);
 
 const curPageValue = computed(() => {
 	if (currentPage.value === "User details") {
