@@ -35,12 +35,15 @@
 						class="d-flex justify-space-between align-center px-5"
 						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
-						<div v-if="currentPage != 'User details'" class="h-100 d-flex align-center">
+						<div
+							v-if="currentPage != 'Users details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
+							class="h-100 d-flex align-center"
+						>
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
 						</div>
 
 						<!-- <div
-							v-else-if="currentPage == 'User details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
+							v-else-if="currentPage == 'Users details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
 							class="h-100 d-flex align-center"
 						> -->
 						<div v-else class="h-100 d-flex align-center">
@@ -99,7 +102,7 @@
 						<v-window-item :value="'Users'">
 							<AdminUsers @changePage="changePage" />
 						</v-window-item>
-						<v-window-item :value="'User details'">
+						<v-window-item :value="'Users details'">
 							<AdminUserDetail />
 						</v-window-item>
 						<v-window-item :value="'Finance'">
@@ -156,10 +159,8 @@ const route = useRoute();
 const confirmLogout = ref(false);
 
 const paramId = route.params.slug;
-
 const currentPage = ref(route.params.name ? route.params.name : "Dashboard");
 
-// console.log("curr", route.params.slug);
 watch(
 	() => route.params.name,
 	(name) => {
@@ -167,45 +168,16 @@ watch(
 	}
 );
 
-const handleClick = () => {
-	if (currentPage.value === "User details") {
-		router.push("/Users");
-	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
-		router.push("/admin/dashboard/Posts");
-	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
-		router.push("/admin/dashboard/Articles");
-	} else {
-		router.push("/admin/dashboard/Users");
-	}
-};
-
 function changePage(n) {
 	if (n == "Logout") {
 		return (confirmLogout.value = true);
-		// return router.push("/admin/login");
 	}
 	return router.push(`/admin/dashboard/${n}`);
 }
 
-// function changeTab(n){
-// 	// router.push(`/admin/dashboard/Settings/${n}`)
-// 	route.params.tab = n
-// }
 function sideFn() {
 	useAdminStore().sideBtn = false;
 }
-
-// const curPageValue = computed(() => {
-// 	if (currentPage.value === "User details") {
-// 		return "Users";
-// 	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
-// 		return "Posts";
-// 	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
-// 		return "Articles";
-// 	} else {
-// 		return "Users";
-// 	}
-// });
 </script>
 
 <style>

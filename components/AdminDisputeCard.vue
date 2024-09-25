@@ -51,11 +51,11 @@ const iconColor = computed(() => {
 		case "Cancelled":
 			return "#D92D20";
 		case "Resolved":
-			return "#007E70"; // green for resolved
+			return "#007E70";
 		case "Pending":
-			return "#D37A39"; // orange for pending
+			return "#D37A39";
 		case "In progress":
-			return "#0B5297"; // blue for in progress
+			return "#0B5297";
 		default:
 			return;
 	}

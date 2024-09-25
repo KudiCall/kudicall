@@ -59,7 +59,23 @@
 								<!-- <span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span> -->
 							</template>
 							<template v-slot:[`item.actions`]="{ item }">
-								<v-icon icon="mdi mdi-dots-vertical" color="#ECECEC" @click="console.log(item.DisputeID)" />
+								<v-menu>
+									<template v-slot:activator="{ props }">
+										<v-icon v-bind="props" icon="mdi mdi-dots-vertical" color="#ECECEC" />
+									</template>
+
+									<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
+										<v-list-item
+											v-for="(menuItem, i) in menuItems(item)"
+											:key="i"
+											@click.stop="menuItem.action"
+											rounded-xl
+											style="color: #ececec; font-weight: 500"
+										>
+											<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
+										</v-list-item>
+									</v-list>
+								</v-menu>
 							</template>
 							<template #no-data>
 								<div class="text-center py-16" style="font-size: 20px; color: #ececec">
@@ -71,12 +87,18 @@
 				</v-tabs-window-item>
 			</v-tabs-window>
 		</v-card>
+
+		<v-dialog v-model="updateStatusModal" persistent max-width="755">
+			<AdminUpdateStatus :leftBtnAction="() => (updateStatusModal = false)" :rightBtnAction="() => (updateStatusModal = false)" />
+		</v-dialog>
 	</div>
 </template>
 
 <script setup>
-const users = ref([]);
+import { useRouter } from "vue-router";
+const router = useRouter();
 const selected = ref([]);
+const updateStatusModal = ref(false);
 const headers = ref([
 	{ title: "Date", key: "date" },
 
@@ -123,54 +145,48 @@ const tabs = [
 	},
 ];
 
-const initialize = () => {
-	users.value = [
-		{
-			DisputeID: 1234567898,
-			date: "24/08/24",
-			OrderID: 1234567898,
-			buyerEmail: "sandraapeh@gmail.com",
-			status: "Pending",
-			StoreEmail: "belindabikes@gmail.com",
-		},
-		{
-			DisputeID: 1234567899,
-			date: "24/08/24",
-			OrderID: 1234567898,
-			buyerEmail: "sandraapeh@gmail.com",
-			status: "Resolved",
-			StoreEmail: "belindabikes@gmail.com",
-		},
-		{
-			DisputeID: 1234567899,
-			date: "24/08/24",
-			OrderID: 1234567898,
-			buyerEmail: "sandraapeh@gmail.com",
-			StoreEmail: "belindabikes@gmail.com",
-			status: "Cancelled",
-		},
-		{
-			DisputeID: 1234567899,
-			date: "24/08/24",
-			OrderID: 1234567898,
-			buyerEmail: "sandraapeh@gmail.com",
-			StoreEmail: "belindabikes@gmail.com",
-			status: "In progress",
-		},
-		{
-			DisputeID: 1234567899,
-			date: "24/08/24",
-			OrderID: 1234567898,
-			buyerEmail: "sandraapeh@gmail.com",
-			StoreEmail: "belindabikes@gmail.com",
-			status: "In progress",
-		},
-	];
-};
-
-onMounted(() => {
-	initialize();
-});
+const users = [
+	{
+		DisputeID: 1234567898,
+		date: "24/08/24",
+		OrderID: 1234567898,
+		buyerEmail: "sandraapeh@gmail.com",
+		status: "Pending",
+		StoreEmail: "belindabikes@gmail.com",
+	},
+	{
+		DisputeID: 1234567899,
+		date: "24/08/24",
+		OrderID: 1234567898,
+		buyerEmail: "sandraapeh@gmail.com",
+		status: "Resolved",
+		StoreEmail: "belindabikes@gmail.com",
+	},
+	{
+		DisputeID: 1234567899,
+		date: "24/08/24",
+		OrderID: 1234567898,
+		buyerEmail: "sandraapeh@gmail.com",
+		StoreEmail: "belindabikes@gmail.com",
+		status: "Cancelled",
+	},
+	{
+		DisputeID: 1234567899,
+		date: "24/08/24",
+		OrderID: 1234567898,
+		buyerEmail: "sandraapeh@gmail.com",
+		StoreEmail: "belindabikes@gmail.com",
+		status: "In progress",
+	},
+	{
+		DisputeID: 1234567899,
+		date: "24/08/24",
+		OrderID: 1234567898,
+		buyerEmail: "sandraapeh@gmail.com",
+		StoreEmail: "belindabikes@gmail.com",
+		status: "In progress",
+	},
+];
 
 const getStatusClass = (status) => {
 	switch (status) {
@@ -185,6 +201,16 @@ const getStatusClass = (status) => {
 		default:
 			return "";
 	}
+};
+
+const menuItems = (userInfo) => {
+	return [
+		{
+			title: "View Detail",
+			action: () => router.push(`/admin/dashboard/Dispute%20Detail/${userInfo.DisputeID}`),
+		},
+		{ title: "Update Status", action: () => (updateStatusModal.value = true) },
+	];
 };
 </script>
 

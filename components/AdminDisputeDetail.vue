@@ -48,7 +48,7 @@
 							</span>
 						</p>
 					</div>
-					<v-btn class="btn my-4" size="x-large" rounded>View Dispute</v-btn>
+					<v-btn @click="updateStatusModal = true" class="btn my-4" size="x-large" rounded>Update status</v-btn>
 				</v-card>
 
 				<v-card variant="outlined" class="pa-5" style="border: 0.5px solid #303030; border-radius: 8px">
@@ -81,33 +81,15 @@
 				</v-card>
 			</v-col>
 		</v-row>
+
+		<v-dialog v-model="updateStatusModal" persistent max-width="755">
+			<AdminUpdateStatus :leftBtnAction="() => (updateStatusModal = false)" :rightBtnAction="() => (updateStatusModal = false)" />
+		</v-dialog>
 	</div>
 </template>
 
 <script setup>
-const products = [
-	{
-		id: 1,
-		name: "Modern sports shoe",
-		image: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1721951428/OnCall/Rectangle_3188_yjggrg.png",
-		price: 100,
-		quantity: 1,
-	},
-	{
-		id: 2,
-		name: "Futuristic sports shoe",
-		image: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1721951429/OnCall/Rectangle_3188_1_kibthh.png",
-		price: 150,
-		quantity: 2,
-	},
-	{
-		id: 3,
-		name: "Classic running shoe",
-		image: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1721951429/OnCall/Rectangle_3188_2_tamdit.png",
-		price: 150,
-		quantity: 2,
-	},
-];
+const updateStatusModal = ref(false);
 
 const transactionHistory = ref([
 	{

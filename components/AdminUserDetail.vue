@@ -72,7 +72,7 @@
 						<v-list-item
 							v-for="(menuItem, i) in menuItems({ UserID: 1, status: 'Active' })"
 							:key="i"
-							@click.stop="menuItem.action"
+							@click="menuItem.action"
 							rounded-xl
 							style="color: #ececec; font-weight: 500"
 						>
@@ -228,7 +228,7 @@ const menuItems = (userInfo) => {
 	return [
 		{
 			title: "Message user",
-			action: () => router.push(`/admin/dashboard/User%20details/${userInfo.UserID}`),
+			action: () => router.push(`/admin/dashboard/Users%20details/${userInfo.UserID}`),
 		},
 		{ title: `${userInfo.status == "Active" ? "Suspend" : "Reactivate"}`, action: () => (confirmSuspendModal.value = true) },
 		{ title: "Delete User", action: () => (confirmDeleteUser.value = true) },

@@ -159,7 +159,7 @@
 								style="background-color: transparent"
 							>
 								<template v-slot:[`item.UserID`]="{ item }">
-									<span @click="$router.push(`/admin/dashboard/User%20details/${item.UserID}`)" class="cursor-pointer">{{ item.UserID }}</span>
+									<span @click="$router.push(`/admin/dashboard/Users%20details/${item.UserID}`)" class="cursor-pointer">{{ item.UserID }}</span>
 								</template>
 								<template v-slot:[`item.status`]="{ item }">
 									<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
@@ -286,10 +286,6 @@ const handleApply = (selection) => {
 	console.log("Selected Items:", selection.selectedItems);
 };
 
-// const choose = (x) => {
-// 	ctx.emit("changePage", x);
-// };
-
 const users = ref([
 	{
 		UserID: 1234567898,
@@ -368,7 +364,7 @@ const menuItems = (userInfo) => {
 	return [
 		{
 			title: "View Detail",
-			action: () => router.push(`/admin/dashboard/User%20details/${userInfo.UserID}`),
+			action: () => router.push(`/admin/dashboard/Users%20details/${userInfo.UserID}`),
 		},
 		{ title: `${userInfo.status == "Active" ? "Suspend" : "Reactivate"}`, action: () => (confirmSuspendModal.value = true) },
 	];

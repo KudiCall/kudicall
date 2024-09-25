@@ -10,17 +10,54 @@
 				<v-card variant="outlined" class="pa-3" style="border: 0.5px solid #303030; border-radius: 8px">
 					<div class="d-flex justify-space-between align-center">
 						<p style="font-weight: 700; font-size: 20px; line-height: 28px; color: #ececec" class="">Transactions</p>
-						<v-btn
-							class="d-flex justify-space-between px-2"
-							icon-size="24"
-							rounded
-							size="large"
-							color="#161818"
-							append-icon="mdi mdi-chevron-down"
-							style="font-size: 16px; font-weight: 400; line-height: 22.4px; border-radius: 8px"
-						>
-							This month
-						</v-btn>
+
+						<v-menu>
+							<template v-slot:activator="{ props }">
+								<v-btn
+									v-bind="props"
+									class="d-flex justify-space-between px-2"
+									icon-size="24"
+									rounded
+									size="large"
+									color="#161818"
+									append-icon="mdi mdi-chevron-down"
+									style="font-size: 16px; font-weight: 400; line-height: 22.4px; border-radius: 8px"
+								>
+									This month
+								</v-btn>
+							</template>
+
+							<v-card class="pa-4 mt-4" width="275px" style="background-color: #141515; border-radius: 12px">
+								<v-card-title class="d-flex justify-start">
+									<div>
+										<h3 style="font-weight: 700; font-size: 18px; line-height: 24.5px; color: #ececec">Transaction time</h3>
+										<p style="font-weight: 400; font-size: 16px; line-height: 22.4px; color: #8f8f8f">Select target duration</p>
+									</div>
+								</v-card-title>
+
+								<!-- Static Radio Option -->
+								<div class="px-4 my-4 d-flex justify-space-between align-center">
+									<p style="font-weight: 500; font-size: 18px; line-height: 24.5px; color: #ececec">All</p>
+									<div>
+										<v-radio color="#1288FC" v-model="selectedDuration" value="All"></v-radio>
+									</div>
+								</div>
+
+								<!-- Dynamic Radio Options -->
+								<div class="px-4" style="background-color: transparent">
+									<div
+										v-for="duration in ['Today', 'This week', 'This month', 'This year']"
+										:key="duration"
+										class="d-flex justify-space-between align-center mb-2"
+									>
+										<p style="font-weight: 500; font-size: 18px; line-height: 24.5px; color: #ececec">{{ duration }}</p>
+										<div>
+											<v-radio color="#1288FC" v-model="selectedDuration" :value="duration"></v-radio>
+										</div>
+									</div>
+								</div>
+							</v-card>
+						</v-menu>
 					</div>
 
 					<v-sheet rounded="lg" style="background-color: transparent" class="my-4">
@@ -60,13 +97,43 @@
 									style="background-color: transparent"
 								>
 									<template v-slot:[`item.TxnID`]="{ item }">
-										<span @click="$router.push(`/admin/dashboard/Finance Detail/${item.TxnID}`)" class="cursor-pointer">{{ item.TxnID }}</span>
+										<span @click="$router.push(`/admin/dashboard/Finance Detail/${item.TxnID}`)" class="cursor-pointer">#{{ item.TxnID }}</span>
+									</template>
+									<template v-slot:[`item.user`]="{ item }">
+										<div class="d-flex align-center">
+											<v-avatar size="24" class="mr-2">
+												<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
+											</v-avatar>
+											<p>{{ item.user }}</p>
+										</div>
+									</template>
+									<template v-slot:[`item.amount`]="{ item }">
+										<span> ${{ item.amount }}</span>
 									</template>
 									<template v-slot:[`item.status`]="{ item }">
 										<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
 									</template>
-									<template v-slot:[`item.actions`]="{ item }">
+									<!-- <template v-slot:[`item.actions`]="{ item }">
 										<v-icon icon="mdi mdi-dots-vertical" color="#ECECEC" @click="console.log(item.TxnID)" />
+									</template> -->
+									<template v-slot:[`item.actions`]="{ item }">
+										<v-menu>
+											<template v-slot:activator="{ props }">
+												<v-icon v-bind="props" icon="mdi mdi-dots-vertical" color="#ECECEC" />
+											</template>
+
+											<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
+												<v-list-item
+													v-for="(menuItem, i) in menuItems(item)"
+													:key="i"
+													@click.stop="menuItem.action"
+													rounded-xl
+													style="color: #ececec; font-weight: 500"
+												>
+													<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
+												</v-list-item>
+											</v-list>
+										</v-menu>
 									</template>
 									<template #no-data>
 										<div class="text-center py-16" style="font-size: 20px; color: #ececec">
@@ -91,6 +158,8 @@
 </template>
 
 <script setup>
+import { useRouter } from "vue-router";
+const router = useRouter();
 const selected = ref([]);
 const headers = ref([
 	{
@@ -107,7 +176,8 @@ const headers = ref([
 	{ title: "Note", key: "note" },
 	{ title: "", key: "actions", sortable: false },
 ]);
-const tab = ref("tab-1");
+const tab = ref("Withdrawals");
+const selectedDuration = ref("All");
 const financeSummary = [
 	{ name: "Total Deposits", value: "2,000,000,000,000" },
 	{ name: "Total Withdrawals", value: "2,000,000,000,000" },
@@ -118,19 +188,19 @@ const financeSummary = [
 const tabs = [
 	{
 		text: "Withdrawals",
-		value: "tab-1",
+		value: "Withdrawals",
 	},
 	{
 		text: "Deposits",
-		value: "tab-2",
+		value: "Deposits",
 	},
 	{
 		text: "Transfers",
-		value: "tab-3",
+		value: "Transfers",
 	},
 	{
 		text: "Escrow",
-		value: "tab-4",
+		value: "Escrow",
 	},
 ];
 
@@ -192,6 +262,16 @@ const getStatusClass = (status) => {
 		default:
 			return "";
 	}
+};
+
+const menuItems = (userInfo) => {
+	return [
+		{
+			title: "View Detail",
+			action: () => router.push(`/admin/dashboard/Finance%20Detail/${userInfo.TxnID}`),
+		},
+		{ title: `${userInfo.status && "Resolve Dispute"}`, action: () => router.push(`/admin/dashboard/Dispute`) },
+	];
 };
 </script>
 
