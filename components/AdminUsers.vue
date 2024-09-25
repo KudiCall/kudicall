@@ -207,7 +207,7 @@
 				title="Suspend user"
 				message="Are you sure you want to suspend this user?"
 				infoTitle="Suspending a user will:"
-				:info="actionInfo"
+				:info="suspendActionInfo"
 				leftBtn="Cancel"
 				rightBtn="Suspend user"
 				img="/images/user-remove.svg"
@@ -220,7 +220,7 @@
 				title="Delete all users"
 				message="Are you sure you want to delete these users? This action cannot be undone?"
 				infoTitle="Deleting a user will:"
-				:info="actionInfo"
+				:info="removeActionInfo"
 				leftBtn="Cancel"
 				rightBtn="Delete"
 				img="/images/user-remove.svg"
@@ -387,7 +387,8 @@ const getStatusClass = (status) => {
 	}
 };
 
-const actionInfo = ["Permanently remove their account and all associated data", "Remove their ability to log in and access the platform"];
+const removeActionInfo = ["Permanently remove their account and all associated data", "Remove their ability to log in and access the platform"];
+const suspendActionInfo = ["Remove their ability to log in and access the platform until you reactivate them"];
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-	<div class="px-4 px-md-5">
+	<div class="px-4 px-md-5 mb-10">
 		<v-row dense>
 			<v-col cols="12" md="8">
 				<v-card variant="outlined" class="pa-4 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
@@ -51,45 +51,35 @@
 							</template>
 						</v-tabs>
 					</v-sheet>
-					<div class="w-66 w-md-25 ml-auto">
+					<div class="w-66 w-md-50 ml-auto">
 						<SearchComponent placeholder="Search" />
 					</div>
 				</div>
 				<v-tabs-window v-model="tab">
 					<v-tabs-window-item v-for="item in tabs" :key="item.value" :value="item.value">
-						<v-card class="px-4" style="background-color: transparent">
-							<v-data-table
-								class="custom-table"
-								v-model="selected"
-								:headers="headers"
-								:items="users"
-								item-value="UserID"
-								items-per-page="6"
-								:hide-default-footer="users.length < 5"
-								style="background-color: transparent"
-							>
-								<template v-slot:[`item.UserID`]="{ item }">
-									<span class="cursor-pointer text-decoration-underline" style="color: #00b4a0">#{{ item.UserID }}</span>
-								</template>
-								<template v-slot:[`item.status`]="{ item }">
-									<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
-								</template>
-								<template v-slot:[`item.actions`]="{ item }">
-									<v-icon icon="mdi mdi-dots-vertical" color="#ECECEC" @click="console.log(item.UserID)" />
-								</template>
-								<template #no-data>
-									<div class="text-center py-16" style="font-size: 20px; color: #ececec">
-										<p>No user yet</p>
-									</div>
-								</template>
-							</v-data-table>
-						</v-card>
+						<component :is="getComponent(tab)" />
 					</v-tabs-window-item>
 				</v-tabs-window>
 			</v-col>
 
 			<v-col cols="12" md="4">
-				<v-btn class="btn mb-10" size="x-large" rounded append-icon="mdi mdi-menu-down">Actions</v-btn>
+				<v-menu>
+					<template v-slot:activator="{ props }">
+						<v-btn v-bind="props" class="btn mb-10" size="x-large" rounded append-icon="mdi mdi-menu-down">Actions</v-btn>
+					</template>
+
+					<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
+						<v-list-item
+							v-for="(menuItem, i) in menuItems({ UserID: 1, status: 'Active' })"
+							:key="i"
+							@click.stop="menuItem.action"
+							rounded-xl
+							style="color: #ececec; font-weight: 500"
+						>
+							<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
+						</v-list-item>
+					</v-list>
+				</v-menu>
 				<v-card variant="outlined" class="pa-5" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pb-8">Users analytics</p>
 					<AdminUsersChart />
@@ -129,34 +119,55 @@
 				</v-card>
 			</v-col>
 		</v-row>
+
+		<v-dialog v-model="confirmSuspendModal" persistent max-width="755">
+			<ConfirmActionModal
+				title="Suspend user"
+				message="Are you sure you want to suspend this user?"
+				infoTitle="Suspending a user will:"
+				:info="suspendActionInfo"
+				leftBtn="Cancel"
+				rightBtn="Suspend user"
+				img="/images/user-remove.svg"
+				:leftBtnAction="() => (confirmSuspendModal = false)"
+				:rightBtnAction="() => (confirmSuspendModal = false)"
+			/>
+		</v-dialog>
+		<v-dialog v-model="confirmDeleteUser" persistent max-width="755">
+			<ConfirmActionModal
+				title="Delete user"
+				message="Are you sure you want to delete this user? This action cannot be undone."
+				infoTitle="Deleting a user will:"
+				:info="removeActionInfo"
+				leftBtn="Cancel"
+				rightBtn="Delete"
+				img="/images/user-remove.svg"
+				:leftBtnAction="() => (confirmDeleteUser = false)"
+				:rightBtnAction="() => (confirmDeleteUser = false)"
+			/>
+		</v-dialog>
 	</div>
 </template>
 
 <script setup>
-const users = ref([]);
-const selected = ref([]);
-const headers = ref([
-	{
-		title: "UserID",
-		align: "start",
-		sortable: false,
-		key: "UserID",
-	},
-	{ title: "Country", key: "country" },
-	{ title: "Phone number", key: "phoneNo" },
-	{ title: "User category", key: "category" },
-	{ title: "Status", key: "status" },
-	{ title: "", key: "actions", sortable: false },
-]);
-const tab = ref("tab-1");
+import AdminUserPurchases from "@/components/AdminUserPurchases.vue";
+import AdminUserSales from "@/components/AdminUserSales.vue";
+import AdminUserDispute from "@/components/AdminUserDispute.vue";
+import AdminUserCollaborator from "@/components/AdminUserCollaborator.vue";
+import AdminUserDeposits from "@/components/AdminUserDeposits.vue";
+import AdminUserWithdrawals from "@/components/AdminUserWithdrawals.vue";
+import AdminUserTransfers from "@/components/AdminUserTransfers.vue";
+const tab = ref("Sales");
+const confirmSuspendModal = ref(false);
+const confirmDeleteUser = ref(false);
 const tabs = [
-	{
-		text: "Purchases",
-		value: "Purchases",
-	},
 	{
 		text: "Sales",
 		value: "Sales",
+	},
+	{
+		text: "Purchases",
+		value: "Purchases",
 	},
 	{
 		text: "Dispute",
@@ -180,71 +191,25 @@ const tabs = [
 	},
 ];
 
-const initialize = () => {
-	users.value = [
-		{
-			UserID: 1234567898,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "Active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "Suspended",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-
-		{
-			UserID: 1234567899,
-			country: "Nigeria",
-			phoneNo: "+2348193789403",
-			category: "Buyer",
-			status: "In active",
-		},
-	];
+// Function to return a component based on the tab chosen
+const getComponent = (tab) => {
+	switch (tab) {
+		case "Purchases":
+			return AdminUserPurchases;
+		case "Sales":
+			return AdminUserSales;
+		case "Dispute":
+			return AdminUserDispute;
+		case "Collaborator":
+			return AdminUserCollaborator;
+		case "Deposits":
+			return AdminUserDeposits;
+		case "Withdrawals":
+			return AdminUserWithdrawals;
+		default:
+			return AdminUserTransfers;
+	}
 };
-
-onMounted(() => {
-	initialize();
-});
 
 const getStatusClass = (status) => {
 	switch (status) {
@@ -258,6 +223,20 @@ const getStatusClass = (status) => {
 			return "";
 	}
 };
+
+const menuItems = (userInfo) => {
+	return [
+		{
+			title: "Message user",
+			action: () => router.push(`/admin/dashboard/User%20details/${userInfo.UserID}`),
+		},
+		{ title: `${userInfo.status == "Active" ? "Suspend" : "Reactivate"}`, action: () => (confirmSuspendModal.value = true) },
+		{ title: "Delete User", action: () => (confirmDeleteUser.value = true) },
+	];
+};
+
+const removeActionInfo = ["Permanently remove their account and all associated data", "Remove their ability to log in and access the platform"];
+const suspendActionInfo = ["Remove their ability to log in and access the platform until you reactivate them"];
 </script>
 
 <style scoped>

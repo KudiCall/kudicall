@@ -91,7 +91,6 @@
 </template>
 
 <script setup>
-const users = ref([]);
 const selected = ref([]);
 const headers = ref([
 	{
@@ -135,59 +134,53 @@ const tabs = [
 	},
 ];
 
-const initialize = () => {
-	users.value = [
-		{
-			TxnID: 1234567898,
-			date: "24/08/24",
-			channel: "Bank transfer",
-			user: "Felicia Murray",
-			amount: "30",
-			status: "Completed",
-			note: "This is a note",
-		},
-		{
-			TxnID: 1234567899,
-			date: "24/08/24",
-			channel: "USSD",
-			user: "Felicia Murray",
-			amount: "100",
-			status: "Failed",
-			note: "Network failure",
-		},
-		{
-			TxnID: 1234567899,
-			date: "24/08/24",
-			channel: "Bank transfer",
-			user: "Felicia Murray",
-			amount: "100",
-			status: "Completed",
-			note: "-",
-		},
-		{
-			TxnID: 1234567899,
-			date: "24/08/24",
-			channel: "Bank transfer",
-			user: "Felicia Murray",
-			amount: "30",
-			status: "Completed",
-			note: "-",
-		},
-		{
-			TxnID: 1234567899,
-			date: "24/08/24",
-			channel: "Bank transfer",
-			user: "Felicia Murray",
-			amount: "30",
-			status: "Completed",
-			note: "This is a note",
-		},
-	];
-};
-
-onMounted(() => {
-	initialize();
-});
+const users = [
+	{
+		TxnID: 1234567898,
+		date: "24/08/24",
+		channel: "Bank transfer",
+		user: "Felicia Murray",
+		amount: "30",
+		status: "Completed",
+		note: "This is a note",
+	},
+	{
+		TxnID: 1234567899,
+		date: "24/08/24",
+		channel: "USSD",
+		user: "Felicia Murray",
+		amount: "100",
+		status: "Failed",
+		note: "Network failure",
+	},
+	{
+		TxnID: 1234567899,
+		date: "24/08/24",
+		channel: "Bank transfer",
+		user: "Felicia Murray",
+		amount: "100",
+		status: "Completed",
+		note: "-",
+	},
+	{
+		TxnID: 1234567899,
+		date: "24/08/24",
+		channel: "Bank transfer",
+		user: "Felicia Murray",
+		amount: "30",
+		status: "Completed",
+		note: "-",
+	},
+	{
+		TxnID: 1234567899,
+		date: "24/08/24",
+		channel: "Bank transfer",
+		user: "Felicia Murray",
+		amount: "30",
+		status: "Completed",
+		note: "This is a note",
+	},
+];
 
 const getStatusClass = (status) => {
 	switch (status) {
