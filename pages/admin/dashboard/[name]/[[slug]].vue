@@ -35,13 +35,19 @@
 						class="d-flex justify-space-between align-center px-5"
 						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
-						<div
-							v-if="currentPage != 'User details' || (currentPage != 'Finance Detail' && currentPage != 'Add Products')"
-							class="h-100 d-flex align-center"
-						>
+						<div v-if="currentPage != 'User details'" class="h-100 d-flex align-center">
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
 						</div>
+
+						<!-- <div
+							v-else-if="currentPage == 'User details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
+							class="h-100 d-flex align-center"
+						> -->
 						<div v-else class="h-100 d-flex align-center">
+							<v-icon @click="$router.back()" size="32" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
+							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">#{{ paramId }}</p>
+						</div>
+						<!-- <div v-else class="h-100 d-flex align-center">
 							<v-btn
 								v-if="!(currentPage == 'Create Post') || currentPage == 'Create Article'"
 								@click="handleClick"
@@ -51,10 +57,9 @@
 								class="pa-0"
 							>
 								<v-icon size="24" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
-								1234567879
-								<!-- Back to {{ curPageValue }} -->
+								lslsl
 							</v-btn>
-						</div>
+						</div> -->
 
 						<div class="d-flex ga-4 align-center d-md-none">
 							<v-avatar size="38" class="pa-2" color="#313131">
@@ -126,27 +131,17 @@
 			</v-col>
 		</v-row>
 
-		<!-- <v-dialog v-model="confirmLogout" persistent>
-			<v-card class="d-flex flex-column ga-6" flat rounded="xl" max-width="400" style="background-color: #1c1c1c; padding: 20px 20px 30px">
-				<div class="d-flex align-center ga-2" style="width: fit-content">
-					<v-img src="/images/icons/logout.svg" width="24" height="24" />
-					<p style="font-weight: 500; color: #d92d20; font-size: 20px">Logout</p>
-				</div>
-				<p style="color: #ececec">Are you sure you want to logout of OnCall?</p>
-				<v-card-actions>
-					<v-btn class="px-4" @click="confirmLogout = false" style="font-weight: 600; font-size: 16px; background-color: #3e3e3e" rounded="xl">
-						No
-					</v-btn>
-					<v-btn
-						class="px-4"
-						style="font-weight: 600; font-size: 16px; background: linear-gradient(180deg, #f97066 2.68%, #b42318 84.82%)"
-						rounded="xl"
-					>
-						Yes
-					</v-btn>
-				</v-card-actions>
-			</v-card>
-		</v-dialog> -->
+		<v-dialog v-model="confirmLogout" persistent max-width="550">
+			<ConfirmActionModal
+				title="Logout"
+				message="Are you sure you want to logout of OnCall?"
+				leftBtn="Cancel"
+				rightBtn="Logout"
+				img="/images/logout.svg"
+				:leftBtnAction="() => (confirmLogout = false)"
+				:rightBtnAction="() => (confirmLogout = $router.push('/admin/login'))"
+			/>
+		</v-dialog>
 	</div>
 </template>
 
@@ -160,19 +155,11 @@ const router = useRouter();
 const route = useRoute();
 const confirmLogout = ref(false);
 
-const curPageValue = computed(() => {
-	if (currentPage.value === "User details") {
-		return "Users";
-	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
-		return "Posts";
-	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
-		return "Articles";
-	} else {
-		return "Users";
-	}
-});
+const paramId = route.params.slug;
+
 const currentPage = ref(route.params.name ? route.params.name : "Dashboard");
 
+// console.log("curr", route.params.slug);
 watch(
 	() => route.params.name,
 	(name) => {
@@ -194,7 +181,8 @@ const handleClick = () => {
 
 function changePage(n) {
 	if (n == "Logout") {
-		return router.push("/admin/login");
+		return (confirmLogout.value = true);
+		// return router.push("/admin/login");
 	}
 	return router.push(`/admin/dashboard/${n}`);
 }
@@ -206,6 +194,18 @@ function changePage(n) {
 function sideFn() {
 	useAdminStore().sideBtn = false;
 }
+
+// const curPageValue = computed(() => {
+// 	if (currentPage.value === "User details") {
+// 		return "Users";
+// 	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
+// 		return "Posts";
+// 	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
+// 		return "Articles";
+// 	} else {
+// 		return "Users";
+// 	}
+// });
 </script>
 
 <style>

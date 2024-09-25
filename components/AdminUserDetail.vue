@@ -2,39 +2,35 @@
 	<div class="px-4 px-md-5">
 		<v-row dense>
 			<v-col cols="12" md="8">
-				<v-card variant="outlined" class="pa-5 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
+				<v-card variant="outlined" class="pa-4 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">About user</p>
-					<v-row>
-						<v-col md="4" sm="12">
-							<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
-								<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
-							</v-avatar>
-						</v-col>
-						<v-col md="8" sm="12">
-							<div class="d-flex flex-column ga-2">
-								<p class="mb-3">
-									<span class="mr-5" style="color: rgba(143, 143, 143, 1)">#1234567879</span>
-									<span :class="getStatusClass('Active')" class="user-status">{{ "Active" }}</span>
-								</p>
-								<p style="font-weight: 800; font-size: 32px; color: rgba(236, 236, 236, 1)">Stephanie Sunday</p>
-								<p>+234 815 7689 905</p>
-								<div>
-									<span class="mr-10">
-										<span class="mr-2" style="color: rgba(69, 69, 69, 1); font-weight: 600">User type</span>
-										<span style="color: rgba(181, 181, 181, 1); font-weight: 600">Buyer | Vendor</span>
-									</span>
-									<span>
-										<span class="mr-2" style="color: rgba(69, 69, 69, 1); font-weight: 600">Location</span>
-										<span style="color: rgba(181, 181, 181, 1); font-weight: 600">Nigeria <span class="dot">.</span> Abuja</span>
-									</span>
-								</div>
+					<div class="d-flex align-center ga-10">
+						<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
+							<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
+						</v-avatar>
+						<div class="d-flex flex-1 flex-column ga-2">
+							<p class="mb-3">
+								<span class="mr-5" style="color: rgba(143, 143, 143, 1)">#1234567879</span>
+								<span :class="getStatusClass('Active')" class="user-status">{{ "Active" }}</span>
+							</p>
+							<p style="font-weight: 800; font-size: 32px; color: rgba(236, 236, 236, 1)">Stephanie Sunday</p>
+							<p>+234 815 7689 905</p>
+							<div>
+								<span class="mr-10">
+									<span class="mr-2" style="color: rgba(69, 69, 69, 1); font-weight: 600">User type</span>
+									<span style="color: rgba(181, 181, 181, 1); font-weight: 600">Buyer | Vendor</span>
+								</span>
 								<span>
-									<span class="mr-2" style="color: rgba(69, 69, 69, 1); font-weight: 600">Since</span>
-									<span style="color: rgba(181, 181, 181, 1); font-weight: 600">August 02 <span class="dot">.</span> 2024</span>
+									<span class="mr-2" style="color: rgba(69, 69, 69, 1); font-weight: 600">Location</span>
+									<span style="color: rgba(181, 181, 181, 1); font-weight: 600">Nigeria <span class="dot">.</span> Abuja</span>
 								</span>
 							</div>
-						</v-col>
-					</v-row>
+							<span>
+								<span class="mr-2" style="color: rgba(69, 69, 69, 1); font-weight: 600">Since</span>
+								<span style="color: rgba(181, 181, 181, 1); font-weight: 600">August 02 <span class="dot">.</span> 2024</span>
+							</span>
+						</div>
+					</div>
 				</v-card>
 				<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="">Activity history</p>
 				<div class="my-4">
@@ -59,7 +55,6 @@
 						<SearchComponent placeholder="Search" />
 					</div>
 				</div>
-
 				<v-tabs-window v-model="tab">
 					<v-tabs-window-item v-for="item in tabs" :key="item.value" :value="item.value">
 						<v-card class="px-4" style="background-color: transparent">
