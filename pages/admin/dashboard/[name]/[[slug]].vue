@@ -121,7 +121,7 @@
 							<p class="pa-8">Admin page</p>
 						</v-window-item>
 						<v-window-item :value="'Category'">
-							<p class="pa-8">Category page</p>
+							<AdminCategory />
 						</v-window-item>
 						<v-window-item :value="'Messages'">
 							<p class="pa-8">Messages page</p>
