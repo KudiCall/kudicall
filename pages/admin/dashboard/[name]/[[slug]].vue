@@ -36,7 +36,7 @@
 						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
 						<div
-							v-if="currentPage != 'Users details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
+							v-if="currentPage != 'Users details' && currentPage != 'Finance Detail' && currentPage != 'Dispute Detail'"
 							class="h-100 d-flex align-center"
 						>
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>

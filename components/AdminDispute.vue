@@ -2,7 +2,7 @@
 	<div class="px-4 px-md-5">
 		<p style="font-weight: 700; font-size: 20px; line-height: 28px; color: #ececec" class="pb-4">Summary</p>
 
-		<v-row class="d-flex align-center justify-space-between my-4 ga-4 px-3">
+		<v-row class="d-flex align-center my-4 ga-4 px-3">
 			<AdminDisputeCard v-for="(item, index) in disputeSummary" :key="index" :name="item.name" :value="item.value" />
 		</v-row>
 

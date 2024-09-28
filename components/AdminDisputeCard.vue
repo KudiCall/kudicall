@@ -1,5 +1,5 @@
 <template>
-	<v-card variant="outlined" class="mb-4 py-2" :style="{ border: '0.5px solid #303030' }" style="min-width: 240px">
+	<v-card variant="outlined" class="mb-4 py-2" :style="{ border: '0.5px solid #303030' }" style="width: 230px">
 		<v-card-text>
 			<v-avatar :size="32" :style="avatarStyle">
 				<v-icon :size="24" :color="iconColor" :icon="icon"></v-icon>

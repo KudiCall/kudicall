@@ -27,7 +27,7 @@
 								</v-btn>
 							</template>
 
-							<v-card class="pa-4 mt-4" width="275px" style="background-color: #141515; border-radius: 12px">
+							<v-card class="pa-2 mt-4" width="250px" style="background-color: #141515; border-radius: 12px">
 								<v-card-title class="d-flex justify-start">
 									<div>
 										<h3 style="font-weight: 700; font-size: 18px; line-height: 24.5px; color: #ececec">Transaction time</h3>
@@ -79,69 +79,7 @@
 					</v-sheet>
 					<v-tabs-window v-model="tab">
 						<v-tabs-window-item v-for="item in tabs" :key="item.value" :value="item.value">
-							<v-card class="px-md-4" style="background-color: transparent">
-								<div class="d-flex justify-end">
-									<div class="w-100 w-md-33">
-										<SearchComponent placeholder="Search" />
-									</div>
-								</div>
-
-								<v-data-table
-									class="custom-table"
-									v-model="selected"
-									:headers="headers"
-									:items="users"
-									item-value="TxnID"
-									items-per-page="6"
-									:hide-default-footer="users.length < 5"
-									style="background-color: transparent"
-								>
-									<template v-slot:[`item.TxnID`]="{ item }">
-										<span @click="$router.push(`/admin/dashboard/Finance Detail/${item.TxnID}`)" class="cursor-pointer">#{{ item.TxnID }}</span>
-									</template>
-									<template v-slot:[`item.user`]="{ item }">
-										<div class="d-flex align-center">
-											<v-avatar size="24" class="mr-2">
-												<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
-											</v-avatar>
-											<p>{{ item.user }}</p>
-										</div>
-									</template>
-									<template v-slot:[`item.amount`]="{ item }">
-										<span> ${{ item.amount }}</span>
-									</template>
-									<template v-slot:[`item.status`]="{ item }">
-										<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
-									</template>
-									<!-- <template v-slot:[`item.actions`]="{ item }">
-										<v-icon icon="mdi mdi-dots-vertical" color="#ECECEC" @click="console.log(item.TxnID)" />
-									</template> -->
-									<template v-slot:[`item.actions`]="{ item }">
-										<v-menu>
-											<template v-slot:activator="{ props }">
-												<v-icon v-bind="props" icon="mdi mdi-dots-vertical" color="#ECECEC" />
-											</template>
-
-											<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
-												<v-list-item
-													v-for="(menuItem, i) in menuItems(item)"
-													:key="i"
-													@click.stop="menuItem.action"
-													rounded-xl
-													style="color: #ececec; font-weight: 500"
-												>
-													<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
-												</v-list-item>
-											</v-list>
-										</v-menu>
-									</template>
-									<template #no-data>
-										<div class="text-center py-16" style="font-size: 20px; color: #ececec">
-											<p>No user yet</p>
-										</div>
-									</template>
-								</v-data-table>
-							</v-card>
+							<component :is="getComponent(item.value)" />
 						</v-tabs-window-item>
 					</v-tabs-window>
 				</v-card>
@@ -158,24 +96,30 @@
 </template>
 
 <script setup>
+import AdminFinanceWithdrawal from "@/components/AdminFinanceWithdrawal.vue";
+import AdminFinanceDeposit from "@/components/AdminFinanceDeposit.vue";
+import AdminFinanceTransfer from "@/components/AdminFinanceTransfer.vue";
+import AdminFinanceEscrow from "@/components/AdminFinanceEscrow.vue";
+
 import { useRouter } from "vue-router";
 const router = useRouter();
+const viewDetailModal = ref(false);
 const selected = ref([]);
-const headers = ref([
-	{
-		title: "Txn. ID",
-		align: "start",
-		sortable: false,
-		key: "TxnID",
-	},
-	{ title: "Date", key: "date" },
-	{ title: "Channel", key: "channel" },
-	{ title: "User", key: "user" },
-	{ title: "Amount", key: "amount" },
-	{ title: "Status", key: "status" },
-	{ title: "Note", key: "note" },
-	{ title: "", key: "actions", sortable: false },
-]);
+// const headers = ref([
+// 	{
+// 		title: "Txn. ID",
+// 		align: "start",
+// 		sortable: false,
+// 		key: "TxnID",
+// 	},
+// 	{ title: "Date", key: "date" },
+// 	{ title: "Channel", key: "channel" },
+// 	{ title: "User", key: "user" },
+// 	{ title: "Amount", key: "amount" },
+// 	{ title: "Status", key: "status" },
+// 	{ title: "Note", key: "note" },
+// 	{ title: "", key: "actions", sortable: false },
+// ]);
 const tab = ref("Withdrawals");
 const selectedDuration = ref("All");
 const financeSummary = [
@@ -204,53 +148,68 @@ const tabs = [
 	},
 ];
 
-const users = [
-	{
-		TxnID: 1234567898,
-		date: "24/08/24",
-		channel: "Bank transfer",
-		user: "Felicia Murray",
-		amount: "30",
-		status: "Completed",
-		note: "This is a note",
-	},
-	{
-		TxnID: 1234567899,
-		date: "24/08/24",
-		channel: "USSD",
-		user: "Felicia Murray",
-		amount: "100",
-		status: "Failed",
-		note: "Network failure",
-	},
-	{
-		TxnID: 1234567899,
-		date: "24/08/24",
-		channel: "Bank transfer",
-		user: "Felicia Murray",
-		amount: "100",
-		status: "Completed",
-		note: "-",
-	},
-	{
-		TxnID: 1234567899,
-		date: "24/08/24",
-		channel: "Bank transfer",
-		user: "Felicia Murray",
-		amount: "30",
-		status: "Completed",
-		note: "-",
-	},
-	{
-		TxnID: 1234567899,
-		date: "24/08/24",
-		channel: "Bank transfer",
-		user: "Felicia Murray",
-		amount: "30",
-		status: "Completed",
-		note: "This is a note",
-	},
-];
+const getComponent = (tab) => {
+	switch (tab) {
+		case "Withdrawals":
+			return AdminFinanceWithdrawal;
+		case "Deposits":
+			return AdminFinanceDeposit;
+		case "Transfers":
+			return AdminFinanceTransfer;
+		case "Escrow":
+			return AdminFinanceEscrow;
+		default:
+			return null; // or a fallback component
+	}
+};
+
+// const users = [
+// 	{
+// 		TxnID: 1234567898,
+// 		date: "24/08/24",
+// 		channel: "Bank transfer",
+// 		user: "Felicia Murray",
+// 		amount: "30",
+// 		status: "Completed",
+// 		note: "This is a note",
+// 	},
+// 	{
+// 		TxnID: 1234567899,
+// 		date: "24/08/24",
+// 		channel: "USSD",
+// 		user: "Felicia Murray",
+// 		amount: "100",
+// 		status: "Failed",
+// 		note: "Network failure",
+// 	},
+// 	{
+// 		TxnID: 1234567899,
+// 		date: "24/08/24",
+// 		channel: "Bank transfer",
+// 		user: "Felicia Murray",
+// 		amount: "100",
+// 		status: "Completed",
+// 		note: "-",
+// 	},
+// 	{
+// 		TxnID: 1234567899,
+// 		date: "24/08/24",
+// 		channel: "Bank transfer",
+// 		user: "Felicia Murray",
+// 		amount: "30",
+// 		status: "Completed",
+// 		note: "-",
+// 	},
+// 	{
+// 		TxnID: 1234567899,
+// 		date: "24/08/24",
+// 		channel: "Bank transfer",
+// 		user: "Felicia Murray",
+// 		amount: "30",
+// 		status: "Completed",
+// 		note: "This is a note",
+// 	},
+// ];
 
 const getStatusClass = (status) => {
 	switch (status) {
@@ -268,7 +227,7 @@ const menuItems = (userInfo) => {
 	return [
 		{
 			title: "View Detail",
-			action: () => router.push(`/admin/dashboard/Finance%20Detail/${userInfo.TxnID}`),
+			action: () => (viewDetailModal = true),
 		},
 		{ title: `${userInfo.status && "Resolve Dispute"}`, action: () => router.push(`/admin/dashboard/Dispute`) },
 	];

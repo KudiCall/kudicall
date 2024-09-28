@@ -1,6 +1,6 @@
 <template>
 	<v-card width="calc(100% - 100px)" height="100vh" class="rounded-0 style-0" flat="" color="#0F1010" min="">
-		<div class="" style="position: absolute; z-index: 99; left: 0px; background: ; padding-top: 32px">
+		<div class="" style="position: absolute; z-index: 99; left: 0px; padding-top: 32px">
 			<div class="d-flex align-center justify-space-between px-8 ga-10">
 				<h4 v-show="sidebar" class="logo pacifico" color="primary">OnCall</h4>
 				<v-icon
