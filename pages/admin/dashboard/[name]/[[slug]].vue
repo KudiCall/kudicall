@@ -35,10 +35,22 @@
 						class="d-flex justify-space-between align-center px-5"
 						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
-						<div v-if="currentPage != 'User details' && currentPage != 'Add Products'" class="h-100 d-flex align-center">
+						<div
+							v-if="currentPage != 'Users details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
+							class="h-100 d-flex align-center"
+						>
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
 						</div>
+
+						<!-- <div
+							v-else-if="currentPage == 'Users details' || currentPage == 'Finance Detail' || currentPage == 'Dispute Detail'"
+							class="h-100 d-flex align-center"
+						> -->
 						<div v-else class="h-100 d-flex align-center">
+							<v-icon @click="$router.back()" size="32" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
+							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">#{{ paramId }}</p>
+						</div>
+						<!-- <div v-else class="h-100 d-flex align-center">
 							<v-btn
 								v-if="!(currentPage == 'Create Post') || currentPage == 'Create Article'"
 								@click="handleClick"
@@ -48,10 +60,9 @@
 								class="pa-0"
 							>
 								<v-icon size="24" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
-								1234567879
-								<!-- Back to {{ curPageValue }} -->
+								lslsl
 							</v-btn>
-						</div>
+						</div> -->
 
 						<div class="d-flex ga-4 align-center d-md-none">
 							<v-avatar size="38" class="pa-2" color="#313131">
@@ -89,23 +100,28 @@
 							<AdminDashboard />
 						</v-window-item>
 						<v-window-item :value="'Users'">
-							<!-- <p class="pa-8">User page</p> -->
 							<AdminUsers @changePage="changePage" />
 						</v-window-item>
-						<!-- <v-window-item :value="'User details'">
+						<v-window-item :value="'Users details'">
 							<AdminUserDetail />
-						</v-window-item> -->
+						</v-window-item>
 						<v-window-item :value="'Finance'">
-							<p class="pa-8">Finance page</p>
+							<AdminFinance />
+						</v-window-item>
+						<v-window-item :value="'Finance Detail'">
+							<AdminFinanceDetail />
 						</v-window-item>
 						<v-window-item :value="'Dispute'">
-							<p class="pa-8">Dispute page</p>
+							<AdminDispute />
+						</v-window-item>
+						<v-window-item :value="'Dispute Detail'">
+							<AdminDisputeDetail />
 						</v-window-item>
 						<v-window-item :value="'Admin'">
 							<p class="pa-8">Admin page</p>
 						</v-window-item>
 						<v-window-item :value="'Category'">
-							<p class="pa-8">Category page</p>
+							<AdminCategory />
 						</v-window-item>
 						<v-window-item :value="'Messages'">
 							<p class="pa-8">Messages page</p>
@@ -117,6 +133,18 @@
 				</v-card>
 			</v-col>
 		</v-row>
+
+		<v-dialog v-model="confirmLogout" persistent max-width="550">
+			<ConfirmActionModal
+				title="Logout"
+				message="Are you sure you want to logout of OnCall?"
+				leftBtn="Cancel"
+				rightBtn="Logout"
+				img="/images/logout.svg"
+				:leftBtnAction="() => (confirmLogout = false)"
+				:rightBtnAction="() => (confirmLogout = $router.push('/admin/login'))"
+			/>
+		</v-dialog>
 	</div>
 </template>
 
@@ -128,18 +156,9 @@ import SearchComponent from "~/components/SearchComponent.vue";
 const sidebar = computed(() => useAdminStore().sideBtn);
 const router = useRouter();
 const route = useRoute();
+const confirmLogout = ref(false);
 
-const curPageValue = computed(() => {
-	if (currentPage.value === "User details") {
-		return "Users";
-	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
-		return "Posts";
-	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
-		return "Articles";
-	} else {
-		return "Users";
-	}
-});
+const paramId = route.params.slug;
 const currentPage = ref(route.params.name ? route.params.name : "Dashboard");
 
 watch(
@@ -149,29 +168,13 @@ watch(
 	}
 );
 
-const handleClick = () => {
-	if (currentPage.value === "User details") {
-		router.push("/Users");
-	} else if (currentPage.value === "Create Post" || currentPage.value === "Edit Post") {
-		router.push("/admin/dashboard/Posts");
-	} else if (currentPage.value === "Create Article" || currentPage.value === "Edit Article") {
-		router.push("/admin/dashboard/Articles");
-	} else {
-		router.push("/admin/dashboard/Users");
-	}
-};
-
 function changePage(n) {
 	if (n == "Logout") {
-		return router.push("/admin/login");
+		return (confirmLogout.value = true);
 	}
 	return router.push(`/admin/dashboard/${n}`);
 }
 
-// function changeTab(n){
-// 	// router.push(`/admin/dashboard/Settings/${n}`)
-// 	route.params.tab = n
-// }
 function sideFn() {
 	useAdminStore().sideBtn = false;
 }

@@ -14,7 +14,7 @@
 					</v-col>
 				</v-row>
 
-				<div>
+				<div class="px-3">
 					<AdminDashboardChart />
 				</div>
 
@@ -62,28 +62,13 @@
 
 			<v-col cols="12" md="3">
 				<v-card class="pa-4" style="background-color: #111212">
-					<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pb-8">Finance Summary</p>
-
-					<v-card v-for="n in financeSummary" :key="n" variant="outlined" class="mb-4 py-2" style="border: 0.5px solid #303030">
-						<v-card-text>
-							<v-avatar
-								size="32"
-								:style="
-									n.name === 'Withdrawals'
-										? 'background: linear-gradient(180deg, rgba(249, 112, 102, 0.1) 2.68%, rgba(180, 35, 24, 0.1) 84.82%)'
-										: 'background: linear-gradient(185.49deg, rgba(0, 180, 160, 0.1) 15%, rgba(0, 108, 96, 0.1) 85.96%)'
-								"
-							>
-								<v-icon
-									size="24"
-									:color="n.name === 'Withdrawals' ? '#D92D20' : '#007E70'"
-									:icon="n.name === 'Withdrawals' ? 'mdi mdi-trending-up' : 'mdi mdi-trending-down'"
-								></v-icon>
-							</v-avatar>
-						</v-card-text>
-						<v-card-title style="font-weight: 400; font-size: 16px; line-height: 22px; color: #8f8f8f">{{ n.name }}</v-card-title>
-						<v-card-text style="font-weight: 700; font-size: 20px; line-height: 28px; color: #ececec"> $ {{ n.value }} </v-card-text>
-					</v-card>
+					<div class="d-flex justify-space-between">
+						<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pb-8 flex-1">Finance Summary</p>
+						<div>
+							<v-img eager src="/images/refresh.svg" width="40" height="40" class="cursor-pointer"></v-img>
+						</div>
+					</div>
+					<AdminFinanceCard v-for="(item, index) in financeSummary" :key="index" :name="item.name" :value="item.value" />
 				</v-card>
 			</v-col>
 		</v-row>
@@ -200,8 +185,8 @@ const getStatusClass = (status) => {
 }
 
 .dispute-status-pending {
-	background: #8f8f8f1a;
-	color: #8f8f8f;
+	background: rgba(143, 143, 143, 1);
+	color: #232323;
 }
 
 .v-table--density-default > .v-table__wrapper > table > thead > tr > th {

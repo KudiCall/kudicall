@@ -20,12 +20,12 @@
 				<div v-for="(item, i) in items" :key="i" class="pb-16">
 					<div @click="selectItem(n.text)" class="align-center px-4 text-capitalize py-2 style-2" v-for="(n, i) in item.list" :key="i" style="">
 						<div class="d-flex align-center justify-space-between">
-							<div class="d-flex align-center" :class="adminStore.selectedItem == n.text ? 'bg active-bg' : 'bg'">
+							<div class="d-flex align-center" :class="isActive(n.text) ? 'bg active-bg' : 'bg'">
 								<v-avatar v-if="n.text === 'Maris'" size="24" class="mr-2">
 									<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
 								</v-avatar>
-								<v-icon v-else size="24" :color="adminStore.selectedItem == n.text ? '#0d5fb0' : '#8f8f8f'" class="mr-2" :icon="n.icon"></v-icon>
-								<p v-show="sidebar" :class="adminStore.selectedItem == n.text ? 'active' : 'not-active'" class="style-3 title">{{ n.text }}</p>
+								<v-icon v-else size="24" :color="isActive(n.text) ? '#0d5fb0' : '#8f8f8f'" class="mr-2" :icon="n.icon"></v-icon>
+								<p v-show="sidebar" :class="isActive(n.text) ? 'active' : 'not-active'" class="style-3 title">{{ n.text }}</p>
 							</div>
 						</div>
 					</div>
@@ -40,9 +40,16 @@ import { useAdminStore } from "~/stores/adminStore";
 export default {
 	setup() {
 		const adminStore = useAdminStore();
+		const route = useRoute();
+
+		// Function to check if the current route contains the sidebar item
+		const isActive = (text) => {
+			return route.path.split("/")[3].toLowerCase().startsWith(text.toLowerCase());
+		};
 
 		return {
 			adminStore,
+			isActive,
 		};
 	},
 	beforeMount() {
@@ -63,6 +70,8 @@ export default {
 						{ text: "Dispute", icon: "mdi mdi-account-group" },
 						{ text: "Admin", icon: "mdi mdi-trending-up" },
 						{ text: "Category", icon: "mdi mdi-warehouse" },
+						{ text: "Posts", icon: "mdi mdi-warehouse" },
+						{ text: "Products", icon: "mdi mdi-warehouse" },
 						{ text: "Country", icon: "fas fa-globe" },
 					],
 				},
