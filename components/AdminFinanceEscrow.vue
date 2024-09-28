@@ -31,7 +31,10 @@
 
 					<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
 						<v-list-item v-for="(menuItem, i) in menuItems(item)" :key="i" @click.stop="menuItem.action" rounded-xl style="font-weight: 500">
-							<v-list-item-title :class="item.status === 'Dispute' ? 'my-white' : 'my-gray'">
+							<v-list-item-title v-if="item.status !== 'Dispute' && menuItem.title == 'Resolve Dispute'" class="my-gray">
+								{{ menuItem.title }}
+							</v-list-item-title>
+							<v-list-item-title v-else class="my-white">
 								{{ menuItem.title }}
 							</v-list-item-title>
 						</v-list-item>
@@ -179,7 +182,7 @@ const menuItems = (userInfo) => {
 }
 
 .my-gray {
-	color: #b5b5b5; /* Gray color */
+	color: #484444; /* Gray color */
 }
 
 .my-white {
