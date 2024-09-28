@@ -31,7 +31,7 @@
 					</v-card-text>
 					<v-card-actions class="d-flex mt-4">
 						<v-avatar size="40">
-							<img eager :src="testimony.avatar" alt="Avatar" />
+							<img eager :src="testimony.avatar" alt="Avatar" width="40" height="40" />
 						</v-avatar>
 						<div class="ml-3">
 							<div class="font-weight-normal manrope" style="font-size: 14px">{{ testimony.name }}</div>
