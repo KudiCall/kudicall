@@ -4,9 +4,9 @@
 			<v-col cols="12" md="8">
 				<v-card variant="outlined" class="pa-4 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">About user</p>
-					<div class="d-flex align-center ga-10">
+					<div class="d-flex flex-column flex-md-row align-center ga-10">
 						<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
-							<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
+							<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
 						</v-avatar>
 						<div class="d-flex flex-1 flex-column ga-2">
 							<p class="mb-3">

@@ -58,7 +58,7 @@
 									</v-menu>
 								</v-col>
 								<v-col md="4" sm="12">
-									<p class="mb-2">Select status</p>
+									<p class="mb-2">Select state</p>
 
 									<v-menu>
 										<template v-slot:activator="{ props }">
