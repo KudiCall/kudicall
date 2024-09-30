@@ -22,7 +22,7 @@
 						<div class="d-flex align-center justify-space-between">
 							<div class="d-flex align-center" :class="isActive(n.text) ? 'bg active-bg' : 'bg'">
 								<v-avatar v-if="n.text === 'Maris'" size="24" class="mr-2">
-									<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
+									<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
 								</v-avatar>
 								<v-icon v-else size="24" :color="isActive(n.text) ? '#0d5fb0' : '#8f8f8f'" class="mr-2" :icon="n.icon"></v-icon>
 								<p v-show="sidebar" :class="isActive(n.text) ? 'active' : 'not-active'" class="style-3 title">{{ n.text }}</p>

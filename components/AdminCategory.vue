@@ -107,7 +107,7 @@
 															</v-list-item>
 														</v-list>
 													</v-menu>
-													<v-img src="/images/drag_vertical.svg" width="24" height="24" alt="drag" class="drag-handle" @mousedown.stop />
+													<v-img eager src="/images/drag_vertical.svg" width="24" height="24" alt="drag" class="drag-handle" @mousedown.stop />
 												</div>
 											</v-col>
 										</v-row>

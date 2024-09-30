@@ -6,7 +6,7 @@
 			<v-card flat class="pa-md-12" width="100%" max-width="562px" style="background-color: transparent">
 				<h1 style="font-style: normal; font-weight: 800; font-size: 28px; line-height: 39.2px; color: #ececec">Login,</h1>
 				<p class="font-weight-medium mb-10 mt-5">Please enter your email and password</p>
-				<v-img width="125" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724177714/OnCall/tag_mc6ere.png" class="mb-5">
+				<v-img eager width="125" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724177714/OnCall/tag_mc6ere.png" class="mb-5">
 				</v-img>
 				<v-form>
 					<v-text-field

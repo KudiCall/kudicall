@@ -66,7 +66,12 @@
 
 						<div class="d-flex ga-4 align-center d-md-none">
 							<v-avatar size="38" class="pa-2" color="#313131">
-								<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1723051734/OnCall/search-normal_zl2ush.svg" alt="search" cover></v-img>
+								<v-img
+									eager
+									src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1723051734/OnCall/search-normal_zl2ush.svg"
+									alt="search"
+									cover
+								></v-img>
 							</v-avatar>
 							<v-icon
 								@click="useAdminStore().sideBtn = !useAdminStore().sideBtn"
@@ -80,17 +85,23 @@
 							<SearchComponent placeholder="Search" />
 							<div class="d-flex ga-2 align-center">
 								<v-avatar size="56" class="avatar pa-3">
-									<v-img width="32" height="32" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172529/OnCall/message_oe3euj.png"></v-img>
+									<v-img
+										eager
+										width="32"
+										height="32"
+										src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172529/OnCall/message_oe3euj.png"
+									></v-img>
 								</v-avatar>
 								<v-avatar size="56" class="avatar pa-3">
 									<v-img
+										eager
 										width="32"
 										height="32"
 										src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172545/OnCall/notification-bing_zdxw8u.png"
 									></v-img>
 								</v-avatar>
 								<v-avatar size="56" class="">
-									<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
+									<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
 								</v-avatar>
 							</div>
 						</div>

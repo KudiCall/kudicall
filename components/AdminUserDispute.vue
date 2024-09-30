@@ -15,7 +15,7 @@
 			<template v-slot:[`item.opponent`]="{ item }">
 				<div class="d-flex align-center">
 					<v-avatar size="24" class="mr-2">
-						<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
+						<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
 					</v-avatar>
 					<p>{{ item.opponent }}</p>
 				</div>

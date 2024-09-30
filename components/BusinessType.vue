@@ -87,6 +87,7 @@
 					</div>
 
 					<v-img
+						eager
 						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
 						width="100%"
 						height="100%"

@@ -16,7 +16,7 @@
 		<!-- All Items Option -->
 		<div class="px-4 mt-8 d-flex justify-space-between align-center">
 			<div class="d-flex align-center ga-3">
-				<v-img src="/images/global.svg" width="40" height="40" />
+				<v-img eager src="/images/global.svg" width="40" height="40" />
 				<p style="font-weight: 500; font-size: 18px; line-height: 24.5px; color: #ececec">All</p>
 			</div>
 			<div>

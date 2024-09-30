@@ -93,7 +93,7 @@
 										size="32"
 										style="background: linear-gradient(185.49deg, rgba(18, 136, 252, 0.1) 15%, rgba(11, 82, 151, 0.1) 85.96%)"
 									>
-										<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725090075/OnCall/wallet-2_cv7vmv.svg"></v-img>
+										<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725090075/OnCall/wallet-2_cv7vmv.svg"></v-img>
 									</v-avatar>
 								</v-card-text>
 								<v-card-title style="font-weight: 400; font-size: 16px; line-height: 22px; color: #8f8f8f">Wallet bal.</v-card-title>
@@ -108,7 +108,7 @@
 										size="32"
 										style="background: linear-gradient(185.49deg, rgba(18, 136, 252, 0.1) 15%, rgba(11, 82, 151, 0.1) 85.96%)"
 									>
-										<v-img src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725090075/OnCall/bag-2_wajc6a.svg"></v-img>
+										<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725090075/OnCall/bag-2_wajc6a.svg"></v-img>
 									</v-avatar>
 								</v-card-text>
 								<v-card-title style="font-weight: 400; font-size: 16px; line-height: 22px; color: #8f8f8f">Wallet bal.</v-card-title>
