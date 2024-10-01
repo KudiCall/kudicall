@@ -20,60 +20,13 @@
 						</div>
 						<v-btn class="custom_btn" size="x-large" rounded @click="addCategoryModal = true"> Create category </v-btn>
 					</div>
-					<!-- <div class="mt-8">
-						<v-row class="px-3 mb-4 overflow-x-auto" style="background-color: #141515">
-							<v-col sm="5" md="4">Category</v-col>
-							<v-col>Posts</v-col>
-							<v-col>Products</v-col>
-							<v-col>Sales</v-col>
-							<v-col md="1" class="inline-block">Action</v-col>
-						</v-row>
-						<div class="overflow-x-auto">
-							<draggable v-model="categories" @end="onDragEnd" item-key="id">
-								<template #item="{ element }">
-									<div>
-										<v-row class="px-2 mb-5" style="background-color: #0f1010">
-											<v-col class="d-flex align-center py-0" sm="5" md="4">
-												<v-checkbox color="#1288FC" class="my-checkbox mr-10" label=""></v-checkbox>
-												<span>{{ element.category }}</span>
-											</v-col>
-											<v-col>{{ element.posts }}</v-col>
-											<v-col>{{ element.products }}</v-col>
-											<v-col>{{ element.sales }}</v-col>
-											<v-col cols="1">
-												<div class="d-flex align-center">
-													<v-menu>
-														<template v-slot:activator="{ props }">
-															<v-icon v-bind="props" icon="mdi mdi-dots-vertical" color="#ECECEC" />
-														</template>
-														<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
-															<v-list-item
-																v-for="(menuItem, i) in menuItems(element)"
-																:key="i"
-																@click.stop="menuItem.action"
-																rounded-xl
-																style="color: #ececec; font-weight: 500"
-															>
-																<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
-															</v-list-item>
-														</v-list>
-													</v-menu>
-													<v-img src="/images/drag_vertical.svg" width="24" height="24" alt="drag" class="drag-handle" @mousedown.stop />
-												</div>
-											</v-col>
-										</v-row>
-									</div>
-								</template>
-							</draggable>
-						</div>
-					</div> -->
 
 					<div class="mt-8">
 						<v-row class="px-3 mb-4 overflow-x-auto flex-nowrap" style="background-color: #141515">
 							<v-col xs="6" sm="5" md="4">Category</v-col>
-							<v-col xs="3" sm="auto">Posts</v-col>
-							<v-col xs="3" sm="auto">Products</v-col>
-							<v-col xs="3" sm="auto">Sales</v-col>
+							<v-col xs="3" sm="auto" md="2">Posts</v-col>
+							<v-col xs="3" sm="auto" md="2">Products</v-col>
+							<v-col xs="3" sm="auto" md="2">Sales</v-col>
 							<v-col xs="2" md="1" class="inline-block">Action</v-col>
 						</v-row>
 
@@ -83,12 +36,12 @@
 									<div>
 										<v-row class="px-2 mb-5 flex-nowrap" style="background-color: #0f1010">
 											<v-col class="d-flex align-center py-0" xs="6" sm="5" md="4">
-												<v-checkbox color="#1288FC" class="my-checkbox mr-10" label=""></v-checkbox>
+												<v-checkbox color="#1288FC" class="my-checkbox mr-10 mr-md-4" label=""></v-checkbox>
 												<span>{{ element.category }}</span>
 											</v-col>
-											<v-col xs="3" sm="auto">{{ element.posts }}</v-col>
-											<v-col xs="3" sm="auto">{{ element.products }}</v-col>
-											<v-col xs="3" sm="auto">{{ element.sales }}</v-col>
+											<v-col xs="3" sm="auto" md="2">{{ element.posts }}</v-col>
+											<v-col xs="3" sm="auto" md="2">{{ element.products }}</v-col>
+											<v-col xs="3" sm="auto" md="2">{{ element.sales }}</v-col>
 											<v-col xs="2" md="1">
 												<div class="d-flex align-center">
 													<v-menu>

@@ -21,7 +21,7 @@
 					<div @click="selectItem(n.text)" class="align-center px-4 text-capitalize py-2 style-2" v-for="(n, i) in item.list" :key="i" style="">
 						<div class="d-flex align-center justify-space-between">
 							<div class="d-flex align-center" :class="isActive(n.text) ? 'bg active-bg' : 'bg'">
-								<v-avatar v-if="n.text === 'Maris'" size="24" class="mr-2">
+								<v-avatar v-if="n.text === 'Profile'" size="24" class="mr-2">
 									<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
 								</v-avatar>
 								<v-icon v-else size="24" :color="isActive(n.text) ? '#0d5fb0' : '#8f8f8f'" class="mr-2" :icon="n.icon"></v-icon>
@@ -79,7 +79,7 @@ export default {
 				{
 					name: "",
 					list: [
-						{ text: "Maris", icon: "mdi mdi-message-badge" },
+						{ text: "Profile", icon: "mdi mdi-message-badge" },
 						{ text: "Logout", icon: "fas fa-arrow-right-from-bracket" },
 					],
 				},

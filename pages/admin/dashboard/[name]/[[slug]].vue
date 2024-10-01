@@ -36,7 +36,9 @@
 						style="height: 96px; background-color: #0c0d0d; position: sticky; z-index: 99; top: 0; border-bottom: 1px solid #ffffff0d"
 					>
 						<div
-							v-if="currentPage != 'Users details' && currentPage != 'Finance Detail' && currentPage != 'Dispute Detail'"
+							v-if="
+								currentPage != 'Users details' && currentPage != 'Finance Detail' && currentPage != 'Dispute Detail' && currentPage != 'Admin Detail'
+							"
 							class="h-100 d-flex align-center"
 						>
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">{{ currentPage }}</p>
@@ -48,7 +50,10 @@
 						> -->
 						<div v-else class="h-100 d-flex align-center">
 							<v-icon @click="$router.back()" size="32" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
-							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">#{{ paramId }}</p>
+							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">
+								<span v-show="currentPage != 'Admin Detail'">#</span>
+								{{ paramId }}
+							</p>
 						</div>
 						<!-- <div v-else class="h-100 d-flex align-center">
 							<v-btn
@@ -92,7 +97,9 @@
 										src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172529/OnCall/message_oe3euj.png"
 									></v-img>
 								</v-avatar>
-								<v-avatar size="56" class="avatar pa-3">
+
+								<v-img v-if="notificationActive" eager width="56" height="56" src="/images/notification-active.svg"></v-img>
+								<v-avatar v-else size="56" class="avatar pa-3 cursor-pointer" @click="$router.push('/admin/dashboard/Notifications')">
 									<v-img
 										eager
 										width="32"
@@ -100,7 +107,7 @@
 										src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172545/OnCall/notification-bing_zdxw8u.png"
 									></v-img>
 								</v-avatar>
-								<v-avatar size="56" class="">
+								<v-avatar size="56" class="cursor-pointer">
 									<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1724172633/OnCall/Group_6_yfdipz.png" cover></v-img>
 								</v-avatar>
 							</div>
@@ -129,16 +136,23 @@
 							<AdminDisputeDetail />
 						</v-window-item>
 						<v-window-item :value="'Admin'">
-							<p class="pa-8">Admin page</p>
+							<AdminAdmin />
+						</v-window-item>
+						<v-window-item :value="'Admin Detail'">
+							<AdminAdminDetail />
 						</v-window-item>
 						<v-window-item :value="'Category'">
 							<AdminCategory />
+						</v-window-item>
+						<v-window-item :value="'Profile'">
+							<AdminProfile />
 						</v-window-item>
 						<v-window-item :value="'Messages'">
 							<p class="pa-8">Messages page</p>
 						</v-window-item>
 						<v-window-item :value="'Notifications'">
-							<p class="pa-8">Notifications page</p>
+							<!-- <p class="pa-8">Notifications page</p> -->
+							<AdminNotification />
 						</v-window-item>
 					</v-window>
 				</v-card>
@@ -163,14 +177,21 @@
 import { useAdminStore } from "~/stores/adminStore";
 import { useRouter, useRoute } from "#vue-router";
 import SearchComponent from "~/components/SearchComponent.vue";
+import AdminProfile from "~/components/AdminProfile.vue";
+import AdminNotification from "~/components/AdminNotification.vue";
 
 const sidebar = computed(() => useAdminStore().sideBtn);
 const router = useRouter();
 const route = useRoute();
 const confirmLogout = ref(false);
+const notificationActive = ref(false);
 
 const paramId = route.params.slug;
 const currentPage = ref(route.params.name ? route.params.name : "Dashboard");
+
+if (route.params.name === "Notifications") {
+	notificationActive.value = true;
+}
 
 watch(
 	() => route.params.name,

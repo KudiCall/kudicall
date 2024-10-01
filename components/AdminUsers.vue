@@ -38,7 +38,7 @@
 											<v-btn
 												v-bind="props"
 												class="d-flex justify-space-between"
-												style="width: 100%"
+												style="width: 275px"
 												icon-size="24"
 												rounded
 												size="x-large"
@@ -65,7 +65,7 @@
 											<v-btn
 												v-bind="props"
 												class="d-flex justify-space-between"
-												style="width: 100%"
+												style="width: 275px"
 												icon-size="24"
 												rounded
 												size="x-large"

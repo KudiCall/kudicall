@@ -34,7 +34,7 @@
 			>
 			<v-btn
 				width="200"
-				:class="rightBtn === 'Delete' || rightBtn === 'Logout' ? 'redBtn' : 'blueBtn'"
+				:class="rightBtn === 'Delete' || rightBtn === 'Logout' || rightBtn === 'Disable 2FA' ? 'redBtn' : 'blueBtn'"
 				style="font-weight: 600; font-size: 16px; line-height: 22.4px"
 				rounded="xl"
 				color="primary"
