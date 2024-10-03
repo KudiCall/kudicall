@@ -37,7 +37,12 @@
 					>
 						<div
 							v-if="
-								currentPage != 'Users details' && currentPage != 'Finance Detail' && currentPage != 'Dispute Detail' && currentPage != 'Admin Detail'
+								currentPage != 'Users details' &&
+								currentPage != 'Finance Detail' &&
+								currentPage != 'Dispute Detail' &&
+								currentPage != 'Admin Detail' &&
+								currentPage != 'Posts details' &&
+								currentPage != 'Products details'
 							"
 							class="h-100 d-flex align-center"
 						>
@@ -51,7 +56,7 @@
 						<div v-else class="h-100 d-flex align-center">
 							<v-icon @click="$router.back()" size="32" class="mr-2" icon="mdi mdi-chevron-left"></v-icon>
 							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="text-capitalize">
-								<span v-show="currentPage != 'Admin Detail'">#</span>
+								<span v-show="currentPage != 'Admin Detail' && currentPage != 'Products details'">#</span>
 								{{ paramId }}
 							</p>
 						</div>
@@ -147,11 +152,29 @@
 						<v-window-item :value="'Profile'">
 							<AdminProfile />
 						</v-window-item>
+						<v-window-item :value="'Country'">
+							<AdminCountry />
+						</v-window-item>
+						<v-window-item :value="'Posts'">
+							<p class="pa-8">Post page</p>
+							<!-- <AdminPosts /> -->
+						</v-window-item>
+						<v-window-item :value="'Posts details'">
+							<p class="pa-8">Post detail page</p>
+							<!-- <AdminPostsDetail /> -->
+						</v-window-item>
+						<v-window-item :value="'Products'">
+							<p class="pa-8">Products page</p>
+							<!-- <AdminProducts /> -->
+						</v-window-item>
+						<v-window-item :value="'Products details'">
+							<p class="pa-8">Post detail page</p>
+							<!-- <AdminProductsDetail /> -->
+						</v-window-item>
 						<v-window-item :value="'Messages'">
 							<p class="pa-8">Messages page</p>
 						</v-window-item>
 						<v-window-item :value="'Notifications'">
-							<!-- <p class="pa-8">Notifications page</p> -->
 							<AdminNotification />
 						</v-window-item>
 					</v-window>
@@ -179,6 +202,9 @@ import { useRouter, useRoute } from "#vue-router";
 import SearchComponent from "~/components/SearchComponent.vue";
 import AdminProfile from "~/components/AdminProfile.vue";
 import AdminNotification from "~/components/AdminNotification.vue";
+import AdminCountry from "~/components/AdminCountry.vue";
+import AdminPostCard from "~/components/AdminPostCard.vue";
+import AdminPostsDetail from "~/components/AdminPostsDetail.vue";
 
 const sidebar = computed(() => useAdminStore().sideBtn);
 const router = useRouter();

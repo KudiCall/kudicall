@@ -7,16 +7,11 @@
 						<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">About admin</p>
 					</div>
 					<div class="d-flex flex-column flex-md-row align-center ga-10">
-						<!-- <v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
-							<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
-						</v-avatar> -->
 						<div class="avatar-wrapper">
 							<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
 								<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
 							</v-avatar>
-							<!-- <v-icon large class="upload-icon">mdi-camera</v-icon> -->
 							<v-img eager src="/images/upload-icon.svg" class="upload-icon" width="40" height="40" />
-							<!-- Centered camera icon -->
 						</div>
 						<div class="d-flex flex-1 flex-column ga-2">
 							<p style="font-weight: 800; font-size: 32px; color: rgba(236, 236, 236, 1)">Michael Faraday</p>
@@ -44,11 +39,19 @@
 					<p class="mb-10" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">Account security</p>
 					<div class="d-flex justify-space-between align-center">
 						<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">2FA</p>
-						<!-- <v-btn size="large" rounded class="btn" @click="confirmDisable2fa = true">Set up 2FA</v-btn> -->
 						<v-btn size="large" rounded class="redBtn" @click="confirmDisable2fa = true">Disable</v-btn>
 					</div>
+				</v-card>
+				<v-card v-show="openSetup" variant="outlined" class="pa-4 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
+					<p class="mb-10" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">Account security</p>
+					<div class="d-flex justify-space-between align-center">
+						<p class="mb-4" style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec">2FA</p>
+						<v-btn v-if="!isSetup2FA && !confirm2FAPin" size="large" rounded class="btn" @click="setup2FA">Set up 2FA</v-btn>
+						<v-btn v-if="isSetup2FA && !confirm2FAPin" size="large" rounded class="btn" @click="continueSetup2FA">Continue set up</v-btn>
+						<v-btn v-if="isCompleteSetup" size="large" rounded class="btn" @click="openSetup = false">Complete set up</v-btn>
+					</div>
 					<!-- 2FA setup code below -->
-					<!-- <div class="d-flex mt-10 ga-10">
+					<div v-if="isSetup2FA" class="d-flex mt-10 ga-10">
 						<div style="width: 431px">
 							<p class="mb-8" style="font-size: 20px; font-weight: 700; color: #b5b5b5; line-height: 28px">
 								Set up 2FA by copying the code or scanning the QR code with your authenticator app
@@ -66,7 +69,7 @@
 							<v-img eager src="/images/qr-code.png" width="200" height="200"></v-img>
 						</div>
 					</div>
-					<div style="width: 431px">
+					<div v-if="confirm2FAPin" style="width: 431px">
 						<p class="mb-8" style="font-size: 20px; font-weight: 700; color: #b5b5b5; line-height: 28px">Enter code from your 2FA app</p>
 						<v-text-field
 							prepend-inner-icon="mdi mdi-content-copy"
@@ -76,7 +79,7 @@
 							autocomplete="off"
 							width="315px"
 						></v-text-field>
-					</div> -->
+					</div>
 				</v-card>
 				<v-card variant="outlined" class="pa-4 mb-10" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="">Activity history</p>
@@ -308,7 +311,7 @@
 				rightBtn="Disable 2FA"
 				img="/images/shield-security.svg"
 				:leftBtnAction="() => (confirmDisable2fa = false)"
-				:rightBtnAction="() => (confirmDisable2fa = false)"
+				:rightBtnAction="() => (openSetup = true)"
 			/>
 		</v-dialog>
 	</div>
@@ -317,6 +320,21 @@
 <script setup>
 const confirmSuspendModal = ref(false);
 const confirmDisable2fa = ref(false);
+const openSetup = ref(false);
+const isSetup2FA = ref(false);
+const confirm2FAPin = ref(false);
+const isCompleteSetup = ref(false);
+
+const setup2FA = () => {
+	isSetup2FA.value = true;
+	confirm2FAPin.value = false;
+};
+
+const continueSetup2FA = () => {
+	isSetup2FA.value = false;
+	confirm2FAPin.value = true;
+	isCompleteSetup.value = true;
+};
 
 const performanceData = [
 	{ title: "Users suspended", value: "200", img: "/images/account-remove.svg" },
