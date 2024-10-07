@@ -157,19 +157,19 @@
 						</v-window-item>
 						<v-window-item :value="'Posts'">
 							<p class="pa-8">Post page</p>
-							<!-- <AdminPosts /> -->
+							<AdminPosts />
 						</v-window-item>
 						<v-window-item :value="'Posts details'">
 							<p class="pa-8">Post detail page</p>
-							<!-- <AdminPostsDetail /> -->
+							<AdminPostsDetail />
 						</v-window-item>
 						<v-window-item :value="'Products'">
 							<p class="pa-8">Products page</p>
-							<!-- <AdminProducts /> -->
+							<AdminProducts />
 						</v-window-item>
 						<v-window-item :value="'Products details'">
 							<p class="pa-8">Post detail page</p>
-							<!-- <AdminProductsDetail /> -->
+							<AdminProductsDetail />
 						</v-window-item>
 						<v-window-item :value="'Messages'">
 							<p class="pa-8">Messages page</p>
