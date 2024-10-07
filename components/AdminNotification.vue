@@ -19,8 +19,8 @@
 				</v-tabs>
 			</v-sheet>
 			<div class="d-flex justify-space-between ga-4" style="width: 33%">
-				<v-btn class="outlined_btn px-5" size="x-large" rounded @click="confirmDeleteUsers = true"> Mark all as read </v-btn>
-				<v-btn class="custom_btn" size="x-large" rounded @click="confirmDeleteUsers = true"> Clear all </v-btn>
+				<v-btn class="outlined_btn px-5" size="x-large" rounded> Mark all as read </v-btn>
+				<v-btn class="custom_btn" size="x-large" rounded> Clear all </v-btn>
 			</div>
 		</div>
 		<v-row dense>
@@ -38,7 +38,7 @@
 			</v-col>
 		</v-row>
 
-		<v-dialog v-model="confirmSuspendModal" persistent max-width="755">
+		<v-dialog v-model="confirmMarkAllAsRead" persistent max-width="755">
 			<ConfirmActionModal
 				title="Suspend user"
 				message="Are you sure you want to suspend this user?"
@@ -47,21 +47,19 @@
 				leftBtn="Cancel"
 				rightBtn="Suspend user"
 				img="/images/user-remove.svg"
-				:leftBtnAction="() => (confirmSuspendModal = false)"
-				:rightBtnAction="() => (confirmSuspendModal = false)"
+				:leftBtnAction="() => (confirmMarkAllAsRead = false)"
+				:rightBtnAction="() => (confirmMarkAllAsRead = false)"
 			/>
 		</v-dialog>
-		<v-dialog v-model="confirmDeleteUsers" persistent max-width="755">
+		<v-dialog v-model="confirmClearAll" persistent max-width="755">
 			<ConfirmActionModal
-				title="Delete all users"
-				message="Are you sure you want to delete these users? This action cannot be undone?"
-				infoTitle="Deleting a user will:"
-				:info="removeActionInfo"
+				title="Clear all notifications"
+				message="Are you sure you want to clear all the notifications? This action cannot be undone?"
 				leftBtn="Cancel"
 				rightBtn="Delete"
 				img="/images/user-remove.svg"
-				:leftBtnAction="() => (confirmDeleteUsers = false)"
-				:rightBtnAction="() => (confirmDeleteUsers = false)"
+				:leftBtnAction="() => (confirmClearAll = false)"
+				:rightBtnAction="() => (confirmClearAll = false)"
 			/>
 		</v-dialog>
 	</div>
@@ -71,8 +69,8 @@
 import { useRouter } from "vue-router";
 import NotificationSettings from "./NotificationSettings.vue";
 
-const confirmSuspendModal = ref(false);
-const confirmDeleteUsers = ref(false);
+const confirmMarkAllAsRead = ref(false);
+const confirmClearAll = ref(false);
 
 const tab = ref("All");
 const tabs = [
