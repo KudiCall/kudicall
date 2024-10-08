@@ -17,7 +17,7 @@
 				class="scroll-container"
 				style="top: 32px; position: relative; overflow-y: scroll"
 			>
-				<div v-for="(item, i) in items" :key="i" class="pb-16">
+				<div v-for="(item, i) in items" :key="i" class="pb-8">
 					<div @click="selectItem(n.text)" class="align-center px-4 text-capitalize py-2 style-2" v-for="(n, i) in item.list" :key="i" style="">
 						<div class="d-flex align-center justify-space-between">
 							<div class="d-flex align-center" :class="isActive(n.text) ? 'bg active-bg' : 'bg'">

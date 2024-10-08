@@ -94,7 +94,8 @@
 						<div class="d-none d-md-flex ga-8 align-center w-50">
 							<SearchComponent placeholder="Search" />
 							<div class="d-flex ga-2 align-center">
-								<v-avatar size="56" class="avatar pa-3">
+								<v-img v-if="messageActive" eager width="56" height="56" src="/images/message-active.svg"></v-img>
+								<v-avatar v-else size="56" class="avatar pa-3" @click="$router.push('/admin/dashboard/Messages')">
 									<v-img
 										eager
 										width="32"
@@ -167,7 +168,12 @@
 						<v-window-item :value="'Products details'">
 							<AdminProductsDetail />
 						</v-window-item>
-						<v-window-item :value="'Messages'"> </v-window-item>
+						<v-window-item :value="'Messages'">
+							<AdminMessage />
+						</v-window-item>
+						<v-window-item :value="'New messages'">
+							<AdminNewMessages />
+						</v-window-item>
 						<v-window-item :value="'Notifications'">
 							<AdminNotification />
 						</v-window-item>
@@ -199,18 +205,24 @@ import AdminNotification from "~/components/AdminNotification.vue";
 import AdminCountry from "~/components/AdminCountry.vue";
 import AdminPostCard from "~/components/AdminPostCard.vue";
 import AdminPostsDetail from "~/components/AdminPostsDetail.vue";
+import AdminNewMessages from "~/components/AdminNewMessages.vue";
 
 const sidebar = computed(() => useAdminStore().sideBtn);
 const router = useRouter();
 const route = useRoute();
 const confirmLogout = ref(false);
 const notificationActive = ref(false);
+const messageActive = ref(false);
 
 const paramId = route.params.slug;
 const currentPage = ref(route.params.name ? route.params.name : "Dashboard");
 
 if (route.params.name === "Notifications") {
 	notificationActive.value = true;
+}
+
+if (route.params.name === "Messages") {
+	messageActive.value = true;
 }
 
 watch(

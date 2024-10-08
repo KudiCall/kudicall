@@ -6,30 +6,28 @@
 					<div class="w-100 w-md-66">
 						<SearchComponent placeholder="Search" />
 					</div>
-					<v-btn class="custom_btn" size="x-large" rounded @click="$router.push('/admin/dashboard/New%20messages')">New message </v-btn>
 				</div>
-				<v-sheet rounded="lg" style="background-color: transparent">
-					<v-tabs v-model="tab" :items="tabs" slider-color="transparent">
-						<template v-slot:tab="{ item }">
-							<v-tab
-								:text="item.text"
-								:value="item.value"
-								rounded
-								:class="tab === item.value ? 'my-chip--active' : 'my-chip'"
-								class="d-flex align-center justify-center mx-1"
-								style="font-size: 14px; line-height: 19.4px; font-weight: 500; color: #ececec"
-							>
-								<v-icon v-if="tab === item.value" left class="mr-2">fas fa-circle-check</v-icon>
-								{{ item.text }}
-							</v-tab>
-						</template>
-					</v-tabs>
-				</v-sheet>
-				<div style="margin: 30px auto; max-width: 100%">
-					<h2 class="mb-5">Chats</h2>
+
+				<div style="max-width: 100%">
+					<h2 class="mb-5">Select recipient</h2>
+					<div class="d-flex flex-column flex-md-row align-center justify-space-between ga-5 mb-5">
+						<div class="d-flex ga-4 align-center">
+							<v-checkbox color="#1288FC" class="my-checkbox" label="Select All"></v-checkbox>
+							<div class="d-flex align-center ga-2">
+								<span style="font-size: 18px; font-weight: 500; color: #b5b5b5">0 of {{ messages.length }} Selected</span>
+							</div>
+						</div>
+						<div class="d-flex align-center ga-5">
+							<p style="font-size: 18px; font-weight: 500; color: #b5b5b5">1 - 100 of 50,000</p>
+							<div>
+								<v-btn size="small" class="mr-1" icon="mdi mdi-chevron-left"></v-btn>
+								<v-btn size="small" icon="mdi mdi-chevron-right"></v-btn>
+							</div>
+						</div>
+					</div>
 					<v-virtual-scroll :items="messages" :item-height="80" style="height: 55vh; overflow: auto; padding-bottom: 10vh">
 						<template v-slot:default="{ item }">
-							<chat-card
+							<contact-card
 								:title="item.name"
 								:avatar-src="item.avatar || 'https://res.cloudinary.com/dd26v0ffw/image/upload/v1721865425/OnCall/Ellipse_2895_o2kkhu.png'"
 								badge-src="/images/online-status-indicator.svg"
@@ -55,16 +53,12 @@
 			<v-divider vertical class="my-0"></v-divider>
 
 			<div class="d-flex flex-column" style="width: 50%; height: 90vh">
-				<div
-					v-if="selectedChat?.value"
-					class="d-flex align-center ga-3 pa-3"
-					style="font-size: 20px; font-weight: 700; color: #ececec; border-bottom: 1px solid #303030"
-				>
+				<div class="d-flex align-center ga-3 pa-3" style="font-size: 20px; font-weight: 700; color: #ececec; border-bottom: 1px solid #303030">
 					<v-avatar size="40">
 						<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1721865425/OnCall/Ellipse_2895_o2kkhu.png"></v-img>
 					</v-avatar>
 					<div>
-						<span>{{ selectedChat?.value.name || "Unknown" }}</span>
+						<span>Michael Faraday <span style="color: #8f8f8f">+ 300 Others</span></span>
 					</div>
 				</div>
 
@@ -72,8 +66,7 @@
 					<div v-if="selectedChat?.value" style="margin-top: 10px; margin-bottom: 20px">
 						<p>{{ selectedChat?.value.message || "No message available" }}</p>
 					</div>
-					<!-- Placeholder for when no chat is selected -->
-					<div v-else class="d-flex justify-center align-center">
+					<!-- <div v-else class="d-flex justify-center align-center">
 						<div class="d-flex flex-column align-center w-75 ga-4" style="margin-top: 40%">
 							<h3 style="font-weight: 600; font-size: 32px; line-height: 44px; color: #ececec">Click on a chat</h3>
 							<p style="font-weight: 400; font-size: 20px; line-height: 28px; color: #8f8f8f">
@@ -81,14 +74,10 @@
 							</p>
 							<v-btn class="custom_btn" size="x-large" rounded> New message </v-btn>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
-				<div
-					v-if="selectedChat?.value"
-					class="d-flex align-center mx-10 px-3 mb-5"
-					style="background-color: #1c1c1c; border-radius: 50px; height: 70px"
-				>
+				<div class="d-flex align-center mx-10 px-3 mb-5" style="background-color: #1c1c1c; border-radius: 50px; height: 70px">
 					<v-textarea rows="1" auto-grow class="message-input mt-5" bg-color="#1C1C1C" variant="solo" flat placeholder="Message"></v-textarea>
 					<div class="d-flex align-center ga-2" style="" @click.stop>
 						<v-menu>
@@ -124,104 +113,42 @@
 <script setup>
 const selectedChat = ref({});
 
-const tab = ref("Users");
-const tabs = [
-	{
-		text: "Users",
-		value: "Admin",
-	},
-	{
-		text: "Admin",
-		value: "Admin",
-	},
-];
-
 const messages = ref([
 	{
 		name: "Belinda bikes",
-		message:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		message: "Manage users, messages",
 		online: true,
 		unread: true,
 	},
 	{
 		name: "Precious Karty’s business",
-		message: "I have what you are looking for, call me asap",
+		message: "Manage users, messages",
 		online: true,
 		unread: true,
 	},
 	{
 		name: "Bridget homes",
-		message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+		message: "Manage users, messages",
 		online: true,
 		unread: true,
 	},
 
 	{
 		name: "Albertini gadgets",
-		message: "I have what you are looking for, call me asap",
+		message: "Manage users, messages",
 		online: true,
 		unread: true,
 	},
 	{
 		name: "House of crocs",
-		message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+		message: "Manage users, messages",
 		online: true,
 		unread: false,
 	},
 	{
 		name: "Hilary Clinton",
-		message: "I have what you are looking for, call me asap",
+		message: "Manage users, messages",
 		online: true,
-		unread: false,
-	},
-	{
-		name: "Bella’s wears",
-		message: "I have what you are looking for, call me asap",
-		online: false,
-		unread: false,
-	},
-	{
-		name: "Belinda bikes",
-		message: "I have what you are looking for, call me asap",
-		online: true,
-		unread: true,
-	},
-	{
-		name: "Precious Karty’s business",
-		message: "I have what you are looking for, call me asap",
-		online: true,
-		unread: true,
-	},
-	{
-		name: "Bridget homes",
-		message: "I have what you are looking for, call me asap",
-		online: true,
-		unread: true,
-	},
-
-	{
-		name: "Albertini gadgets",
-		message: "I have what you are looking for, call me asap",
-		online: true,
-		unread: true,
-	},
-	{
-		name: "House of crocs",
-		message: "I have what you are looking for, call me asap",
-		online: true,
-		unread: false,
-	},
-	{
-		name: "Hilary Clinton",
-		message: "I have what you are looking for, call me asap",
-		online: true,
-		unread: false,
-	},
-	{
-		name: "Bella’s wears",
-		message: "I have what you are looking for, call me asap",
-		online: false,
 		unread: false,
 	},
 ]);
@@ -261,5 +188,9 @@ const messages = ref([
 	font-size: 16px;
 	line-height: 22.4px;
 	background: linear-gradient(185.49deg, #1288fc 15%, #0b5297 85.96%);
+}
+
+.my-checkbox :deep(.v-input__details) {
+	display: none !important;
 }
 </style>
