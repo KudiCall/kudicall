@@ -1,7 +1,7 @@
 <template>
 	<v-card class="pa-0" style="border-radius: 10px; overflow: hidden; background-color: #111212">
 		<v-img src="/images/video.png" eager />
-		<div class="d-flex flex-column ga-4 px-4 pb-4">
+		<div class="d-flex flex-column ga-4 px-4 pb-4 mt-8">
 			<div class="d-flex justify-space-between">
 				<div>
 					<p>112K</p>
