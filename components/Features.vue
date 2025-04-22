@@ -233,6 +233,7 @@ export default {
 .features-section {
 	height: 680px;
 	border-radius: 20px;
+	overflow: hidden;
 }
 
 .text-section {
