@@ -1,6 +1,6 @@
 <template>
 	<div class="pa-10">
-		<h2 class="logo pacifico" color="primary">OnCall</h2>
+		<v-img eager width="124" height="20" :src="'/kudicall.png'" />
 
 		<div class="d-flex justify-center py-12">
 			<v-card flat class="pa-md-12" width="100%" max-width="562px" style="background-color: transparent">

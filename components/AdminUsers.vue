@@ -257,22 +257,22 @@ const tabs = [
 		text: "All",
 		value: "All",
 	},
-	{
-		text: "Buyers",
-		value: "Buyers",
-	},
+	// {
+	// 	text: "Buyers",
+	// 	value: "Buyers",
+	// },
 	{
 		text: "Vendors",
 		value: "Vendors",
 	},
-	{
-		text: "Vendors & Buyers",
-		value: "Vendors & Buyers",
-	},
-	{
-		text: "Suspended",
-		value: "Suspended",
-	},
+	// {
+	// 	text: "Vendors & Buyers",
+	// 	value: "Vendors & Buyers",
+	// },
+	// {
+	// 	text: "Suspended",
+	// 	value: "Suspended",
+	// },
 ];
 
 // Method to handle the apply button click
