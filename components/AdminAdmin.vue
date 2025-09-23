@@ -57,7 +57,7 @@
 
 						<div>
 							<p style="font-size: 18px; font-weight: 400; color: #b5b5b5">Permissions</p>
-							<v-checkbox color="primary" class="my-checkbox" v-for="n in allPermissions" :label="n"></v-checkbox>
+							<v-checkbox color="primary" class="my-checkbox" v-for="n in allPermissions" :label="n" :key="n"></v-checkbox>
 						</div>
 
 						<v-btn color="primary" rounded class="btn px-6 mt-10" size="x-large"> Create admin </v-btn>
@@ -78,7 +78,7 @@
 				</div>
 				<div>
 					<p style="font-size: 18px; font-weight: 400; color: #ececec">This admin has access to the following features</p>
-					<v-checkbox color="primary" class="my-checkbox" style="color: #e7f3ff" v-for="n in allPermissions" :label="n"></v-checkbox>
+					<v-checkbox color="primary" class="my-checkbox" style="color: #e7f3ff" v-for="n in allPermissions" :label="n" :key="n"></v-checkbox>
 				</div>
 				<div class="d-flex align-center justify-end mt-5" style="gap: 10px">
 					<v-btn

@@ -77,7 +77,7 @@
 				</div>
 				<v-card variant="outlined" class="pa-5" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pb-8">Users analytics</p>
-					<AdminUsersChart />
+					<!-- <AdminUsersChart /> -->
 				</v-card>
 			</v-col>
 		</v-row>

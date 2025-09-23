@@ -88,7 +88,7 @@
 			<v-col cols="12" md="3">
 				<v-card variant="outlined" class="pa-5" style="border: 0.5px solid #303030; border-radius: 8px">
 					<p style="font-weight: 700; font-size: 20px; line-height: 28px; color: #ececec" class="pb-8">Financial charts</p>
-					<AdminUsersChart />
+					<AdminFinanceChart />
 				</v-card>
 			</v-col>
 		</v-row>

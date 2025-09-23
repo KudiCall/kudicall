@@ -8,7 +8,7 @@
 					</div>
 					<div class="d-flex flex-column flex-md-row align-center ga-10">
 						<div class="avatar-wrapper">
-							<v-avatar size="200" style="border: 1px solid rgba(236, 236, 236, 1)">
+							<v-avatar size="120" style="border: 1px solid rgba(236, 236, 236, 1)">
 								<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1725086683/OnCall/Ellipse_2324_hmn7ct.png" cover></v-img>
 							</v-avatar>
 							<v-img eager src="/images/upload-icon.svg" class="upload-icon" width="40" height="40" />

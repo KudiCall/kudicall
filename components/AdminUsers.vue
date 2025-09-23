@@ -1,207 +1,126 @@
 <template>
-	<div class="px-4 px-md-5">
-		<div class="d-flex justify-space-between align-center mb-4">
+	<div class="px-4 px-md-5" style="padding-bottom: 100">
+		<AdminUsersChart />
+
+		<div class="d-flex justify-space-between align-center mt-10">
 			<v-sheet rounded="lg" style="background-color: transparent">
-				<v-tabs v-model="tab" :items="tabs" slider-color="transparent">
+				<v-tabs v-model="tab" :items="tabs" selected-class="selected-class" slider-color="transparent">
 					<template v-slot:tab="{ item }">
 						<v-tab
 							:text="item.text"
 							:value="item.value"
-							rounded
-							:class="tab === item.value ? 'my-chip--active' : 'my-chip'"
-							class="d-flex align-center justify-center mx-1"
-							style="font-size: 14px; line-height: 19.4px; font-weight: 500; color: #ececec"
+							:class="tab === item.value ? 'my-tab-active' : 'my-tab'"
+							class="pl-0 pr-1"
+							style="font-size: 18px; font-weight: 500; line-height: 22px"
 						>
-							<v-icon v-if="tab === item.value" left class="mr-2">fas fa-circle-check</v-icon>
 							{{ item.text }}
 						</v-tab>
 					</template>
 				</v-tabs>
 			</v-sheet>
-			<div class="w-66 w-md-25">
-				<SearchComponent placeholder="Search" />
+			<div class="d-flex ga-2 align-center">
+				<v-img eager src="/images/refresh.svg" width="40" height="40" class="cursor-pointer img-tinted" @click="refreshData"></v-img>
+				<v-img @click="filterCountry = true" eager src="/images/global.svg" width="24" height="24" class="cursor-pointer img-tinted"></v-img>
+				<v-img @click="filterOptions = true" eager src="/images/filter.png" width="40" height="40" class="cursor-pointer img-tinted"></v-img>
 			</div>
 		</div>
-		<v-row dense>
-			<v-col cols="12" md="9">
-				<v-tabs-window v-model="tab">
-					<v-tabs-window-item v-for="item in tabs" :key="item.value" :value="item.value">
-						<v-card class="px-4" style="background-color: transparent">
-							<p style="font-weight: 700; font-size: 24px; line-height: 34px; color: #ececec" class="">Filter by</p>
 
-							<v-row style="font-weight: 500; font-size: 18px; line-height: 25.2px; color: #ececec" class="my-5">
-								<v-col md="4" sm="12">
-									<p class="mb-2">Select country</p>
-
-									<v-menu>
-										<template v-slot:activator="{ props }">
-											<v-btn
-												v-bind="props"
-												class="d-flex justify-space-between"
-												style="width: 275px"
-												icon-size="24"
-												rounded
-												size="x-large"
-												color="#161818"
-												append-icon="mdi mdi-chevron-down"
-											>
-												All
-											</v-btn>
-										</template>
-										<SelectState
-											title="Country"
-											description="Select target country"
-											:items="formattedContries"
-											:allIcon="'/images/country-icon.svg'"
-											@apply="handleApply"
-										/>
-									</v-menu>
-								</v-col>
-								<v-col md="4" sm="12">
-									<p class="mb-2">Select state</p>
-
-									<v-menu>
-										<template v-slot:activator="{ props }">
-											<v-btn
-												v-bind="props"
-												class="d-flex justify-space-between"
-												style="width: 275px"
-												icon-size="24"
-												rounded
-												size="x-large"
-												color="#161818"
-												append-icon="mdi mdi-chevron-down"
-											>
-												All
-											</v-btn>
-										</template>
-
-										<SelectState
-											title="State"
-											description="Select target state"
-											:items="formattedStates"
-											:allIcon="'/images/country-icon.svg'"
-											@apply="handleApply"
-										/>
-
-										<!-- <v-card class="pa-2 mt-4" width="275px" height="400px" style="background-color: #141515; border-radius: 12px">
-											<v-card-title class="d-flex justify-start">
-												<div>
-													<h3 style="font-weight: 700; font-size: 18px; line-height: 24.5px; color: #ececec">State</h3>
-													<p style="font-weight: 400; font-size: 16px; line-height: 22.4px; color: #8f8f8f">Select target state</p>
-												</div>
-											</v-card-title>
-
-											<div class="my-3 px-4">
-												<v-btn class="custom_btn" size="large" rounded @click="applySelection"> Apply </v-btn>
-											</div>
-
-											<div class="px-4 mt-8 d-flex justify-space-between align-center">
-												<div class="d-flex align-center ga-3">
-													<v-img src="/images/global.svg" width="40" height="40" />
-													<p style="font-weight: 500; font-size: 18px; line-height: 24.5px; color: #ececec">All</p>
-												</div>
-												<div>
-													<v-radio color="#1288FC" @click.stop v-model="selectedState" value="all"></v-radio>
-												</div>
-											</div>
-
-											<v-divider class="mt-4" color="#303030" style="border: 1px solid #6c6666"></v-divider>
-											<div class="px-4" style="background-color: transparent">
-												<div v-for="state in states" :key="state" class="d-flex justify-space-between align-center">
-													<p>
-														{{ state }}
-													</p>
-													<v-checkbox color="#1288FC" class="my-checkbox" @click.stop v-model="selectedStates" :value="state"></v-checkbox>
-												</div>
-											</div>
-										</v-card> -->
-									</v-menu>
-								</v-col>
-								<!-- <v-col>
-									<p class="mb-2">Select city</p>
-									<v-btn
-										class="d-flex justify-space-between"
-										style="width: 100%"
-										icon-size="24"
-										rounded
-										size="x-large"
-										color="#161818"
-										append-icon="mdi mdi-chevron-down"
-									>
-										All
-									</v-btn>
-								</v-col> -->
-							</v-row>
-
-							<div class="d-flex mb-4">
-								<div class="d-flex align-center ga-5 ml-auto">
-									<span style="font-size: 18px; font-weight: 500; color: #b5b5b5">{{ selected.length }} 0f {{ users.length }} Selected</span>
+		<v-tabs-window v-model="tab">
+			<v-tabs-window-item v-for="item in tabs" :key="item.value" :value="item.value">
+				<v-card class="px-4" style="background-color: transparent">
+					<div class="d-flex align-center">
+						<div class="search-container">
+							<SearchComponent placeholder="Search table" />
+						</div>
+						<div class="d-flex align-center ga-3 ml-auto">
+							<span class="selection-text">{{ selected.length }} of {{ filteredUsers.length }} Selected</span>
+							<div class="d-flex align-center ga-3 ml-auto" v-if="selected.length > 0">
+								<div class="d-flex align-center ga-1">
+									<v-icon color="#D37A39" size="20">mdi mdi-account-remove</v-icon>
+									<span class="action-text">Suspend</span>
+								</div>
+								<div class="d-flex align-center cursor-pointer" @click="confirmDeleteUsers = true">
 									<v-img
-										@click="confirmDeleteUsers = true"
 										eager
-										style="cursor: pointer"
 										src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1723461122/OnCall/delete_dbkf9b.svg"
 										width="40"
 										height="40"
 									></v-img>
+									<span class="action-text">Delete</span>
+								</div>
+								<div class="d-flex align-center ga-1">
+									<v-icon color="#1288FC" size="20">mdi mdi-account</v-icon>
+									<span class="action-text">Re-activate</span>
 								</div>
 							</div>
-							<v-data-table
-								class="custom-table"
-								v-model="selected"
-								:headers="headers"
-								:items="users"
-								item-value="UserID"
-								items-per-page="6"
-								:hide-default-footer="users.length < 6"
-								show-select
-								style="background-color: transparent"
-							>
-								<template v-slot:[`item.UserID`]="{ item }">
-									<span @click="$router.push(`/admin/dashboard/Users%20details/${item.UserID}`)" class="cursor-pointer">{{ item.UserID }}</span>
-								</template>
-								<template v-slot:[`item.status`]="{ item }">
-									<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
-								</template>
-								<template v-slot:[`item.actions`]="{ item }">
-									<v-menu>
-										<template v-slot:activator="{ props }">
-											<v-icon v-bind="props" icon="mdi mdi-dots-vertical" color="#ECECEC" />
-										</template>
 
-										<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
-											<v-list-item
-												v-for="(menuItem, i) in menuItems(item)"
-												:key="i"
-												@click.stop="menuItem.action"
-												rounded-xl
-												style="color: #ececec; font-weight: 500"
-											>
-												<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
-											</v-list-item>
-										</v-list>
-									</v-menu>
-								</template>
-								<template #no-data>
-									<div class="text-center py-16" style="font-size: 20px; color: #ececec">
-										<p>No user yet</p>
-									</div>
-								</template>
-							</v-data-table>
-						</v-card>
-					</v-tabs-window-item>
-				</v-tabs-window>
-			</v-col>
+							<div class="pagination-controls d-flex align-center ga-2">
+								<v-btn icon size="small" class="pagination-btn" :disabled="currentPage <= 1" @click="previousPage">
+									<v-icon size="16">mdi mdi-chevron-left</v-icon>
+								</v-btn>
+								<v-btn icon size="small" class="pagination-btn" :disabled="currentPage >= totalPages" @click="nextPage">
+									<v-icon size="16">mdi mdi-chevron-right</v-icon>
+								</v-btn>
+							</div>
+						</div>
+					</div>
 
-			<v-col cols="12" md="3">
-				<v-card variant="outlined" class="pa-5" style="border: 0.5px solid #303030; border-radius: 8px">
-					<p style="font-weight: 500; font-size: 20px; line-height: 34px; color: #ececec" class="pb-8">Users analytics</p>
-					<AdminUsersChart />
+					<v-data-table
+						class="custom-table"
+						v-model="selected"
+						:headers="headers"
+						:items="paginatedUsers"
+						item-value="UserID"
+						items-per-page="6"
+						:hide-default-footer="paginatedUsers.length < 6"
+						show-select
+						style="background-color: transparent"
+					>
+						<template v-slot:[`item.UserID`]="{ item }">
+							<span @click="$router.push(`/admin/dashboard/Users%20details/${item.UserID}`)" class="cursor-pointer">{{ item.UserID }}</span>
+						</template>
+						<template v-slot:[`item.status`]="{ item }">
+							<span :class="getStatusClass(item.status)" class="user-status">{{ item.status }}</span>
+						</template>
+						<template v-slot:[`item.walletBalance`]="{ item }">
+							<span>₦{{ formatNumber(item.walletBalance) }}</span>
+						</template>
+						<template v-slot:[`item.purchases`]="{ item }">
+							<span>{{ formatNumber(item.purchases) }}</span>
+						</template>
+						<template v-slot:[`item.sales`]="{ item }">
+							<span>₦{{ formatNumber(item.sales) }}</span>
+						</template>
+						<template v-slot:[`item.actions`]="{ item }">
+							<v-menu>
+								<template v-slot:activator="{ props }">
+									<v-icon v-bind="props" icon="mdi mdi-dots-vertical" color="#ECECEC" />
+								</template>
+
+								<v-list style="background-color: #141515; min-width: 160px; border-radius: 12px">
+									<v-list-item
+										v-for="(menuItem, i) in menuItems(item)"
+										:key="i"
+										@click.stop="menuItem.action"
+										rounded-xl
+										style="color: #ececec; font-weight: 500"
+									>
+										<v-list-item-title>{{ menuItem.title }}</v-list-item-title>
+									</v-list-item>
+								</v-list>
+							</v-menu>
+						</template>
+						<template #no-data>
+							<div class="text-center py-16" style="font-size: 20px; color: #ececec">
+								<p>No user yet</p>
+							</div>
+						</template>
+					</v-data-table>
 				</v-card>
-			</v-col>
-		</v-row>
+			</v-tabs-window-item>
+		</v-tabs-window>
 
+		<!-- Suspend User Modal -->
 		<v-dialog v-model="confirmSuspendModal" persistent max-width="755">
 			<ConfirmActionModal
 				title="Suspend user"
@@ -215,6 +134,8 @@
 				:rightBtnAction="() => (confirmSuspendModal = false)"
 			/>
 		</v-dialog>
+
+		<!-- Delete Users Modal -->
 		<v-dialog v-model="confirmDeleteUsers" persistent max-width="755">
 			<ConfirmActionModal
 				title="Delete all users"
@@ -228,6 +149,148 @@
 				:rightBtnAction="() => (confirmDeleteUsers = false)"
 			/>
 		</v-dialog>
+
+		<!-- Country Filter Modal -->
+		<v-dialog v-model="filterCountry" persistent max-width="350">
+			<v-card class="filter-card" flat>
+				<div class="filter-content">
+					<div class="filter-options">
+						<div class="filter-option" v-for="country in countries" :key="country.value">
+							<v-checkbox v-model="selectedCountries" :value="country.value" color="primary" class="filter-checkbox" hide-details>
+								<template v-slot:label>
+									<div class="d-flex align-center ga-2">
+										<div class="country-flag" :class="country.flagClass"></div>
+										<span class="filter-label">{{ country.label }}</span>
+									</div>
+								</template>
+							</v-checkbox>
+						</div>
+					</div>
+				</div>
+
+				<div class="filter-actions">
+					<v-btn width="140" class="discard-btn" rounded="lg" size="large" @click="discardCountryFilter"> Discard </v-btn>
+					<v-btn width="140" class="apply-btn" rounded="lg" size="large" @click="applyCountryFilter"> Apply filter </v-btn>
+				</div>
+			</v-card>
+		</v-dialog>
+
+		<!-- User/Vendor Filter Modal -->
+		<v-dialog v-model="filterOptions" persistent max-width="400">
+			<v-card class="filter-card" flat>
+				<!-- Replace the existing filter-tabs section with this -->
+				<div class="filter-tabs">
+					<div class="tab-headers">
+						<div
+							v-for="filterTab in filterTabs"
+							:key="filterTab.value"
+							@click="activeFilterTab = filterTab.value"
+							:class="['tab-header', { active: activeFilterTab === filterTab.value }]"
+						>
+							{{ filterTab.label }}
+						</div>
+					</div>
+				</div>
+
+				<!-- Replace the entire filter-options section with this -->
+				<div class="filter-options">
+					<!-- All Users Tab Content -->
+					<template v-if="tab === 'All'">
+						<template v-if="activeFilterTab === 'all'">
+							<div class="filter-option" v-for="option in allUsersFilters" :key="option.value">
+								<v-radio-group v-model="selectedAllUsersFilter" hide-details>
+									<v-radio :value="option.value" color="primary" class="filter-radio">
+										<template v-slot:label>
+											<div class="radio-label-container">
+												<span class="filter-label">{{ option.label }}</span>
+											</div>
+										</template>
+									</v-radio>
+								</v-radio-group>
+							</div>
+						</template>
+
+						<template v-if="activeFilterTab === 'status'">
+							<div class="filter-option" v-for="option in statusOptions" :key="option.value">
+								<v-radio-group v-model="selectedStatusFilter" hide-details>
+									<v-radio :value="option.value" color="primary" class="filter-radio">
+										<template v-slot:label>
+											<div class="radio-label-container">
+												<span class="filter-label">{{ option.label }}</span>
+											</div>
+										</template>
+									</v-radio>
+								</v-radio-group>
+							</div>
+						</template>
+					</template>
+
+					<!-- Vendors Tab Content -->
+					<template v-if="tab === 'Vendors'">
+						<template v-if="activeFilterTab === 'store-type'">
+							<div class="filter-option" v-for="option in storeTypeOptions" :key="option.value">
+								<v-radio-group v-model="selectedStoreType" hide-details>
+									<v-radio :value="option.value" color="primary" class="filter-radio">
+										<template v-slot:label>
+											<div class="radio-label-container">
+												<span class="filter-label">{{ option.label }}</span>
+											</div>
+										</template>
+									</v-radio>
+								</v-radio-group>
+							</div>
+						</template>
+
+						<template v-if="activeFilterTab === 'status'">
+							<div class="filter-option" v-for="option in statusOptions" :key="option.value">
+								<v-radio-group v-model="selectedStatusFilter" hide-details>
+									<v-radio :value="option.value" color="primary" class="filter-radio">
+										<template v-slot:label>
+											<div class="radio-label-container">
+												<span class="filter-label">{{ option.label }}</span>
+											</div>
+										</template>
+									</v-radio>
+								</v-radio-group>
+							</div>
+						</template>
+
+						<template v-if="activeFilterTab === 'verification'">
+							<div class="filter-option" v-for="option in verificationOptions" :key="option.value">
+								<v-radio-group v-model="selectedVerification" hide-details>
+									<v-radio :value="option.value" color="primary" class="filter-radio">
+										<template v-slot:label>
+											<div class="radio-label-container">
+												<span class="filter-label">{{ option.label }}</span>
+											</div>
+										</template>
+									</v-radio>
+								</v-radio-group>
+							</div>
+						</template>
+
+						<template v-if="activeFilterTab === 'badge'">
+							<div class="filter-option" v-for="option in badgeOptions" :key="option.value">
+								<v-radio-group v-model="selectedBadge" hide-details>
+									<v-radio :value="option.value" color="primary" class="filter-radio">
+										<template v-slot:label>
+											<div class="radio-label-container">
+												<span class="filter-label">{{ option.label }}</span>
+											</div>
+										</template>
+									</v-radio>
+								</v-radio-group>
+							</div>
+						</template>
+					</template>
+				</div>
+
+				<div class="filter-actions">
+					<v-btn width="140" class="discard-btn" rounded="lg" size="large" @click="discardOptionsFilter"> Discard </v-btn>
+					<v-btn width="140" class="apply-btn" rounded="lg" size="large" @click="applyOptionsFilter"> Apply filter </v-btn>
+				</div>
+			</v-card>
+		</v-dialog>
 	</div>
 </template>
 
@@ -235,130 +298,324 @@
 import { useRouter } from "vue-router";
 const router = useRouter();
 
+// Reactive data
 const selected = ref([]);
 const confirmSuspendModal = ref(false);
 const confirmDeleteUsers = ref(false);
+const currentPage = ref(1);
+const itemsPerPage = 6;
+const selectAll = ref(false);
+const filterCountry = ref(false);
+const filterOptions = ref(false);
+
+// Filter states
+const selectedCountries = ref(["all"]);
+const activeFilterTab = ref("all");
+const activeVendorSubtab = ref("store-type");
+
+// All Users Filter
+const selectedAllUsersFilter = ref("all-users");
+
+// Vendor Filters
+const selectedStoreType = ref("all");
+const selectedStatusFilter = ref("active");
+const selectedVerification = ref("all");
+const selectedBadge = ref("all");
+
+// Applied filters (for actual filtering)
+const appliedFilters = ref({
+	countries: ["all"],
+	userType: "all-users",
+	storeType: "all",
+	status: "active",
+	verification: "all",
+	badge: "all",
+});
+
 const headers = ref([
 	{
-		title: "UserID",
+		title: "User ID",
 		align: "start",
-		sortable: false,
+		sortable: true,
 		key: "UserID",
 	},
-	{ title: "Country", key: "country" },
-	{ title: "Phone number", key: "phoneNo" },
-	{ title: "User category", key: "category" },
-	{ title: "Status", key: "status" },
-	{ title: "", key: "actions", sortable: false },
+	{ title: "Full name", key: "fullName", sortable: true },
+	{ title: "User type", key: "userType", sortable: true },
+	{ title: "Strikes", key: "strikes", sortable: true },
+	{ title: "Wallet bal.", key: "walletBalance", sortable: true },
+	{ title: "Purchases", key: "purchases", sortable: true },
+	{ title: "Sales", key: "sales", sortable: true },
+	{ title: "Status", key: "status", sortable: false },
+	{ title: "Action", key: "actions", sortable: false },
 ]);
+
 const tab = ref("All");
 const tabs = [
 	{
 		text: "All",
 		value: "All",
 	},
-	// {
-	// 	text: "Buyers",
-	// 	value: "Buyers",
-	// },
 	{
 		text: "Vendors",
 		value: "Vendors",
 	},
-	// {
-	// 	text: "Vendors & Buyers",
-	// 	value: "Vendors & Buyers",
-	// },
-	// {
-	// 	text: "Suspended",
-	// 	value: "Suspended",
-	// },
 ];
 
-// Method to handle the apply button click
-// const applySelection = () => {
-// 	console.log("Selected States:", selectedStates.value);
-// 	console.log("Selected State (All/Specific):", selectedState.value);
-// };
+// Filter options data
+const countries = [
+	{ label: "All", value: "all", flagClass: "flag-all" },
+	{ label: "Nigeria", value: "nigeria", flagClass: "flag-nigeria" },
+];
 
-const handleApply = (selection) => {
-	console.log("Selected Item:", selection.selectedItem);
-	console.log("Selected Items:", selection.selectedItems);
-};
+const filterTabs = computed(() => {
+	if (tab.value === "All") {
+		return [
+			{ label: "User type", value: "all" },
+			{ label: "Status", value: "status" },
+		];
+	} else {
+		return [
+			{ label: "Store type", value: "store-type" },
+			{ label: "Status", value: "status" },
+			{ label: "Verification", value: "verification" },
+			{ label: "Badge", value: "badge" },
+		];
+	}
+});
 
+const allUsersFilters = [
+	{ label: "All users", value: "all-users" },
+	{ label: "Vendors", value: "vendors" },
+];
+
+const storeTypeOptions = [
+	{ label: "All", value: "all" },
+	{ label: "Product", value: "product" },
+	{ label: "Service", value: "service" },
+];
+
+const statusOptions = [
+	{ label: "Active", value: "active" },
+	{ label: "Inactive", value: "inactive" },
+	{ label: "Suspended", value: "suspended" },
+];
+
+const verificationOptions = [
+	{ label: "All", value: "all" },
+	{ label: "Verified", value: "verified" },
+	{ label: "Unverified", value: "unverified" },
+];
+
+const badgeOptions = [
+	{ label: "All", value: "all" },
+	{ label: "Top sellers", value: "top-sellers" },
+	{ label: "New vendor", value: "new-vendor" },
+	{ label: "Fast response", value: "fast-response" },
+];
+
+// Sample users data with additional properties for filtering
 const users = ref([
 	{
-		UserID: 1234567898,
-		country: `${getCurrencyFlag("NG")} Nigeria`,
-		phoneNo: "+2348193789403",
-		category: "Buyer",
+		UserID: 123456790,
+		fullName: "Emmanuel Bakare",
+		avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+		userType: "Vendor",
+		strikes: 0,
+		walletBalance: 5080000,
+		purchases: 9670,
+		sales: 690080500,
 		status: "Active",
+		country: "nigeria",
+		storeType: "product",
+		verification: "verified",
+		badge: "top-sellers",
 	},
 	{
-		UserID: 1034567899,
-		country: `${getCurrencyFlag("US")} United States`,
-		phoneNo: "+2348193789403",
-		category: "Vendor",
+		UserID: 123456791,
+		fullName: "Sarah Johnson",
+		avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+		userType: "User",
+		strikes: 0,
+		walletBalance: 2080000,
+		purchases: 5670,
+		sales: 0,
+		status: "Inactive",
+		country: "nigeria",
+		storeType: null,
+		verification: null,
+		badge: null,
+	},
+	{
+		UserID: 123456792,
+		fullName: "Michael Chen",
+		avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+		userType: "Vendor",
+		strikes: 1,
+		walletBalance: 3080000,
+		purchases: 8670,
+		sales: 450080500,
 		status: "Suspended",
+		country: "nigeria",
+		storeType: "service",
+		verification: "unverified",
+		badge: "new-vendor",
 	},
 	{
-		UserID: 5234567899,
-		country: `${getCurrencyFlag("ZA")} South Africa`,
-		phoneNo: "+2348193789403",
-		category: "B & V",
-		status: "In active",
+		UserID: 123456793,
+		fullName: "Lisa Anderson",
+		avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+		userType: "Vendor",
+		strikes: 0,
+		walletBalance: 7080000,
+		purchases: 12670,
+		sales: 890080500,
+		status: "Active",
+		country: "nigeria",
+		storeType: "product",
+		verification: "verified",
+		badge: "fast-response",
 	},
 	{
-		UserID: 2234567899,
-		country: `${getCurrencyFlag("CA")} Canada`,
-		phoneNo: "+2348193789403",
-		category: "B & V",
-		status: "In active",
+		UserID: 123456794,
+		fullName: "David Wilson",
+		avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+		userType: "User",
+		strikes: 0,
+		walletBalance: 1580000,
+		purchases: 3670,
+		sales: 0,
+		status: "Active",
+		country: "nigeria",
+		storeType: null,
+		verification: null,
+		badge: null,
 	},
 	{
-		UserID: 3234567899,
-		country: `${getCurrencyFlag("NG")} Nigeria`,
-		phoneNo: "+2348193789403",
-		category: "Buyer",
-		status: "In active",
+		UserID: 123456795,
+		fullName: "Maria Garcia",
+		avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+		userType: "Vendor",
+		strikes: 2,
+		walletBalance: 4080000,
+		purchases: 7670,
+		sales: 320080500,
+		status: "Suspended",
+		country: "nigeria",
+		storeType: "service",
+		verification: "verified",
+		badge: "top-sellers",
 	},
 	{
-		UserID: 4234567899,
-		country: `${getCurrencyFlag("CN")} China`,
-		phoneNo: "+2348193789403",
-		category: "Vendor",
-		status: "In active",
-	},
-	{
-		UserID: 5234567899,
-		country: `${getCurrencyFlag("ZA")} South Africa`,
-		phoneNo: "+2348193789403",
-		category: "Buyer",
-		status: "In active",
-	},
-
-	{
-		UserID: 6234567899,
-		country: `${getCurrencyFlag("NG")} Nigeria`,
-		phoneNo: "+2348193789403",
-		category: "Buyer",
-		status: "In active",
+		UserID: 123456796,
+		fullName: "James Brown",
+		avatar: "https://randomuser.me/api/portraits/men/7.jpg",
+		userType: "Vendor",
+		strikes: 0,
+		walletBalance: 6080000,
+		purchases: 11670,
+		sales: 720080500,
+		status: "Inactive",
+		country: "nigeria",
+		storeType: "product",
+		verification: "unverified",
+		badge: "new-vendor",
 	},
 ]);
 
-const formattedContries = computed(() => {
-	return contries.map((contry) => ({
-		text: `${getCurrencyFlag(contry.flagCode)} ${contry.name}`,
-		value: `${contry.name}`,
-	}));
+// Computed properties
+const filteredUsers = computed(() => {
+	let filtered = users.value;
+
+	// Filter by tab (All vs Vendors)
+	if (tab.value === "Vendors") {
+		filtered = filtered.filter((user) => user.userType === "Vendor");
+	}
+
+	// Apply country filter
+	if (!appliedFilters.value.countries.includes("all")) {
+		filtered = filtered.filter((user) => appliedFilters.value.countries.includes(user.country));
+	}
+
+	// Apply user type filter (only when All tab is active)
+	if (tab.value === "All" && appliedFilters.value.userType === "vendors") {
+		filtered = filtered.filter((user) => user.userType === "Vendor");
+	}
+
+	// Apply vendor-specific filters (only for vendors)
+	if (tab.value === "Vendors") {
+		// Store type filter
+		if (appliedFilters.value.storeType !== "all") {
+			filtered = filtered.filter((user) => user.storeType === appliedFilters.value.storeType);
+		}
+
+		// Status filter
+		if (appliedFilters.value.status !== "all") {
+			filtered = filtered.filter((user) => user.status.toLowerCase() === appliedFilters.value.status);
+		}
+
+		// Verification filter
+		if (appliedFilters.value.verification !== "all") {
+			filtered = filtered.filter((user) => user.verification === appliedFilters.value.verification);
+		}
+
+		// Badge filter
+		if (appliedFilters.value.badge !== "all") {
+			filtered = filtered.filter((user) => user.badge === appliedFilters.value.badge);
+		}
+	}
+
+	return filtered;
 });
 
-const formattedStates = computed(() => {
-	return states.map((state) => ({
-		text: `${state.name}`,
-		value: `${state.name}`,
-	}));
+const totalPages = computed(() => Math.ceil(filteredUsers.value.length / itemsPerPage));
+
+const paginatedUsers = computed(() => {
+	const start = (currentPage.value - 1) * itemsPerPage;
+	const end = start + itemsPerPage;
+	return filteredUsers.value.slice(start, end);
 });
+
+const nextPage = () => {
+	if (currentPage.value < totalPages.value) {
+		currentPage.value++;
+	}
+};
+
+const previousPage = () => {
+	if (currentPage.value > 1) {
+		currentPage.value--;
+	}
+};
+
+const refreshData = () => {
+	// Reset all filters
+	appliedFilters.value = {
+		countries: ["all"],
+		userType: "all-users",
+		storeType: "all",
+		status: "active",
+		verification: "all",
+		badge: "all",
+	};
+
+	// Reset current page
+	currentPage.value = 1;
+
+	// Clear selections
+	selected.value = [];
+
+	// Reset filter modal states
+	selectedCountries.value = ["all"];
+	selectedAllUsersFilter.value = "all-users";
+	selectedStoreType.value = "all";
+	selectedStatusFilter.value = "active";
+	selectedVerification.value = "all";
+	selectedBadge.value = "all";
+};
+
+const formatNumber = (num) => {
+	return new Intl.NumberFormat().format(num);
+};
 
 const menuItems = (userInfo) => {
 	return [
@@ -366,7 +623,10 @@ const menuItems = (userInfo) => {
 			title: "View Detail",
 			action: () => router.push(`/admin/dashboard/Users%20details/${userInfo.UserID}`),
 		},
-		{ title: `${userInfo.status == "Active" ? "Suspend" : "Reactivate"}`, action: () => (confirmSuspendModal.value = true) },
+		{
+			title: `${userInfo.status === "Active" ? "Suspend" : "Reactivate"}`,
+			action: () => (confirmSuspendModal.value = true),
+		},
 	];
 };
 
@@ -374,7 +634,7 @@ const getStatusClass = (status) => {
 	switch (status) {
 		case "Suspended":
 			return "user-status-suspended";
-		case "In active":
+		case "Inactive":
 			return "user-status-inactive";
 		case "Active":
 			return "user-status-active";
@@ -383,24 +643,167 @@ const getStatusClass = (status) => {
 	}
 };
 
+// Filter methods
+const applyCountryFilter = () => {
+	appliedFilters.value.countries = [...selectedCountries.value];
+	currentPage.value = 1; // Reset to first page
+	filterCountry.value = false;
+};
+
+const discardCountryFilter = () => {
+	selectedCountries.value = [...appliedFilters.value.countries];
+	filterCountry.value = false;
+};
+
+const applyOptionsFilter = () => {
+	if (tab.value === "All") {
+		appliedFilters.value.userType = selectedAllUsersFilter.value;
+		appliedFilters.value.status = selectedStatusFilter.value;
+
+		// Console log for All tab
+		console.log("Applied filters for All tab:", {
+			userType: selectedAllUsersFilter.value,
+			status: selectedStatusFilter.value,
+		});
+	} else {
+		// Apply vendor filters based on active tab
+		switch (activeFilterTab.value) {
+			case "store-type":
+				appliedFilters.value.storeType = selectedStoreType.value;
+				console.log("Applied store type filter:", selectedStoreType.value);
+				break;
+			case "status":
+				appliedFilters.value.status = selectedStatusFilter.value;
+				console.log("Applied status filter:", selectedStatusFilter.value);
+				break;
+			case "verification":
+				appliedFilters.value.verification = selectedVerification.value;
+				console.log("Applied verification filter:", selectedVerification.value);
+				break;
+			case "badge":
+				appliedFilters.value.badge = selectedBadge.value;
+				console.log("Applied badge filter:", selectedBadge.value);
+				break;
+		}
+	}
+	currentPage.value = 1; // Reset to first page
+	filterOptions.value = false;
+};
+
+const discardOptionsFilter = () => {
+	// Reset modal states to applied values
+	selectedAllUsersFilter.value = appliedFilters.value.userType;
+	selectedStoreType.value = appliedFilters.value.storeType;
+	selectedStatusFilter.value = appliedFilters.value.status;
+	selectedVerification.value = appliedFilters.value.verification;
+	selectedBadge.value = appliedFilters.value.badge;
+	filterOptions.value = false;
+};
+
+// Watch for tab changes to update filter options
+watch(tab, (newTab) => {
+	if (newTab === "All") {
+		activeFilterTab.value = "all";
+	} else {
+		activeFilterTab.value = "vendors";
+		activeVendorSubtab.value = "store-type";
+	}
+});
+
+// Static data
 const removeActionInfo = ["Permanently remove their account and all associated data", "Remove their ability to log in and access the platform"];
 const suspendActionInfo = ["Remove their ability to log in and access the platform until you reactivate them"];
 </script>
 
 <style scoped>
+.search-container {
+	width: 280px;
+}
+
+.selection-text {
+	font-size: 16px;
+	color: #b5b5b5;
+	font-weight: 500;
+}
+
+.action-text {
+	font-size: 16px;
+	font-weight: 500;
+	color: #f7f7f7;
+}
+
+.pagination-btn {
+	background-color: #1a1a1a !important;
+	color: #ececec !important;
+	min-width: 32px !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+.pagination-btn:disabled {
+	opacity: 0.3 !important;
+}
+
+.custom-table {
+	background-color: transparent !important;
+}
+
+.custom-table :deep(.v-table__wrapper) {
+	background-color: transparent !important;
+}
+
+.custom-table :deep(.v-data-table__th) {
+	background-color: transparent !important;
+	border-bottom: 1px solid #2a2a2a !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	color: #8f8f8f !important;
+	padding: 16px 12px !important;
+	height: auto !important;
+}
+
+.custom-table :deep(.v-data-table__tbody tr) {
+	background-color: #0a0a0a !important;
+	border: 1px solid transparent;
+	margin-bottom: 8px;
+	border-radius: 8px;
+}
+
+.custom-table :deep(.v-data-table__tbody tr:hover) {
+	background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.custom-table :deep(.v-data-table__tbody tr.v-data-table__selected) {
+	border-color: #1288fc !important;
+	background-color: rgba(18, 136, 252, 0.1) !important;
+}
+
+.custom-table :deep(.v-checkbox .v-selection-control__input) {
+	border: 1.5px solid #292929 !important;
+	border-radius: 4px !important;
+	background-color: transparent !important;
+}
+
+.custom-table :deep(.v-checkbox .v-selection-control__input .v-icon) {
+	color: #1288fc !important;
+}
+
 .user-status {
 	border-radius: 6px;
-	padding: 4px 10px;
-	font-size: 16px;
-	line-height: 22.4px;
+	padding: 4px 12px;
+	font-size: 12px;
+	line-height: 16px;
 	font-weight: 500;
-	width: 89px;
 	text-align: center;
+	display: inline-block;
+	min-width: 80px;
 }
+
 .user-status-suspended {
 	background: linear-gradient(180deg, rgba(249, 112, 102, 0.1) 2.68%, rgba(180, 35, 24, 0.1) 84.82%);
 	color: #f97066;
 }
+
 .user-status-inactive {
 	background: linear-gradient(180deg, rgba(211, 122, 57, 0.1) 2.68%, rgba(180, 80, 7, 0.1) 84.82%);
 	color: #d37a39;
@@ -411,33 +814,208 @@ const suspendActionInfo = ["Remove their ability to log in and access the platfo
 	color: #00b4a0;
 }
 
-.my-chip {
-	background-color: #161818;
-	border-radius: 16px !important;
+.my-tab {
+	color: #8f8f8f;
 }
 
-.my-chip--active {
-	background: linear-gradient(185.49deg, rgba(0, 180, 160, 0.2) 15%, rgba(0, 108, 96, 0.2) 85.96%);
-	border-radius: 16px !important;
+.my-tab-active {
+	color: #ececec;
 }
 
-.custom-table :deep(.v-data-table-footer__items-per-page) {
-	display: none;
-}
-.custom-table :deep(.v-data-table__checkbox) {
-	border: 1.5px solid #292929;
-	border-radius: 4px;
+.img-tinted {
+	filter: brightness(0.6);
 }
 
-.custom_btn {
-	width: 150px;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 22.4px;
-	background: linear-gradient(185.49deg, #1288fc 15%, #0b5297 85.96%);
+.cursor-pointer {
+	cursor: pointer;
 }
 
-.my-checkbox :deep(.v-input__details) {
-	display: none !important;
+.selected-class {
+	text-decoration: underline 2px;
+	text-underline-offset: 8px;
+}
+
+/* Filter Modal Styles */
+.filter-card {
+	background-color: #1c1c1c !important;
+	border-radius: 20px !important;
+	padding: 20px !important;
+	color: #ececec;
+}
+
+.filter-header {
+	margin-bottom: 20px;
+}
+
+.filter-header h3 {
+	color: #ececec;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	margin: 0;
+}
+
+.filter-content {
+	margin-bottom: 24px;
+}
+
+.filter-tabs {
+	margin-bottom: 20px;
+}
+
+.tab-headers {
+	display: flex;
+	gap: 12px;
+	/* border-bottom: 1px solid #3a3a3a; */
+}
+
+.tab-header {
+	padding: 12px 16px;
+	color: #8f8f8f;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	font-size: 18px;
+	font-weight: 500;
+	transition: all 0.2s;
+	padding: 0;
+}
+
+.tab-header.active {
+	color: #ececec;
+	border-bottom-color: #ececec;
+	padding: 0;
+}
+
+.tab-header:hover {
+	color: #ececec;
+}
+
+.vendor-subtabs {
+	margin-bottom: 16px;
+}
+
+.subtab-headers {
+	display: flex;
+	gap: 0;
+	border-bottom: 1px solid #3a3a3a;
+}
+
+.subtab-header {
+	padding: 8px 12px;
+	color: #8f8f8f;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	font-size: 12px;
+	font-weight: 500;
+	transition: all 0.2s;
+	white-space: nowrap;
+}
+
+.subtab-header.active {
+	color: #ececec;
+	border-bottom-color: #1288fc;
+}
+
+.subtab-header:hover {
+	color: #ececec;
+}
+
+.filter-options {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.filter-option {
+	padding: 4px 0;
+}
+
+.filter-checkbox :deep(.v-selection-control) {
+	min-height: auto;
+}
+
+.filter-checkbox :deep(.v-selection-control__wrapper) {
+	height: auto;
+}
+
+.filter-checkbox :deep(.v-selection-control__input .v-icon) {
+	color: #1288fc !important;
+}
+
+.filter-radio :deep(.v-selection-control) {
+	min-height: auto;
+	margin: 0;
+}
+
+.filter-radio :deep(.v-selection-control__wrapper) {
+	height: auto;
+}
+
+.filter-radio :deep(.v-selection-control__input) {
+	margin-right: 12px;
+}
+
+.filter-label {
+	color: #ececec;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.country-flag {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #4a4a4a;
+	position: relative;
+}
+
+.flag-all::before {
+	content: "🌍";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12px;
+}
+
+.flag-nigeria::before {
+	content: "🇳🇬";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12px;
+}
+
+.filter-actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 20px;
+}
+
+.discard-btn {
+	background-color: #3e3e3e !important;
+	color: #ececec !important;
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	text-transform: none !important;
+}
+
+.apply-btn {
+	background-color: #1288fc !important;
+	color: #ffffff !important;
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	text-transform: none !important;
+}
+
+.discard-btn:hover {
+	background-color: #4a4a4a !important;
+}
+
+.apply-btn:hover {
+	background-color: #0d7ae8 !important;
 }
 </style>
