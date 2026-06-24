@@ -23,7 +23,7 @@
 						<div>
 							<v-img
 								eager
-								src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719326024/OnCall/Frame_1000007886_neoj6x.svg"
+								src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6b6be361-ee6b-4937-bffd-bf2ca0b3c146.png?alt=media&token="
 								width="40"
 								height="40"
 							/>
@@ -40,11 +40,11 @@
 				</h2>
 				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
 					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">
-						<v-img eager height="28" width="120" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720885363/OnCall/App_Store_edkcx2.png" />
+						<v-img eager height="28" width="120" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fef602f9b-8afd-4f9a-ac9a-0e87dd6e7e8b.png?alt=media&token=" />
 					</v-btn>
 
 					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">
-						<v-img eager height="28" width="120" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720885363/OnCall/Play_Store_rmjj8b.png" />
+						<v-img eager height="28" width="120" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F70f7d2d4-891d-44b3-8c77-b8620a7479a3.png?alt=media&token=" />
 					</v-btn>
 				</div>
 			</div>

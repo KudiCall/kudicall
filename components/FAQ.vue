@@ -2,7 +2,7 @@
 	<v-container id="faq" style="max-width: 1400px; width: 100%; padding-top: 100px" class="mx-auto">
 		<v-row>
 			<v-col cols="12" md="3" class="faq-header">
-				<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009222/OnCall/Frame_1171275577_aza04y.svg" />
+				<v-img eager width="192" height="44" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6d6ef6e1-282f-4277-8d47-106ae274b8e7.png?alt=media&token=" />
 				<h1 class="mt-5">Frequently asked questions</h1>
 			</v-col>
 			<v-col cols="12" md="9">
@@ -31,18 +31,18 @@ export default {
 			faq: [
 				{
 					id: 1,
-					title: "How does live commerce work on OnCall?",
-					text: "OnCall is a platform that revolutionizes online shopping with live demos and real-time interactions.",
+					title: "How does live commerce work on KudiCall?",
+					text: "KudiCall is a platform that revolutionizes online shopping with live demos and real-time interactions.",
 				},
 				{
 					id: 2,
-					title: "Can anyone become a vendor on OnCall?",
+					title: "Can anyone become a vendor on KudiCall?",
 					text: "Users can watch live product demonstrations, chat with vendors, and make purchases instantly.",
 				},
 				{
 					id: 3,
-					title: "How do I ensure the security of my transactions on OnCall?",
-					text: "OnCall prioritizes the security of your transactions. We use industry-standard encryption and work with reputable payment processors to safeguard your financial information. Additionally, our platform undergoes regular security assessments to ensure a safe and secure shopping environment for all users.",
+					title: "How do I ensure the security of my transactions on KudiCall?",
+					text: "KudiCall prioritizes the security of your transactions. We use industry-standard encryption and work with reputable payment processors to safeguard your financial information. Additionally, our platform undergoes regular security assessments to ensure a safe and secure shopping environment for all users.",
 				},
 				{
 					id: 4,
@@ -56,7 +56,7 @@ export default {
 				},
 				{
 					id: 6,
-					title: "What makes OnCall different from traditional e-commerce platforms?",
+					title: "What makes KudiCall different from traditional e-commerce platforms?",
 					text: "Users can watch live product demonstrations, chat with vendors, and make purchases instantly.",
 				},
 			],
@@ -122,3 +122,4 @@ export default {
 	}
 }
 </style>
+

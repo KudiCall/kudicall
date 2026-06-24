@@ -6,7 +6,7 @@
 				width="181"
 				height="44"
 				class="mx-auto my-5"
-				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720009297/OnCall/Frame_1171275577_dpibme.png"
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F518def6e-6a17-45a6-90ec-88e67d5a9e01.png?alt=media&token="
 			/>
 			<h1 class="header-title" style="font-weight: 700">Positive feedback from users</h1>
 			<p>Explore a curated collection of products and services from passionate vendors. From fashion to electronics.</p>
@@ -56,21 +56,21 @@ export default {
 					text: "Lorem ipsum dolor sit amet consectetur. Magna eleifend facilisis enim scelerisque. Nisi auctor in orci venenatis. Enim nibh et quisque aenean quam.",
 					name: "Stephen Eyeson",
 					title: "Founder Kelly's Fashion",
-					avatar: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1720823777/OnCall/Rectangle_3194_vaoqbe.png",
+					avatar: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc327c863-7185-45b0-b960-fc9061d5ab56.png?alt=media&token=",
 				},
 				{
 					rating: 5,
 					text: "Lorem ipsum dolor sit amet consectetur. Tincidunt maecenas suspendisse facilisis amet quis. Cursus ultricies duis non lacinia faucibus eros.",
 					name: "Stephen Eyeson",
 					title: "Founder Kelly's Fashion",
-					avatar: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1720823777/OnCall/Rectangle_3196_vzzmdp.png",
+					avatar: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F837722a2-775a-4c5b-9ee1-13cdf160d2ac.png?alt=media&token=",
 				},
 				{
 					rating: 3,
 					text: "Lorem ipsum dolor sit amet consectetur. Magna eleifend facilisis enim scelerisque. Nisi auctor in orci venenatis. Enim nibh et quisque aenean quam.",
 					name: "Stephen Eyeson",
 					title: "Founder Kelly's Fashion",
-					avatar: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1720823778/OnCall/Rectangle_3210_shkxha.png",
+					avatar: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fde8d421f-73ed-47c5-8127-06bae3287495.png?alt=media&token=",
 				},
 			],
 		};

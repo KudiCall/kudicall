@@ -6,22 +6,22 @@
 				width="181"
 				height="44"
 				class="mx-auto my-5"
-				src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719276448/OnCall/Frame_1171275577_xhzcrp.svg"
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcf03bbc9-fe51-4678-81f3-fed12f84dffc.png?alt=media&token="
 			/>
 			<h1 class="header-title" style="font-weight: 700">
-				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">OnCall</span>
+				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">KudiCall</span>
 			</h1>
 		</div>
 		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-10">
-					<h1 class="text-black" style="">Live Commerce</h1>
-					<p style="">Engage in real-time calls with vendors for a personalized and interactive shopping experience</p>
+					<h1 class="text-black" style="">Direct Calls</h1>
+					<p style="">Connect with customers instantly through voice calls before closing a sale, building trust and increasing conversions</p>
 					<v-btn color="#000" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc7b8c527-0340-48b0-b85b-9acfc7a13684.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -29,28 +29,42 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section first-image mt-auto mb-0">
-					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719278324/OnCall/iphone_15_xa1t8m.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96e2aee6-6ae8-491c-abb6-3983399df43c.png?alt=media&token=" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
 						eager
 						width="50%"
 						height="50%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716206/OnCall/hanging_call_b5f2ve.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F93bf6a6c-7377-4b54-80e3-4644ba2799c1.png?alt=media&token="
 						class="overlay-img call-notification"
 					></v-img>
+					<div class="overlay-img shoe-offer product-card-slider">
+						<v-img
+							v-for="(card, index) in productCards"
+							:key="card"
+							eager
+							:src="card"
+							class="product-card-slide"
+							:class="{ active: activeProductCard === index }"
+						></v-img>
+						<div class="product-card-dots" aria-label="Product card slides">
+							<button
+								v-for="(_, index) in productCards"
+								:key="index"
+								type="button"
+								class="product-card-dot"
+								:class="{ active: activeProductCard === index }"
+								:aria-label="`Show product card ${index + 1}`"
+								@click="setActiveProductCard(index)"
+							></button>
+						</div>
+					</div>
 					<v-img
 						eager
-						width="55%"
-						height="65%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716207/OnCall/shoe_tr9cmv.png"
-						class="overlay-img shoe-offer"
-					></v-img>
-					<v-img
-						eager
-						width="100%"
-						height="80%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716212/OnCall/sidebar_pxpb5d.png"
+						width="90%"
+						height="76%"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0917221f-9e4d-4223-9d28-9710d841dd72.png?alt=media&token="
 						class="overlay-img call"
 					></v-img>
 				</v-col>
@@ -60,15 +74,15 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #1787f2 0%, #1470c9 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Catalogs</h1>
+					<h1 style="color: #fff">Manage Teams</h1>
 					<p style="color: #fff">
-						Anyone can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
+						Add staff members to customer conversations while maintaining visibility and control over all business communications
 					</p>
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -76,20 +90,20 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719282884/OnCall/iphone_19_i8wosw.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fa64f3b8f-fa17-4228-bc4c-2de29f838bef.png?alt=media&token=" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
 						eager
 						width="60%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716536/OnCall/add_z21zhx.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbef43737-628b-40b4-9910-32f03a2f5181.png?alt=media&token="
 						class="overlay-img add"
 					></v-img>
 					<v-img
 						eager
 						width="60%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716536/OnCall/edit_kssg8o.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96300d06-1404-4d7c-8509-9543a877f32a.png?alt=media&token="
 						class="overlay-img edit"
 					></v-img>
 				</v-col>
@@ -99,13 +113,13 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%)">
 			<v-row dense class="mx-auto h-100 mb-0 pb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Uploading Real Time Product Videos</h1>
-					<p style="color: #fff">Plan your live commerce experience by scheduling video calls with vendors in advance.</p>
+					<h1 style="color: #fff">Secure Deals</h1>
+					<p style="color: #fff">Payments are held securely in escrow and only released when the customer confirms the job is completed or the product is received.</p>
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -113,21 +127,21 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719846888/OnCall/iphone_15_xmstw3.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdf372710-f3d8-43e0-9eae-2bc563035110.png?alt=media&token=" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
 						eager
 						width="40%"
 						height="100%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716765/OnCall/upload_vb4uto.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F3477c374-eb18-4f4c-89ea-ce28416ebabc.png?alt=media&token="
 						class="overlay-img uplaod"
 					></v-img>
 					<v-img
 						eager
 						width="40%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716765/OnCall/success_o0gfvn.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd17307f1-85f2-47ef-a908-3cbe690f1cab.png?alt=media&token="
 						class="overlay-img success"
 					></v-img>
 				</v-col>
@@ -137,16 +151,15 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #9f86ff 0%, #8e70ff 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Secure Transactions and Data Protection</h1>
+					<h1 style="color: #fff">Build Shops</h1>
 					<p style="color: #fff">
-						Utilize industry-standard encryption and work with trusted payment processors to ensure the security of user transactions and financial
-						information.
+						Create your online storefront in minutes by adding products or services without needing a website.
 					</p>
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -154,13 +167,13 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847617/OnCall/iphone_16_j3qbat.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F37e46230-08c7-41e9-b3f8-ca8588b58c8a.png?alt=media&token=" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
 						eager
 						width="50%"
 						height="50%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720716884/OnCall/payment_t9fdj3.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2c62b90e-69fd-4cf8-8175-274b16a603dd.png?alt=media&token="
 						class="overlay-img payment"
 					></v-img>
 				</v-col>
@@ -170,15 +183,15 @@
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #ff688f 0%, #f04a75 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Comprehensive Order Tracking</h1>
+					<h1 style="color: #fff">Easy Updates</h1>
 					<p style="color: #fff">
-						Vendors can create and customize catalogs showcasing their products or services with images, descriptions, and prices.
+					Edit product details, pricing, descriptions, and inventory anytime to keep your shop accurate and up to date.
 					</p>
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_jurj73.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -186,21 +199,21 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719847961/OnCall/iphone_18_f47hmp.png" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F60298442-2c7e-42c5-9667-5d8d4f1d7496.png?alt=media&token=" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
 						eager
 						width="50%"
 						height="50%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720717007/OnCall/status_kg20z2.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2341e2f4-f04d-4701-a5f8-3c0fa68d2084.png?alt=media&token="
 						class="overlay-img status"
 					></v-img>
 					<v-img
 						eager
 						width="50%"
 						height="40%"
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720717006/OnCall/delivery_date_tozdfk.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6844c5e9-118d-4ad5-bab2-e120bffd4c5b.png?alt=media&token="
 						class="overlay-img delivery"
 					></v-img>
 				</v-col>
@@ -212,6 +225,33 @@
 <script>
 export default {
 	name: "Features",
+	data() {
+		return {
+			activeProductCard: 0,
+			productCardInterval: null,
+			productCards: [
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcfbe47c9-5d5b-4b70-a099-342256581f9a.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fe0073910-9235-4711-abe8-e158ae5ee54a.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8d7c2914-d087-4bb5-a670-bc03e5bbb1dd.png?alt=media&token=",
+			],
+		};
+	},
+	mounted() {
+		this.productCardInterval = window.setInterval(this.showNextProductCard, 3000);
+	},
+	beforeUnmount() {
+		window.clearInterval(this.productCardInterval);
+	},
+	methods: {
+		setActiveProductCard(index) {
+			this.activeProductCard = index;
+			window.clearInterval(this.productCardInterval);
+			this.productCardInterval = window.setInterval(this.showNextProductCard, 3000);
+		},
+		showNextProductCard() {
+			this.activeProductCard = (this.activeProductCard + 1) % this.productCards.length;
+		},
+	},
 };
 </script>
 
@@ -292,8 +332,52 @@ export default {
 }
 
 .shoe-offer {
-	bottom: 8%;
+	bottom: 15%;
 	left: -6%;
+}
+
+.product-card-slider {
+	width: 50%;
+	height: 55%;
+}
+
+.product-card-slide {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 450ms ease;
+}
+
+.product-card-slide.active {
+	opacity: 1;
+}
+
+.product-card-dots {
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	z-index: 2;
+	display: flex;
+	gap: 4px;
+	transform: translateX(-50%);
+}
+
+.product-card-dot {
+	width: 7px;
+	height: 4px;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.35);
+	cursor: pointer;
+	transition: width 200ms ease, background 200ms ease;
+}
+
+.product-card-dot.active {
+	width: 16px;
+	background: rgba(255, 255, 255, 0.9);
 }
 
 .call {
@@ -322,18 +406,18 @@ export default {
 }
 
 .payment {
-	bottom: -3%;
-	right: 6%;
+	bottom: -7%;
+	right: -6%;
 }
 
 .status {
-	top: 18%;
-	right: 6%;
+	top: 48%;
+	right: -6%;
 }
 
 .delivery {
-	bottom: 5%;
-	left: 3%;
+	bottom: 13%;
+	left: -10%;
 }
 
 .phone-mockup {
@@ -431,18 +515,18 @@ export default {
 	}
 
 	.payment {
-		bottom: 8%;
-		right: 0%;
+		bottom: -12%;
+		right: -10%;
 	}
 
 	.status {
 		top: 18%;
-		right: -5%;
+		right: -17%;
 	}
 
 	.delivery {
 		bottom: 10%;
-		left: -16%;
+		left: -18%;
 	}
 }
 </style>

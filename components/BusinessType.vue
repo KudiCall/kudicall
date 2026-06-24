@@ -199,7 +199,7 @@ export default {
 
 <template>
 	<v-container id="businessType" style="max-width: 1400px; width: 100%; padding-top: 100px">
-		<v-img eager width="192" height="44" src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719284706/OnCall/Frame_1171275577_aarbs8.svg" />
+		<v-img eager width="192" height="44" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F57f0e345-cf88-4ddb-8b14-2f56e694d53a.png?alt=media&token=" />
 
 		<v-row dense class="businesstype-header">
 			<v-col cols="12" md="4">
@@ -234,7 +234,7 @@ export default {
 							<p>this category is for you.</p>
 						</div>
 					</div>
-					<v-img eager src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png" width="100%" height="100%" class="img1" />
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F1f921053-a466-4823-8bc2-329b5010ca29.png?alt=media&token=" width="100%" height="100%" class="img1" />
 				</div>
 			</div>
 			<div class="d-inline-block mr-4" style="width: 616.08px">
@@ -260,7 +260,7 @@ export default {
 
 					<v-img
 						eager
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0ddc0528-ead2-4869-9b5f-e70e551773e4.png?alt=media&token="
 						width="90%"
 						height="100%"
 						class="img2"
@@ -282,7 +282,7 @@ export default {
 
 					<v-img
 						eager
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F48fa821f-9a58-4e04-930e-c97424ff6171.png?alt=media&token="
 						width="100%"
 						height="100%"
 						class="img3"
@@ -305,14 +305,14 @@ export default {
 
 					<v-img
 						eager
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F7fc9c734-d11d-44f3-b145-4c46b5faf8ec.png?alt=media&token="
 						width="100%"
 						height="100%"
 						style="position: absolute; top: 0; left: -19%"
 					/>
 					<v-img
 						eager
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F831877a9-6a7d-42f0-924c-9fde03ba9405.png?alt=media&token="
 						width="100%"
 						height="100%"
 						class="img4"
@@ -342,7 +342,7 @@ export default {
 					</div>
 					<v-img
 						eager
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6a6f78f1-3f7b-4963-acb7-9c341ab0163f.png?alt=media&token="
 						width="100%"
 						height="100%"
 						class="img5"
@@ -372,7 +372,7 @@ export default {
 					</div>
 					<v-img
 						eager
-						src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F9f7e961b-6dd8-42a8-ab8f-449aad4b6523.png?alt=media&token="
 						width="100%"
 						height="100%"
 						class="img6"
@@ -407,7 +407,7 @@ export default {
 						</div>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719288590/OnCall/chef.png"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F1f921053-a466-4823-8bc2-329b5010ca29.png?alt=media&token="
 							width="95%"
 							height="100%"
 							style="position: absolute; bottom: 0; right: -90px"
@@ -438,7 +438,7 @@ export default {
 						</div>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719797591/OnCall/Clothing-line-PhotoRoom_1_cwfwoj.png"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0ddc0528-ead2-4869-9b5f-e70e551773e4.png?alt=media&token="
 							width="90%"
 							height="100%"
 							style="position: absolute; bottom: 0; right: -45px"
@@ -469,7 +469,7 @@ export default {
 						</div>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719798751/OnCall/Rectangle_13_yflzbd.png"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F48fa821f-9a58-4e04-930e-c97424ff6171.png?alt=media&token="
 							width="100%"
 							height="100%"
 							style="position: absolute; bottom: 0; right: -30px"
@@ -488,14 +488,14 @@ export default {
 						</div>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842333/OnCall/Ellipse_10_ushxyh.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F7fc9c734-d11d-44f3-b145-4c46b5faf8ec.png?alt=media&token="
 							width="100%"
 							height="100%"
 							style="position: absolute; top: 0; left: -19%"
 						/>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719842334/OnCall/Ellipse_11_id8rr8.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F831877a9-6a7d-42f0-924c-9fde03ba9405.png?alt=media&token="
 							width="100%"
 							height="100%"
 							style="position: absolute; bottom: -30%; left: -20%"
@@ -526,7 +526,7 @@ export default {
 						</div>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719843057/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_uzrykr.png"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6a6f78f1-3f7b-4963-acb7-9c341ab0163f.png?alt=media&token="
 							width="100%"
 							height="100%"
 							style="position: absolute; bottom: 0; right: -15%"
@@ -557,7 +557,7 @@ export default {
 						</div>
 						<v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1719844190/OnCall/I-need-an-image-of-a-beautiful-African-woman-as-a-chef-in-a-restaurant--PhotoRoom_1_1_scbwkp.png"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F9f7e961b-6dd8-42a8-ab8f-449aad4b6523.png?alt=media&token="
 							width="100%"
 							height="100%"
 							style="position: absolute; bottom: 0; right: -25%"
@@ -642,7 +642,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1719841922/OnCall/Rectangle_14_zrcla4.png");
+	background-image: url("https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fa5d1e441-e792-44a0-97e8-2df5c863ea93.png?alt=media&token=");
 	background-size: cover;
 	background-position: center;
 }
@@ -652,7 +652,7 @@ export default {
 	border-radius: 20px;
 	position: relative;
 	overflow: hidden;
-	background-image: url("https://res.cloudinary.com/dd26v0ffw/image/upload/v1719841922/OnCall/Rectangle_14_zrcla4.png");
+	background-image: url("https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fa5d1e441-e792-44a0-97e8-2df5c863ea93.png?alt=media&token=");
 	background-size: cover;
 	background-position: center;
 }

@@ -2,7 +2,13 @@
 	<div :style="stickyw ? 'position: relative;' : 'position: sticky;'" class="topbar" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)">
 		<v-container class="py-0" style="max-width: 1400px">
 			<div class="d-flex justify-space-between align-center my-5">
-				<h2 class="logo pacifico" color="primary">OnCall</h2>
+				<img
+					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
+					alt="KudiCall Logo"
+					class="logo"
+					height="24"
+					style="display: block; max-width: none; object-fit: contain;"
+				/>
 
 				<div class="d-none d-md-flex">
 					<p
@@ -24,14 +30,14 @@
 						size="large"
 						style="font-size: 16px; letter-spacing: normal; line-height: 21.82px"
 					>
-						Download
-						<v-img
+						Join Waitlist
+						<!-- <v-img
 							eager
-							src="https://res.cloudinary.com/dd26v0ffw/image/upload/v1720005665/OnCall/ArrowLineDown_1_thmlla.svg"
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc7b8c527-0340-48b0-b85b-9acfc7a13684.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
-						></v-img>
+						></v-img> -->
 					</v-btn>
 					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
 						<v-icon color="white" size="32" icon="mdi:mdi-text"></v-icon>
@@ -52,8 +58,13 @@
 		style="z-index: 2000; position: fixed; background-color: #0c0d0d; color: white"
 	>
 		<div class="d-flex align-center justify-space-between px-4 py-4">
-			<!-- <h2 class="logo text--white pacifico" color="primary">OnCall</h2> -->
-			<h2 class="logo pacifico" style="font-size: 24px" color="primary">OnCall</h2>
+			<img
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
+				alt="KudiCall Logo"
+				class="logo"
+				height="24"
+				style="display: block; max-width: none; object-fit: contain;"
+			/>
 			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
 		</div>
 		<v-divider></v-divider>

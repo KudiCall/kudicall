@@ -28,17 +28,17 @@ useHead({
 		{ name: "twitter:description", content: "Discover a new way to Shop, Connect, and Experience!!" },
 		{ name: "twitter:image", content: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1727115612/OnCall/favicon1_owh5zd.png" }, // Use absolute URL
 	],
-	link: [{ rel: "icon", type: "image/x-icon", href: "/favicon1.png" }],
+	link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-16x16.png" }],
 });
 </script> -->
 
 <script setup lang="ts">
 useSeoMeta({
-	title: "OnCall",
-	ogTitle: "OnCall",
+	title: "KudiCall",
+	ogTitle: "KudiCall",
 	description: "Discover a new way to Shop, Connect, and Experience!!",
 	ogDescription: "Discover a new way to Shop, Connect, and Experience!!",
-	ogImage: "https://res.cloudinary.com/dd26v0ffw/image/upload/v1727115612/OnCall/favicon1_owh5zd.png",
+	ogImage: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff3ba885c-af01-4894-bd95-74432dd9e775.png?alt=media&token=",
 	twitterCard: "summary_large_image",
 });
 </script>
