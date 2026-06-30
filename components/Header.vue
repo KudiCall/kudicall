@@ -24,6 +24,7 @@
 				</div>
 				<div class="d-flex align-center">
 					<v-btn
+						@click="openWaitlist"
 						color="primary"
 						rounded
 						class="px-5 d-none d-md-inline"
@@ -81,12 +82,19 @@
 			</p>
 		</v-list>
 	</v-navigation-drawer>
+
+	<!-- Waitlist Modal -->
+	<WaitlistModal ref="waitlistModal" />
 </template>
 
 <script>
 import { useTheme } from "vuetify";
+import WaitlistModal from "./WaitlistModal.vue";
 
 export default {
+	components: {
+		WaitlistModal,
+	},
 	data() {
 		return {
 			theme: useTheme(),
@@ -113,6 +121,9 @@ export default {
 		},
 	},
 	methods: {
+		openWaitlist() {
+			this.$refs.waitlistModal.open();
+		},
 		openNav() {
 			this.drawer = true;
 		},

@@ -41,7 +41,7 @@
 
 			<p class="pacifico text-primary title title2">Shop, Connect, and Experience!</p>
 			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive real-time commerce.</p>
-			<v-btn color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
+			<v-btn @click="openWaitlist" color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 				Join Waitlist
 				<!-- <v-img
 					eager
@@ -85,12 +85,25 @@
 				height="100%"
 			/>
 		</div>
+
+		<!-- Waitlist Modal -->
+		<WaitlistModal ref="waitlistModal" />
 	</v-container>
 </template>
 
 <script>
+import WaitlistModal from "./WaitlistModal.vue";
+
 export default {
 	name: "Hero",
+	components: {
+		WaitlistModal,
+	},
+	methods: {
+		openWaitlist() {
+			this.$refs.waitlistModal.open();
+		}
+	}
 };
 </script>
 

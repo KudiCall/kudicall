@@ -171,9 +171,9 @@
 					<!-- Overlay images -->
 					<v-img
 						eager
-						width="50%"
-						height="50%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2c62b90e-69fd-4cf8-8175-274b16a603dd.png?alt=media&token="
+						width="35%"
+						height="35%"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2032de65-e2f4-43ad-bd81-d88a17ea0ae4.png?alt=media&token="
 						class="overlay-img payment"
 					></v-img>
 				</v-col>
@@ -230,9 +230,9 @@ export default {
 			activeProductCard: 0,
 			productCardInterval: null,
 			productCards: [
-				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcfbe47c9-5d5b-4b70-a099-342256581f9a.png?alt=media&token=",
-				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fe0073910-9235-4711-abe8-e158ae5ee54a.png?alt=media&token=",
-				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8d7c2914-d087-4bb5-a670-bc03e5bbb1dd.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2b2ec7b3-0918-4363-b192-f45ef0000bbb.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc9be9113-ea25-46ce-b6ea-eea2beaf586f.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc9be9113-ea25-46ce-b6ea-eea2beaf586f.png?alt=media&token=",
 			],
 		};
 	},
@@ -406,8 +406,8 @@ export default {
 }
 
 .payment {
-	bottom: -7%;
-	right: -6%;
+	bottom: -5%;
+	right: 8%;
 }
 
 .status {
@@ -515,8 +515,8 @@ export default {
 	}
 
 	.payment {
-		bottom: -12%;
-		right: -10%;
+		bottom: -8%;
+		right: -1%;
 	}
 
 	.status {
