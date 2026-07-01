@@ -4,7 +4,7 @@ export const submitWaitlist = async (data) => {
 	console.log("Submitting waitlist...");
 	
 	try {
-		const response = await fetch(`${API_URL}/waitlist`, {
+		const response = await fetch(`${API_URL}/api/waitlist`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
