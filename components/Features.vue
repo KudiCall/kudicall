@@ -232,7 +232,7 @@ export default {
 			productCards: [
 				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcfbe47c9-5d5b-4b70-a099-342256581f9a.png?alt=media&token=",
 				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fe0073910-9235-4711-abe8-e158ae5ee54a.png?alt=media&token=",
-				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8d7c2914-d087-4bb5-a670-bc03e5bbb1dd.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8d7c2914-d087-4bb5-a670-bc03e5bbb1dd.png?alt=media&token="
 			],
 		};
 	},
