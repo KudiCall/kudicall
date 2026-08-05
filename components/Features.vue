@@ -48,17 +48,7 @@
 							class="product-card-slide"
 							:class="{ active: activeProductCard === index }"
 						></v-img>
-						<div class="product-card-dots" aria-label="Product card slides">
-							<button
-								v-for="(_, index) in productCards"
-								:key="index"
-								type="button"
-								class="product-card-dot"
-								:class="{ active: activeProductCard === index }"
-								:aria-label="`Show product card ${index + 1}`"
-								@click="setActiveProductCard(index)"
-							></button>
-						</div>
+
 					</div>
 					<v-img
 						eager

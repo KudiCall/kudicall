@@ -2,8 +2,12 @@
 
 This file documents Kudicall waitlist website changes so future chats can quickly recover project context.
 
-## 2026-06-30
+## 2026-08-05
 
+- Updated `WaitlistModal.vue` input fields to use the Nunito font (weight 500, size 16) and applied rounded styling to fix the one-sided border radius issue.
+- Removed the functional HTML slider dots from `Features.vue` to avoid duplication with the dots already present in the static product card images.
+
+## 2026-06-30
 - Added a new read-only endpoint `GET /api/waitlist` to retrieve all stored waitlist entries sorted by the newest first.
 - Enhanced `waitlistService.js` and `waitlistController.js` with database queries and development logging for this new route.
 

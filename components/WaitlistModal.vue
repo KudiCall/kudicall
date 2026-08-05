@@ -41,8 +41,9 @@
 						variant="outlined"
 						color="primary"
 						required
-						class="mb-2"
+						class="mb-2 custom-input"
 						:disabled="loading"
+						rounded="lg"
 					></v-text-field>
 					<v-text-field
 						v-model="email"
@@ -51,8 +52,9 @@
 						variant="outlined"
 						color="primary"
 						required
-						class="mb-2"
+						class="mb-2 custom-input"
 						:disabled="loading"
+						rounded="lg"
 					></v-text-field>
 					<v-select
 						v-model="businessType"
@@ -62,8 +64,9 @@
 						variant="outlined"
 						color="primary"
 						required
-						class="mb-4"
+						class="mb-4 custom-input"
 						:disabled="loading"
+						rounded="lg"
 					></v-select>
 					<v-btn
 						type="submit"
@@ -181,3 +184,15 @@ export default {
 	}
 };
 </script>
+
+<style scoped>
+.custom-input :deep(.v-field) {
+	border-radius: 12px;
+}
+.custom-input :deep(.v-field__input),
+.custom-input :deep(.v-label) {
+	font-family: 'Nunito', sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+}
+</style>
