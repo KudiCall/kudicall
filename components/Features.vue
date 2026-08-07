@@ -80,20 +80,20 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fa64f3b8f-fa17-4228-bc4c-2de29f838bef.png?alt=media&token=" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8074acc-9574-4c5a-8775-103394b17746.png?alt=media&token=" class="phone-mockup"></v-img>
 					<!-- Overlay images -->
 					<v-img
 						eager
-						width="60%"
+						width="50%"
 						height="40%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbef43737-628b-40b4-9910-32f03a2f5181.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F114b77ed-9c1f-4ec7-9db4-ef410bdefe11.png?alt=media&token="
 						class="overlay-img add"
 					></v-img>
 					<v-img
 						eager
 						width="60%"
 						height="40%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96300d06-1404-4d7c-8509-9543a877f32a.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F4b83bbc5-f853-4dd3-8879-891356880065.png?alt=media&token="
 						class="overlay-img edit"
 					></v-img>
 				</v-col>
@@ -117,21 +117,21 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdf372710-f3d8-43e0-9eae-2bc563035110.png?alt=media&token=" class="phone-mockup"></v-img>
+					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5acb11a0-a014-4071-b567-02695890ccc7.png?alt=media&token=" class="phone-mockup"></v-img>
 
 					<!-- Overlay images -->
 					<v-img
 						eager
 						width="40%"
 						height="100%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F3477c374-eb18-4f4c-89ea-ce28416ebabc.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F457bdadf-0f2f-4c28-a9bd-3e55d0172885.png?alt=media&token="
 						class="overlay-img uplaod"
 					></v-img>
 					<v-img
 						eager
 						width="40%"
 						height="40%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd17307f1-85f2-47ef-a908-3cbe690f1cab.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbb8a9a3e-d2c2-46e5-8bd9-f19a710dace5.png?alt=media&token="
 						class="overlay-img success"
 					></v-img>
 				</v-col>
@@ -220,7 +220,7 @@ export default {
 			activeProductCard: 0,
 			productCardInterval: null,
 			productCards: [
-				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcfbe47c9-5d5b-4b70-a099-342256581f9a.png?alt=media&token=",
+				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F3d98ea63-bf12-4e10-80ef-981117773969.png?alt=media&token=",
 				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fe0073910-9235-4711-abe8-e158ae5ee54a.png?alt=media&token=",
 				"https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8d7c2914-d087-4bb5-a670-bc03e5bbb1dd.png?alt=media&token="
 			],
@@ -376,23 +376,23 @@ export default {
 }
 
 .add {
-	bottom: -6%;
-	right: -7%;
+	bottom: 3%;
+	right: -5%;
 }
 
 .edit {
-	top: 22%;
-	left: -13%;
+	top: 48%;
+	left: -10%;
 }
 
 .success {
 	bottom: -3%;
-	right: 9%;
+	right: 6%;
 }
 
 .uplaod {
 	top: 8%;
-	left: 3%;
+	left: -3%;
 }
 
 .payment {
@@ -485,23 +485,23 @@ export default {
 	}
 
 	.add {
-		bottom: -5%;
-		right: -10%;
+		bottom: -1%;
+		right: -15%;
 	}
 
 	.edit {
-		top: 22%;
-		left: -18%;
+		top: 48%;
+		left: -20%;
 	}
 
 	.success {
 		bottom: -3%;
-		right: 0%;
+		right: -4%;
 	}
 
 	.uplaod {
 		top: 8%;
-		left: -3%;
+		left: -12%;
 	}
 
 	.payment {
