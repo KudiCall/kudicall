@@ -9,7 +9,7 @@
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcf03bbc9-fe51-4678-81f3-fed12f84dffc.png?alt=media&token="
 			/>
 			<h1 class="header-title" style="font-weight: 700">
-				Smart shopping and selling solutions by <span class="text-primary pacifico" style="font-weight: 400">KudiCall</span>
+				Call people. Call businesses. Get things done <span class="text-primary pacifico" style="font-weight: 400">KudiCall</span>
 			</h1>
 		</div>
 		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
