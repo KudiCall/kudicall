@@ -2,10 +2,10 @@
 	<div>
 		<LazyHeader />
 		<LazyHero />
+		<LazyFeatures />
 		<div id="aboutUs" style="margin-bottom: 120px" />
 		<LazyAboutUs />
-		<LazyFeatures />
-		<LazyBusinessType />
+		<!-- <LazyBusinessType /> -->
 		<LazyFAQ />
 		<LazyTestimonials />
 		<LazyContact />

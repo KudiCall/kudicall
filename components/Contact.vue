@@ -14,12 +14,12 @@
 					:key="n"
 					class="w-full pa-4 d-flex flex-column"
 					:class="i === 1 && 'my-4'"
-					style="background-color: #1c1c1c; height: 166px; border-radius: 15px"
+					style="background-color: #1c1c1c; height: 126px; border-radius: 15px"
 				>
 					<v-icon :icon="n.icon" color="primary" size="60" />
 
 					<div class="d-flex align-center w-full mt-auto" style="justify-content: space-between; color: #fff">
-						<p style="font-size: 24px">{{ n.value }}</p>
+						<p style="font-size: 20px">{{ n.value }}</p>
 						<div>
 							<v-img
 								eager
@@ -35,8 +35,8 @@
 		<div class="w-100 mt-16 d-flex flex-col items-center justify-center backgroundImgCont">
 			<div class="w-100 w-md-66 px-5 px-md-0">
 				<h2 class="text-center title" style="color: #fff">
-					Unlock exclusive deals, personalized recommendations, and a world of exciting
-					<span class="pacifico" style="font-weight: 400">live commerce.</span>
+					We have unlocked what calls can do. Connect with people, businesses, and opportunities  and turn conversations into 
+					<span class="pacifico" style="font-weight: 400">action.</span>
 				</h2>
 				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
 					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">

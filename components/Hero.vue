@@ -24,23 +24,21 @@
 			</span> -->
 
 			<v-img
-				eager
 				width="486"
 				height="44"
 				class="d-none d-md-block mx-auto"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F61e9f647-e4fa-463e-ae6a-e11e3b435d30.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0e2899ac-22cb-47f0-8a8d-ff589d659b2e.png?alt=media&token="
 			></v-img>
 			<v-img
-				eager
 				width="339"
 				height="58"
 				class="d-block d-md-none mx-auto mb-4"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcf32ec51-4dfe-4cc5-9610-82583457afbc.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fab412286-27b7-4a8a-9ed4-a80ed45e2159.png?alt=media&token="
 			></v-img>
 			<p class="title title1">Discover a new way to</p>
 
-			<p class="pacifico text-primary title title2">Shop, Connect, and Experience!</p>
-			<p class="subTitle mt-14">We bring your favorite vendors and services to life through immersive real-time commerce.</p>
+			<p class="pacifico text-primary title title2">Call, Connect, and Close!</p>
+			<p class="subTitle mt-14">Dial a category, talk to every vendor in it, and pay right there on the call.</p>
 			<v-btn @click="openWaitlist" color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 				Join Waitlist
 				<!-- <v-img
@@ -72,17 +70,19 @@
 				eager
 				class="d-none d-md-block"
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F71e70cc2-7bc2-4edc-b616-897e1803ee9a.png?alt=media&token="
-				alt="Frame 25 1"
+				alt="KudiCall hero image showing the app on desktop"
 				width="100%"
 				height="100%"
+				fetchpriority="high"
 			/>
 			<v-img
 				eager
 				class="d-block d-md-none"
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8a465ba-7141-406d-9a3d-fbf9e5cf359a.png?alt=media&token="
-				alt="Frame 26"
+				alt="KudiCall hero image showing the app on mobile"
 				width="100%"
 				height="100%"
+				fetchpriority="high"
 			/>
 		</div>
 

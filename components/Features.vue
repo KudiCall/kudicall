@@ -2,7 +2,6 @@
 	<v-container id="features" style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center text-center container overflow-hidden">
 		<div class="header-container">
 			<v-img
-				eager
 				width="181"
 				height="44"
 				class="mx-auto my-5"
@@ -20,7 +19,6 @@
 					<v-btn color="#000" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
-							eager
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc7b8c527-0340-48b0-b85b-9acfc7a13684.png?alt=media&token="
 							class="ml-2"
 							width="24"
@@ -29,11 +27,12 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section first-image mt-auto mb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96e2aee6-6ae8-491c-abb6-3983399df43c.png?alt=media&token=" class="phone-mockup"></v-img>
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96e2aee6-6ae8-491c-abb6-3983399df43c.png?alt=media&token=" class="phone-mockup">
+						<template #placeholder><div class="placeholder-shimmer" style="background: #e8e8e8;"></div></template>
+					</v-img>
 
 					<!-- Overlay images -->
 					<v-img
-						eager
 						width="50%"
 						height="50%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F93bf6a6c-7377-4b54-80e3-4644ba2799c1.png?alt=media&token="
@@ -43,7 +42,6 @@
 						<v-img
 							v-for="(card, index) in productCards"
 							:key="card"
-							eager
 							:src="card"
 							class="product-card-slide"
 							:class="{ active: activeProductCard === index }"
@@ -51,11 +49,47 @@
 
 					</div>
 					<v-img
-						eager
 						width="90%"
 						height="76%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0917221f-9e4d-4223-9d28-9710d841dd72.png?alt=media&token="
 						class="overlay-img call"
+					></v-img>
+				</v-col>
+			</v-row>
+		</div>
+
+				<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%)">
+			<v-row dense class="mx-auto h-100 mb-0 pb-0">
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
+					<h1 style="color: #fff">Secure Deals</h1>
+					<p style="color: #fff">Payments are held securely in escrow and only released when the customer confirms the job is completed or the product is received.</p>
+					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
+						Download Now
+						<v-img
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
+							class="ml-2"
+							width="24"
+							height="24"
+						></v-img>
+					</v-btn>
+				</v-col>
+				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5acb11a0-a014-4071-b567-02695890ccc7.png?alt=media&token=" class="phone-mockup">
+						<template #placeholder><div class="placeholder-shimmer" style="background: #4db0a6;"></div></template>
+					</v-img>
+
+					<!-- Overlay images -->
+					<v-img
+						width="40%"
+						height="100%"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F457bdadf-0f2f-4c28-a9bd-3e55d0172885.png?alt=media&token="
+						class="overlay-img uplaod"
+					></v-img>
+					<v-img
+						width="40%"
+						height="40%"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbb8a9a3e-d2c2-46e5-8bd9-f19a710dace5.png?alt=media&token="
+						class="overlay-img success"
 					></v-img>
 				</v-col>
 			</v-row>
@@ -71,7 +105,6 @@
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
-							eager
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
@@ -80,17 +113,17 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8074acc-9574-4c5a-8775-103394b17746.png?alt=media&token=" class="phone-mockup"></v-img>
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8074acc-9574-4c5a-8775-103394b17746.png?alt=media&token=" class="phone-mockup">
+						<template #placeholder><div class="placeholder-shimmer" style="background: #1674d9;"></div></template>
+					</v-img>
 					<!-- Overlay images -->
 					<v-img
-						eager
 						width="50%"
 						height="40%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F114b77ed-9c1f-4ec7-9db4-ef410bdefe11.png?alt=media&token="
 						class="overlay-img add"
 					></v-img>
 					<v-img
-						eager
 						width="60%"
 						height="40%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F4b83bbc5-f853-4dd3-8879-891356880065.png?alt=media&token="
@@ -100,43 +133,7 @@
 			</v-row>
 		</div>
 
-		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #5ec6bb 0%, #439189 100%)">
-			<v-row dense class="mx-auto h-100 mb-0 pb-0">
-				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Secure Deals</h1>
-					<p style="color: #fff">Payments are held securely in escrow and only released when the customer confirms the job is completed or the product is received.</p>
-					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
-						Download Now
-						<v-img
-							eager
-							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
-							class="ml-2"
-							width="24"
-							height="24"
-						></v-img>
-					</v-btn>
-				</v-col>
-				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5acb11a0-a014-4071-b567-02695890ccc7.png?alt=media&token=" class="phone-mockup"></v-img>
 
-					<!-- Overlay images -->
-					<v-img
-						eager
-						width="40%"
-						height="100%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F457bdadf-0f2f-4c28-a9bd-3e55d0172885.png?alt=media&token="
-						class="overlay-img uplaod"
-					></v-img>
-					<v-img
-						eager
-						width="40%"
-						height="40%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbb8a9a3e-d2c2-46e5-8bd9-f19a710dace5.png?alt=media&token="
-						class="overlay-img success"
-					></v-img>
-				</v-col>
-			</v-row>
-		</div>
 
 		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #9f86ff 0%, #8e70ff 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
@@ -148,7 +145,6 @@
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
-							eager
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
@@ -157,10 +153,11 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F37e46230-08c7-41e9-b3f8-ca8588b58c8a.png?alt=media&token=" class="phone-mockup"></v-img>
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F37e46230-08c7-41e9-b3f8-ca8588b58c8a.png?alt=media&token=" class="phone-mockup">
+						<template #placeholder><div class="placeholder-shimmer" style="background: #9278ff;"></div></template>
+					</v-img>
 					<!-- Overlay images -->
 					<v-img
-						eager
 						width="50%"
 						height="50%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2c62b90e-69fd-4cf8-8175-274b16a603dd.png?alt=media&token="
@@ -180,7 +177,6 @@
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
-							eager
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
@@ -189,18 +185,18 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img eager src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F60298442-2c7e-42c5-9667-5d8d4f1d7496.png?alt=media&token=" class="phone-mockup"></v-img>
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F60298442-2c7e-42c5-9667-5d8d4f1d7496.png?alt=media&token=" class="phone-mockup">
+						<template #placeholder><div class="placeholder-shimmer" style="background: #e94070;"></div></template>
+					</v-img>
 
 					<!-- Overlay images -->
 					<v-img
-						eager
 						width="50%"
 						height="50%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2341e2f4-f04d-4701-a5f8-3c0fa68d2084.png?alt=media&token="
 						class="overlay-img status"
 					></v-img>
 					<v-img
-						eager
 						width="50%"
 						height="40%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6844c5e9-118d-4ad5-bab2-e120bffd4c5b.png?alt=media&token="
@@ -246,6 +242,13 @@ export default {
 </script>
 
 <style scoped>
+.placeholder-shimmer {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	opacity: 0.4;
+}
+
 .container {
 	padding-top: 100px;
 	margin-top: 50px;

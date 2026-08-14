@@ -2,7 +2,27 @@
 
 This file documents Kudicall waitlist website changes so future chats can quickly recover project context.
 
+## 2026-08-13
+
+### Image Performance (Lighthouse Optimization)
+- Removed `eager` from all below-the-fold `<v-img>` components across `Features.vue`, `AboutUs.vue`, and `Testimonials.vue`. Vuetify now lazy-loads these via its built-in `IntersectionObserver`.
+- Added colored `#placeholder` slots to the 5 phone mockup images in `Features.vue` so section backgrounds remain solid while images load.
+- Kept `eager` only on above-the-fold images in `Hero.vue` (the LCP elements).
+- Added `fetchpriority="high"` to both desktop and mobile hero images in `Hero.vue` — Lighthouse flagged this as missing on the LCP element.
+- Added `loading="lazy"` to testimonial avatar `<img>` tags in `Testimonials.vue`.
+- Added `<link rel="preconnect">` hints in `nuxt.config.ts` for `firebasestorage.googleapis.com`, `fonts.googleapis.com`, and `fonts.gstatic.com` (Lighthouse flagged these as saving ~490–510ms each).
+- Added `<link rel="preload">` for the desktop hero image in `nuxt.config.ts` to directly reduce the 4.2s Resource Load Delay flagged by Lighthouse.
+- Added `lang="en"` to the `<html>` element via `nuxt.config.ts` `htmlAttrs` to fix the Accessibility issue flagged by Lighthouse (score impact: Accessibility 82 → 100).
+- Confirmed `display=swap` is already set on Google Fonts `@import` URLs in `main.css`.
+
+### Legal Pages
+- Created three new Nuxt pages with dummy content: `pages/terms.vue` (Terms of Use), `pages/privacy.vue` (Privacy Policy), and `pages/security.vue` (Security).
+- Each page uses the site's dark theme (`#0c0d0d` background), a sticky topbar with logo and back-to-home link, and organized content sections.
+- Fixed `Footer.vue` links — replaced broken `<p :href="...">` elements (which don't navigate) with proper `<NuxtLink :to="...">` components pointing to `/terms`, `/privacy`, and `/security`.
+- Added `.footer-link` CSS class with hover underline and opacity transition for better UX.
+
 ## 2026-08-05
+
 
 - Updated `WaitlistModal.vue` input fields to use the Nunito font (weight 500, size 16) and applied rounded styling to fix the one-sided border radius issue.
 - Removed the functional HTML slider dots from `Features.vue` to avoid duplication with the dots already present in the static product card images.

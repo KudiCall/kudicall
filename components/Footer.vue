@@ -14,18 +14,14 @@
 					style="display: block; max-width: none; object-fit: contain;"
 				/>
 				<div class="d-flex justify-center ga-4" style="font-size: 16px; font-weight: 400">
-					<p
-						:to="n.route"
-						:href="n.route"
-						variant="text"
-						class="px-0 px-md-4 cursor-pointer"
-						style="line-height: 19.09px"
-						flat
+					<NuxtLink
 						v-for="n in urls"
 						:key="n.title"
+						:to="n.route"
+						class="footer-link px-0 px-md-4"
 					>
 						{{ n.title }}
-					</p>
+					</NuxtLink>
 				</div>
 				<div>
 					<v-avatar v-for="s in social" :key="s.title" class="mx-2" size="40">
@@ -45,9 +41,9 @@ export default {
 	data() {
 		return {
 			urls: [
-				{ title: "Terms of Use", route: "#" },
-				{ title: "Privacy Policy", route: "#" },
-				{ title: "Security", route: "#" },
+				{ title: "Terms of Use", route: "/terms" },
+				{ title: "Privacy Policy", route: "/privacy" },
+				{ title: "Security", route: "/security" },
 			],
 			social: [
 				{ title: "Instagram", icon: "fab fa-instagram" },
@@ -87,6 +83,19 @@ export default {
 	transform: translateX(-50%);
 	text-align: center;
 	background-color: #0c0d0d;
+}
+
+.footer-link {
+	color: #fff;
+	text-decoration: none;
+	line-height: 19.09px;
+	transition: opacity 0.2s ease;
+	opacity: 0.85;
+}
+
+.footer-link:hover {
+	opacity: 1;
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

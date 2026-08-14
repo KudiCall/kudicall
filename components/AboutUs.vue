@@ -9,7 +9,6 @@
 			</h1>
 		</div>
 		<v-img
-			eager
 			v-for="(bubble, index) in bubblesDesktop"
 			:key="index"
 			:src="bubble.src"
@@ -17,7 +16,6 @@
 			class="bubble-image d-none d-md-block"
 		/>
 		<v-img
-			eager
 			v-for="(bubble, index) in bubblesMobile"
 			:key="index"
 			:src="bubble.src"

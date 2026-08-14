@@ -2,7 +2,6 @@
 	<v-container style="max-width: 1400px; width: 100%" class="d-flex flex-column justify-center">
 		<div class="testimony-header text-center">
 			<v-img
-				eager
 				width="181"
 				height="44"
 				class="mx-auto my-5"
@@ -31,7 +30,7 @@
 					</v-card-text>
 					<v-card-actions class="d-flex mt-4">
 						<v-avatar size="40">
-							<img eager :src="testimony.avatar" alt="Avatar" width="40" height="40" />
+						<img loading="lazy" :src="testimony.avatar" alt="User avatar" width="40" height="40" />
 						</v-avatar>
 						<div class="ml-3">
 							<div class="font-weight-normal manrope" style="font-size: 14px">{{ testimony.name }}</div>
