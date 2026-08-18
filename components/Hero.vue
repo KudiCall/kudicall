@@ -68,22 +68,22 @@
 			</div> -->
 		</div>
 		<div class="heroImgContainer">
-			<v-img
-				eager
+			<img
 				class="d-none d-md-block"
 				src="/images/hero-desktop.webp"
 				alt="KudiCall hero image showing the app on desktop"
 				width="100%"
 				height="100%"
+				style="object-fit: contain; max-width: 100%; height: auto;"
 				fetchpriority="high"
 			/>
-			<v-img
-				eager
+			<img
 				class="d-block d-md-none"
 				src="/images/hero-mobile.webp"
 				alt="KudiCall hero image showing the app on mobile"
 				width="100%"
 				height="100%"
+				style="object-fit: contain; max-width: 100%; height: auto;"
 				fetchpriority="high"
 			/>
 		</div>
