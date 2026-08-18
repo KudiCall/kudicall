@@ -11,6 +11,7 @@
 					alt="KudiCall Logo"
 					class="logo"
 					height="24"
+					width="149"
 					style="display: block; max-width: none; object-fit: contain;"
 				/>
 				<div class="d-flex justify-center ga-4" style="font-size: 16px; font-weight: 400">

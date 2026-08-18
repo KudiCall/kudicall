@@ -30,14 +30,12 @@ export default defineNuxtConfig({
 					fetchpriority: "high",
 					type: "image/webp",
 				},
-				// Parallel load Google Fonts as stylesheet links to eliminate render-blocking @import
+				// Parallel load Google Fonts asynchronously as a combined stylesheet link to eliminate render-blocking @import
 				{
 					rel: "stylesheet",
-					href: "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap",
-				},
-				{
-					rel: "stylesheet",
-					href: "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap",
+					href: "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap",
+					media: "print",
+					onload: "this.media='all'",
 				},
 			],
 		},

@@ -9,6 +9,7 @@
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
 							alt="KudiCall Logo"
 							height="24"
+							width="149"
 							style="display: block; max-width: none; object-fit: contain;"
 						/>
 					</NuxtLink>
@@ -22,7 +23,7 @@
 			</v-container>
 		</div>
 
-		<v-container style="max-width: 860px" class="py-12 px-6">
+		<v-container style="max-width: 860px" class="py-12 px-6" tag="main">
 			<p class="legal-date">Last updated: August 13, 2026</p>
 			<h1 class="legal-title">Security</h1>
 			<p class="legal-intro">

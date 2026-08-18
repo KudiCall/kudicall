@@ -7,6 +7,7 @@
 					alt="KudiCall Logo"
 					class="logo"
 					height="24"
+					width="149"
 					style="display: block; max-width: none; object-fit: contain;"
 				/>
 
@@ -75,18 +76,17 @@
 			</v-btn>
 		</div>
 		<v-divider></v-divider>
-		<v-list :items="urls" class="d-flex flex-column align-start ga-5">
+		<div class="d-flex flex-column align-start ga-5">
 			<p
-				@click="$router.push(n.route)"
+				@click="$router.push(n.route); drawer = false;"
 				class="mx-4 cursor-pointer"
-				flat
 				v-for="n in urls"
 				:key="n.title"
 				style="font-size: 16px; letter-spacing: normal"
 			>
 				{{ n.title }}
 			</p>
-		</v-list>
+		</div>
 	</v-navigation-drawer>
 
 

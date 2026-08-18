@@ -6,21 +6,18 @@ This file documents Kudicall waitlist website changes so future chats can quickl
 
 ### Frontend Optimization & Performance
 - Removed render-blocking `@import` font-face directives from `assets/css/main.css`.
-- Added Google Fonts (Nunito, Pacifico, and Manrope) as parallel-loading `<link rel="stylesheet">` elements in `nuxt.config.ts` to improve page load speed.
+- Combined Google Fonts (Nunito, Pacifico, and Manrope) into a single asynchronous request (`media="print"`, `onload="this.media='all'"`) in `nuxt.config.ts` to completely eliminate render-blocking styling and improve Speed Index.
 - Preloaded optimized local hero desktop image `/images/hero-desktop.webp` instead of Firebase Storage image to reduce LCP resource load delay.
 - Removed preconnect resource hint for `firebasestorage.googleapis.com` in `nuxt.config.ts` as Firebase asset dependencies were removed.
+- Added explicit `width="149"` to KudiCall logo across `Header.vue`, `Footer.vue`, `privacy.vue`, `security.vue`, and `terms.vue` to prevent layout shift and resolve the unsized image audit.
 
-### SVG & Icon Optimization
-- Replaced font-based icons (Material Design Icons & Font Awesome) with inline SVG elements to reduce bundle size and layout shifts across:
-  - `WaitlistModal.vue` and `Header.vue` (navigation drawer close buttons).
-  - `Header.vue` (navigation toggle menu button).
-  - `Contact.vue` (email, phone, and address cards).
-  - `FAQ.vue` (expansion panel action toggle icons).
-  - `Footer.vue` (social media icons for Instagram, Twitter, and Facebook).
-  - `pages/privacy.vue`, `pages/security.vue`, and `pages/terms.vue` (back button icons).
+### SVG, Icon & ARIA Optimization
+- Replaced font-based icons (Material Design Icons & Font Awesome) with inline SVG elements to reduce bundle size and layout shifts.
 - Optimized Vuetify plugin (`plugins/vuetify.ts`) to defer loading of heavy Material Design Icons and Font Awesome icon stylesheets, only importing them client-side for admin pages (paths starting with `/admin`).
+- Replaced `<v-list>` in the mobile navigation drawer (`Header.vue`) with a plain `<div>` to eliminate invalid `listbox` ARIA roles and ensure correct screen reader behavior when using static buttons.
 
 ### Accessibility (A11y) Improvements
+- Wrapped main content of the homepage (`Home.vue`) and legal pages (`privacy.vue`, `security.vue`, `terms.vue`) in semantic `<main>` elements (or `tag="main"`) to establish a proper page landmark.
 - Added descriptive `alt` tags to multiple `<v-img>` elements in `AboutUs.vue`, `Contact.vue`, `FAQ.vue`, `Features.vue`, `Hero.vue`, and `Testimonials.vue`.
 - Added `aria-label` tags to icon-only buttons (`WaitlistModal.vue` close, `Header.vue` menu toggle, `Footer.vue` social links, and navigation close drawer) for screen reader support.
 
