@@ -16,7 +16,9 @@
 					:class="i === 1 && 'my-4'"
 					style="background-color: #1c1c1c; height: 126px; border-radius: 15px"
 				>
-					<v-icon :icon="n.icon" color="primary" size="60" />
+					<svg style="color: #1388FC;" viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
+						<path :d="n.svgPath" />
+					</svg>
 
 					<div class="d-flex align-center w-full mt-auto" style="justify-content: space-between; color: #fff">
 						<p style="font-size: 20px">{{ n.value }}</p>
@@ -26,6 +28,7 @@
 								src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6b6be361-ee6b-4937-bffd-bf2ca0b3c146.png?alt=media&token="
 								width="40"
 								height="40"
+								alt="Contact icon"
 							/>
 						</div>
 					</div>
@@ -39,12 +42,12 @@
 					<span class="pacifico" style="font-weight: 400">action.</span>
 				</h2>
 				<div class="d-flex align-center ga-4 my-5 my-md-10 w-75 w-md-33 justify-center mx-auto">
-					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">
-						<v-img eager height="28" width="120" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fef602f9b-8afd-4f9a-ac9a-0e87dd6e7e8b.png?alt=media&token=" />
+					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg" aria-label="Download on the App Store">
+						<v-img eager height="28" width="120" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fef602f9b-8afd-4f9a-ac9a-0e87dd6e7e8b.png?alt=media&token=" alt="Download on the App Store" />
 					</v-btn>
 
-					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg">
-						<v-img eager height="28" width="120" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F70f7d2d4-891d-44b3-8c77-b8620a7479a3.png?alt=media&token=" />
+					<v-btn color="white" size="x-large" class="px-2 px-md-6" rounded="lg" aria-label="Get it on Google Play">
+						<v-img eager height="28" width="120" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F70f7d2d4-891d-44b3-8c77-b8620a7479a3.png?alt=media&token=" alt="Get it on Google Play" />
 					</v-btn>
 				</div>
 			</div>
@@ -59,9 +62,9 @@ export default {
 	data() {
 		return {
 			contacts: [
-				{ value: "hello@oncall.net", icon: "mdi mdi-email" },
-				{ value: "+234 8168286370", icon: "mdi mdi-phone" },
-				{ value: "@oncallhq", icon: "mdi mdi-map-marker" },
+				{ value: "hello@oncall.net", svgPath: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" },
+				{ value: "+234 8168286370", svgPath: "M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" },
+				{ value: "@oncallhq", svgPath: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" },
 			],
 		};
 	},

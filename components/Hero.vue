@@ -28,15 +28,17 @@
 				height="44"
 				class="d-none d-md-block mx-auto"
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0e2899ac-22cb-47f0-8a8d-ff589d659b2e.png?alt=media&token="
+				alt="Discover a new way to Call, Connect, and Close!"
 			></v-img>
 			<v-img
 				width="339"
 				height="58"
 				class="d-block d-md-none mx-auto mb-4"
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fab412286-27b7-4a8a-9ed4-a80ed45e2159.png?alt=media&token="
+				alt="Discover a new way to Call, Connect, and Close!"
 			></v-img>
 			<p class="title title1">Discover a new way to</p>
-
+ 
 			<p class="pacifico text-primary title title2">Call, Connect, and Close!</p>
 			<p class="subTitle mt-14">Dial a category, talk to every vendor in it, and pay right there on the call.</p>
 			<v-btn @click="openWaitlist" color="primary" rounded class="px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
@@ -69,7 +71,7 @@
 			<v-img
 				eager
 				class="d-none d-md-block"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F71e70cc2-7bc2-4edc-b616-897e1803ee9a.png?alt=media&token="
+				src="/images/hero-desktop.webp"
 				alt="KudiCall hero image showing the app on desktop"
 				width="100%"
 				height="100%"
@@ -78,7 +80,7 @@
 			<v-img
 				eager
 				class="d-block d-md-none"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8a465ba-7141-406d-9a3d-fbf9e5cf359a.png?alt=media&token="
+				src="/images/hero-mobile.webp"
 				alt="KudiCall hero image showing the app on mobile"
 				width="100%"
 				height="100%"
@@ -110,7 +112,7 @@ export default {
 
 <style scoped>
 .bg-pattern {
-	background-image: url("https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0609aa6a-f082-4a1b-8918-cca02bcef38f.png?alt=media&token=");
+	background-image: url("/images/bg-pattern.webp");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

@@ -6,6 +6,7 @@
 				height="44"
 				class="mx-auto my-5"
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F518def6e-6a17-45a6-90ec-88e67d5a9e01.png?alt=media&token="
+				alt="Testimonials section indicator"
 			/>
 			<h1 class="header-title" style="font-weight: 700">Positive feedback from users</h1>
 			<p>Explore a curated collection of products and services from passionate vendors. From fashion to electronics.</p>

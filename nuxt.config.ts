@@ -19,8 +19,6 @@ export default defineNuxtConfig({
 			],
 			link: [
 				{ rel: "icon", type: "image/x-icon", href: "/favicon-16x16.png" },
-				// Preconnect to speed up Firebase Storage image fetches (saves ~140ms per Lighthouse)
-				{ rel: "preconnect", href: "https://firebasestorage.googleapis.com" },
 				// Preconnect to speed up Google Fonts fetches (saves ~490-510ms per Lighthouse)
 				{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 				{ rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" },
@@ -28,8 +26,18 @@ export default defineNuxtConfig({
 				{
 					rel: "preload",
 					as: "image",
-					href: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F71e70cc2-7bc2-4edc-b616-897e1803ee9a.png?alt=media&token=",
+					href: "/images/hero-desktop.webp",
 					fetchpriority: "high",
+					type: "image/webp",
+				},
+				// Parallel load Google Fonts as stylesheet links to eliminate render-blocking @import
+				{
+					rel: "stylesheet",
+					href: "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap",
+				},
+				{
+					rel: "stylesheet",
+					href: "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap",
 				},
 			],
 		},
@@ -46,6 +54,20 @@ export default defineNuxtConfig({
 					config.plugins = [];
 				}
 				config.plugins.push(vuetify({}));
+				config.plugins.push({
+					name: 'vuetify-vimg-patch',
+					transform(code, id) {
+						if (id.includes('components/VImg/VImg.mjs')) {
+							return {
+								code: code.replace(
+									'function pollForSize(img) {',
+									'function pollForSize(img) {\n      if (!img) return;'
+								),
+								map: null
+							};
+						}
+					}
+				});
 			});
 		},
 	],

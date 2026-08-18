@@ -3,8 +3,10 @@
 		<v-card style="background-color: #121212; color: white; border-radius: 16px;">
 			<v-card-title class="text-h5 font-weight-bold pt-6 px-6 d-flex justify-space-between align-center">
 				Join the Waitlist
-				<v-btn icon variant="text" size="small" @click="close" :disabled="loading">
-					<v-icon>mdi mdi-close</v-icon>
+				<v-btn icon variant="text" size="small" @click="close" :disabled="loading" aria-label="Close dialog">
+					<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="color: #fff">
+						<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+					</svg>
 				</v-btn>
 			</v-card-title>
 			<v-card-text class="px-6 pb-6 pt-2">

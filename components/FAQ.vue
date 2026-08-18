@@ -2,7 +2,7 @@
 	<v-container id="faq" style="max-width: 1400px; width: 100%; padding-top: 100px" class="mx-auto">
 		<v-row>
 			<v-col cols="12" md="3" class="faq-header">
-				<v-img eager width="192" height="44" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6d6ef6e1-282f-4277-8d47-106ae274b8e7.png?alt=media&token=" />
+				<v-img eager width="192" height="44" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6d6ef6e1-282f-4277-8d47-106ae274b8e7.png?alt=media&token=" alt="FAQ section indicator" />
 				<h1 class="mt-5">Frequently asked questions</h1>
 			</v-col>
 			<v-col cols="12" md="9">
@@ -11,7 +11,12 @@
 						<v-expansion-panel-title class="custom-panel-title">
 							{{ n.title }}
 							<template v-slot:actions="{ expanded }">
-								<v-icon :color="!expanded ? 'primary' : ''" :icon="expanded ? 'mdi mdi-close' : 'mdi mdi-plus'"></v-icon>
+								<svg v-if="expanded" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #fff">
+									<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+								</svg>
+								<svg v-else :style="{ color: '#1388FC' }" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+									<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+								</svg>
 							</template>
 						</v-expansion-panel-title>
 						<v-expansion-panel-text class="custom-panel-text"> {{ n.text }} </v-expansion-panel-text>

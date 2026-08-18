@@ -2,6 +2,38 @@
 
 This file documents Kudicall waitlist website changes so future chats can quickly recover project context.
 
+## 2026-08-18
+
+### Frontend Optimization & Performance
+- Removed render-blocking `@import` font-face directives from `assets/css/main.css`.
+- Added Google Fonts (Nunito, Pacifico, and Manrope) as parallel-loading `<link rel="stylesheet">` elements in `nuxt.config.ts` to improve page load speed.
+- Preloaded optimized local hero desktop image `/images/hero-desktop.webp` instead of Firebase Storage image to reduce LCP resource load delay.
+- Removed preconnect resource hint for `firebasestorage.googleapis.com` in `nuxt.config.ts` as Firebase asset dependencies were removed.
+
+### SVG & Icon Optimization
+- Replaced font-based icons (Material Design Icons & Font Awesome) with inline SVG elements to reduce bundle size and layout shifts across:
+  - `WaitlistModal.vue` and `Header.vue` (navigation drawer close buttons).
+  - `Header.vue` (navigation toggle menu button).
+  - `Contact.vue` (email, phone, and address cards).
+  - `FAQ.vue` (expansion panel action toggle icons).
+  - `Footer.vue` (social media icons for Instagram, Twitter, and Facebook).
+  - `pages/privacy.vue`, `pages/security.vue`, and `pages/terms.vue` (back button icons).
+- Optimized Vuetify plugin (`plugins/vuetify.ts`) to defer loading of heavy Material Design Icons and Font Awesome icon stylesheets, only importing them client-side for admin pages (paths starting with `/admin`).
+
+### Accessibility (A11y) Improvements
+- Added descriptive `alt` tags to multiple `<v-img>` elements in `AboutUs.vue`, `Contact.vue`, `FAQ.vue`, `Features.vue`, `Hero.vue`, and `Testimonials.vue`.
+- Added `aria-label` tags to icon-only buttons (`WaitlistModal.vue` close, `Header.vue` menu toggle, `Footer.vue` social links, and navigation close drawer) for screen reader support.
+
+### Asset Localisation
+- Replaced third-party Firebase Storage image dependencies with optimized local WebP assets under `public/images/`:
+  - Hero desktop (`hero-desktop.webp`) and mobile (`hero-mobile.webp`) images.
+  - Background pattern (`bg-pattern.webp`).
+  - Footer background (`footer-bg.webp`).
+
+### Dependency & Build Enhancements
+- Added `sharp` as a devDependency in `package.json` for local WebP image optimization.
+- Added a build-time Vite plugin patch (`vuetify-vimg-patch`) in `nuxt.config.ts` targeting Vuetify's `VImg.mjs` component to safety check `img` in `pollForSize(img)` and prevent runtime undefined errors.
+
 ## 2026-08-13
 
 ### Image Performance (Lighthouse Optimization)

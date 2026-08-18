@@ -12,8 +12,10 @@
 							style="display: block; max-width: none; object-fit: contain;"
 						/>
 					</NuxtLink>
-					<NuxtLink to="/" class="back-link">
-						<v-icon size="18" class="mr-1">mdi mdi-arrow-left</v-icon>
+					<NuxtLink to="/" class="back-link d-flex align-center">
+						<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="mr-1" style="color: #fff">
+							<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+						</svg>
 						Back to Home
 					</NuxtLink>
 				</div>

@@ -1,9 +1,12 @@
 import { createVuetify } from "vuetify";
 import { mdi } from "vuetify/iconsets/mdi";
 import { aliases, fa } from "vuetify/iconsets/fa";
-import "@mdi/font/css/materialdesignicons.css";
-import "@fortawesome/fontawesome-free/css/all.css";
 import "vuetify/styles";
+
+if (process.client && window.location.pathname.startsWith("/admin")) {
+	import("@mdi/font/css/materialdesignicons.css");
+	import("@fortawesome/fontawesome-free/css/all.css");
+}
 
 export default defineNuxtPlugin((nuxtApp) => {
 	const vuetify = createVuetify({

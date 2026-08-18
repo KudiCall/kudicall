@@ -40,8 +40,10 @@
 							height="24"
 						></v-img> -->
 					</v-btn>
-					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav">
-						<v-icon color="white" size="32" icon="mdi:mdi-text"></v-icon>
+					<v-btn v-if="$vuetify.display.mobile" class="d-block d-md-none" rounded="xl" size="40" icon flat color="transparent" @click.stop="openNav" aria-label="Toggle navigation menu">
+						<svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="color: #fff">
+							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+						</svg>
 					</v-btn>
 					<!-- <v-btn icon @click="toggleTheme" class="ml-4">
 						<v-icon>{{ darkMode ? "mdi mdi-weather-night" : "mdi mdi-white-balance-sunny" }}</v-icon>
@@ -66,7 +68,11 @@
 				height="24"
 				style="display: block; max-width: none; object-fit: contain;"
 			/>
-			<v-icon icon="mdi mdi-close" @click.stop="drawer = false"></v-icon>
+			<v-btn icon variant="text" size="small" @click.stop="drawer = false" aria-label="Close navigation menu">
+				<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #fff">
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+				</svg>
+			</v-btn>
 		</div>
 		<v-divider></v-divider>
 		<v-list :items="urls" class="d-flex flex-column align-start ga-5">

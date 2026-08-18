@@ -14,6 +14,7 @@
 			:src="bubble.src"
 			:style="bubble.style"
 			class="bubble-image d-none d-md-block"
+			alt=""
 		/>
 		<v-img
 			v-for="(bubble, index) in bubblesMobile"
@@ -21,6 +22,7 @@
 			:src="bubble.src"
 			:style="bubble.style"
 			class="bubble-image d-block d-md-none"
+			alt=""
 		/>
 	</v-container>
 </template>
