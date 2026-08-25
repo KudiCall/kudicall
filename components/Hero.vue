@@ -27,7 +27,7 @@
 				width="486"
 				height="44"
 				class="d-none d-md-block mx-auto"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F0e2899ac-22cb-47f0-8a8d-ff589d659b2e.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F7d4301b1-b57e-498a-91b8-a22cbf369838.png?alt=media&token="
 				alt="Discover a new way to Call, Connect, and Close!"
 			></v-img>
 			<v-img

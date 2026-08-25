@@ -180,12 +180,12 @@
 			</v-row>
 		</div>
 
-		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #ff688f 0%, #f04a75 100%)">
+		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #fcac31 0%, #eb940c 100%)">
 			<v-row dense class="mx-auto h-100 mb-0">
 				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
-					<h1 style="color: #fff">Easy Updates</h1>
+					<h1 style="color: #fff">Live Location</h1>
 					<p style="color: #fff">
-					Edit product details, pricing, descriptions, and inventory anytime to keep your shop accurate and up to date.
+					Share your location during a call so customers and vendors can find each other, coordinate deliveries, and meet with confidence.
 					</p>
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
@@ -199,7 +199,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F60298442-2c7e-42c5-9667-5d8d4f1d7496.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall easy updates">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2b3f022a-92c3-4339-aa8c-c4c3eda19541.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall easy updates">
 						<template #placeholder><div class="placeholder-shimmer" style="background: #e94070;"></div></template>
 					</v-img>
 
@@ -207,16 +207,57 @@
 					<v-img
 						width="50%"
 						height="50%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2341e2f4-f04d-4701-a5f8-3c0fa68d2084.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F3236b964-60e9-49df-8933-b9decbca0636.png?alt=media&token="
 						class="overlay-img status"
 						alt="Product status overlay"
 					></v-img>
-					<v-img
+					<!-- <v-img
 						width="50%"
 						height="40%"
 						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6844c5e9-118d-4ad5-bab2-e120bffd4c5b.png?alt=media&token="
 						class="overlay-img delivery"
 						alt="Product delivery overlay"
+					></v-img> -->
+				</v-col>
+			</v-row>
+		</div>
+
+		<div class="px-10 text-left mb-16 features-section" style="background: linear-gradient(270deg, #ff688f 0%, #f04a75 100%)">
+			<v-row dense class="mx-auto h-100 mb-0">
+				<v-col cols="12" md="4" class="text-section py-10 pr-md-16">
+					<h1 style="color: #fff">Smart Calculator</h1>
+					<p style="color: #fff">
+						Calculate prices, quantities, discounts, and order totals during a call making it easier to agree on the deal instantly.
+					</p>
+					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
+						Download Now
+						<v-img
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
+							class="ml-2"
+							width="24"
+							height="24"
+							alt=""
+						></v-img>
+					</v-btn>
+				</v-col>
+				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5524cee2-1bfc-4a21-b912-7e1e589bfecc.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall team management">
+						<template #placeholder><div class="placeholder-shimmer" style="background: #1674d9;"></div></template>
+					</v-img>
+					<!-- Overlay images -->
+					<!-- <v-img
+						width="50%"
+						height="40%"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F114b77ed-9c1f-4ec7-9db4-ef410bdefe11.png?alt=media&token="
+						class="overlay-img add"
+						alt="Add team member overlay"
+					></v-img> -->
+					<v-img
+						width="60%"
+						height="40%"
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fac393ea3-6c7b-4fd0-aa71-8efbc0db2371.png?alt=media&token="
+						class="overlay-img edit"
+						alt="Edit team member details overlay"
 					></v-img>
 				</v-col>
 			</v-row>
@@ -420,7 +461,7 @@ export default {
 }
 
 .status {
-	top: 48%;
+	top: 52%;
 	right: -6%;
 }
 
@@ -529,7 +570,7 @@ export default {
 	}
 
 	.status {
-		top: 18%;
+		top: 52%;
 		right: -17%;
 	}
 
