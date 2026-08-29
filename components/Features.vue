@@ -199,7 +199,8 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2b3f022a-92c3-4339-aa8c-c4c3eda19541.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall easy updates">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fce4c62df-4017-4c19-b373-8aa60a470dd3.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall easy updates">
+						<!-- https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2b3f022a-92c3-4339-aa8c-c4c3eda19541.png?alt=media&token= -->
 						<template #placeholder><div class="placeholder-shimmer" style="background: #e94070;"></div></template>
 					</v-img>
 
