@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 	ssr: false,
 	app: {
 		head: {
-			title: "KudiCall",
+			title: "MonieCall",
 			htmlAttrs: {
 				lang: "en",
 			},

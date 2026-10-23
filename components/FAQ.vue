@@ -36,18 +36,18 @@ export default {
 			faq: [
 				{
 					id: 1,
-					title: "How does live commerce work on KudiCall?",
-					text: "KudiCall is a platform that revolutionizes online shopping with live demos and real-time interactions.",
+					title: "How does live commerce work on MonieCall?",
+					text: "MonieCall is a platform that revolutionizes online shopping with live demos and real-time interactions.",
 				},
 				{
 					id: 2,
-					title: "Can anyone become a vendor on KudiCall?",
+					title: "Can anyone become a vendor on MonieCall?",
 					text: "Users can watch live product demonstrations, chat with vendors, and make purchases instantly.",
 				},
 				{
 					id: 3,
-					title: "How do I ensure the security of my transactions on KudiCall?",
-					text: "KudiCall prioritizes the security of your transactions. We use industry-standard encryption and work with reputable payment processors to safeguard your financial information. Additionally, our platform undergoes regular security assessments to ensure a safe and secure shopping environment for all users.",
+					title: "How do I ensure the security of my transactions on MonieCall?",
+					text: "MonieCall prioritizes the security of your transactions. We use industry-standard encryption and work with reputable payment processors to safeguard your financial information. Additionally, our platform undergoes regular security assessments to ensure a safe and secure shopping environment for all users.",
 				},
 				{
 					id: 4,
@@ -61,7 +61,7 @@ export default {
 				},
 				{
 					id: 6,
-					title: "What makes KudiCall different from traditional e-commerce platforms?",
+					title: "What makes MonieCall different from traditional e-commerce platforms?",
 					text: "Users can watch live product demonstrations, chat with vendors, and make purchases instantly.",
 				},
 			],

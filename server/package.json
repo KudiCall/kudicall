@@ -1,7 +1,7 @@
 {
-  "name": "kudicall-backend",
+  "name": "moniecall-backend",
   "version": "1.0.0",
-  "description": "Backend API for KudiCall Waitlist",
+  "description": "Backend API for MonieCall Waitlist",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

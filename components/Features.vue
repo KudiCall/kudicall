@@ -9,7 +9,7 @@
 				alt="Features section indicator"
 			/>
 			<h1 class="header-title" style="font-weight: 700">
-				Call people. Call businesses. Get things done <span class="text-primary pacifico" style="font-weight: 400">KudiCall</span>
+				Call people. Call businesses. Get things done <span class="text-primary pacifico" style="font-weight: 400">MonieCall</span>
 			</h1>
 		</div>
 		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
@@ -29,7 +29,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section first-image mt-auto mb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96e2aee6-6ae8-491c-abb6-3983399df43c.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall direct calls">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F96e2aee6-6ae8-491c-abb6-3983399df43c.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing MonieCall direct calls">
 						<template #placeholder><div class="placeholder-shimmer" style="background: #e8e8e8;"></div></template>
 					</v-img>
 
@@ -80,7 +80,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5acb11a0-a014-4071-b567-02695890ccc7.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall secure deals">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5acb11a0-a014-4071-b567-02695890ccc7.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing MonieCall secure deals">
 						<template #placeholder><div class="placeholder-shimmer" style="background: #4db0a6;"></div></template>
 					</v-img>
 
@@ -122,7 +122,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8074acc-9574-4c5a-8775-103394b17746.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall team management">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff8074acc-9574-4c5a-8775-103394b17746.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing MonieCall team management">
 						<template #placeholder><div class="placeholder-shimmer" style="background: #1674d9;"></div></template>
 					</v-img>
 					<!-- Overlay images -->
@@ -156,7 +156,7 @@
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
-							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F39772528-0a8f-49e2-a781-01526403fd01.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -165,7 +165,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F37e46230-08c7-41e9-b3f8-ca8588b58c8a.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall shop builder">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F39772528-0a8f-49e2-a781-01526403fd01.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing MonieCall shop builder">
 						<template #placeholder><div class="placeholder-shimmer" style="background: #9278ff;"></div></template>
 					</v-img>
 					<!-- Overlay images -->
@@ -199,7 +199,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0 pb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fce4c62df-4017-4c19-b373-8aa60a470dd3.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall easy updates">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fce4c62df-4017-4c19-b373-8aa60a470dd3.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing MonieCall easy updates">
 						<!-- https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2b3f022a-92c3-4339-aa8c-c4c3eda19541.png?alt=media&token= -->
 						<template #placeholder><div class="placeholder-shimmer" style="background: #e94070;"></div></template>
 					</v-img>
@@ -242,7 +242,7 @@
 					</v-btn>
 				</v-col>
 				<v-col cols="12" md="8" class="image-section bottom mt-auto mb-0">
-					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F5524cee2-1bfc-4a21-b912-7e1e589bfecc.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing KudiCall team management">
+					<v-img src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F4344ac6c-b129-4ed5-be79-d18e9d997cee.png?alt=media&token=" class="phone-mockup" alt="Phone mockup showing MonieCall team management">
 						<template #placeholder><div class="placeholder-shimmer" style="background: #1674d9;"></div></template>
 					</v-img>
 					<!-- Overlay images -->

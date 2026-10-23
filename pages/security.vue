@@ -7,7 +7,7 @@
 					<NuxtLink to="/" class="d-flex align-center text-decoration-none">
 						<img
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
-							alt="KudiCall Logo"
+							alt="MonieCall Logo"
 							height="24"
 							width="149"
 							style="display: block; max-width: none; object-fit: contain;"
@@ -27,7 +27,7 @@
 			<p class="legal-date">Last updated: August 13, 2026</p>
 			<h1 class="legal-title">Security</h1>
 			<p class="legal-intro">
-				At KudiCall, security is fundamental to everything we build. This page explains the measures we take
+				At MonieCall, security is fundamental to everything we build. This page explains the measures we take
 				to keep your account, data, and transactions safe.
 			</p>
 
@@ -44,7 +44,7 @@
 					<p style="font-size: 15px; color: #c8c8c8; line-height: 1.6;">
 						We take security reports seriously. If you discover a security issue, please disclose it
 						responsibly by emailing us at
-						<a href="mailto:security@kudicall.com" class="legal-link">security@kudicall.com</a>.
+						<a href="mailto:security@moniecall.com" class="legal-link">security@moniecall.com</a>.
 						We will respond within 48 hours.
 					</p>
 				</div>
@@ -62,11 +62,11 @@ export default {
 			sections: [
 				{
 					title: "Data Encryption",
-					body: "All data transmitted between your device and KudiCall servers is encrypted using TLS 1.3. Sensitive data at rest, including payment information and personal identifiers, is encrypted using AES-256. We never store raw payment card numbers on our servers.",
+					body: "All data transmitted between your device and MonieCall servers is encrypted using TLS 1.3. Sensitive data at rest, including payment information and personal identifiers, is encrypted using AES-256. We never store raw payment card numbers on our servers.",
 				},
 				{
 					title: "Secure Payments & Escrow",
-					body: "Payments on KudiCall are processed through PCI-DSS compliant payment processors. Funds are held in a secure escrow account and only released upon confirmed delivery or completion. This protects both buyers and vendors from fraud.",
+					body: "Payments on MonieCall are processed through PCI-DSS compliant payment processors. Funds are held in a secure escrow account and only released upon confirmed delivery or completion. This protects both buyers and vendors from fraud.",
 				},
 				{
 					title: "Account Security",
@@ -74,7 +74,7 @@ export default {
 				},
 				{
 					title: "Infrastructure Security",
-					body: "KudiCall's infrastructure runs on enterprise-grade cloud providers with SOC 2 Type II certification. We employ network firewalls, intrusion detection systems, and regular penetration testing. All critical systems are monitored 24/7.",
+					body: "MonieCall's infrastructure runs on enterprise-grade cloud providers with SOC 2 Type II certification. We employ network firewalls, intrusion detection systems, and regular penetration testing. All critical systems are monitored 24/7.",
 				},
 				{
 					title: "Access Controls",
@@ -86,19 +86,19 @@ export default {
 				},
 				{
 					title: "Your Responsibilities",
-					body: "To help keep your account secure, use a strong unique password, enable multi-factor authentication, never share your login credentials, and log out from shared devices. Be cautious of phishing emails claiming to be from KudiCall — we will never ask for your password via email.",
+					body: "To help keep your account secure, use a strong unique password, enable multi-factor authentication, never share your login credentials, and log out from shared devices. Be cautious of phishing emails claiming to be from MonieCall — we will never ask for your password via email.",
 				},
 			],
 		};
 	},
 	head() {
 		return {
-			title: "Security | KudiCall",
+			title: "Security | MonieCall",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
-					content: "Learn about the security measures KudiCall uses to protect your account, data, and transactions.",
+					content: "Learn about the security measures MonieCall uses to protect your account, data, and transactions.",
 				},
 			],
 		};

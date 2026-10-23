@@ -7,7 +7,7 @@
 					<NuxtLink to="/" class="d-flex align-center text-decoration-none">
 						<img
 							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
-							alt="KudiCall Logo"
+							alt="MonieCall Logo"
 							height="24"
 							width="149"
 							style="display: block; max-width: none; object-fit: contain;"
@@ -27,7 +27,7 @@
 			<p class="legal-date">Last updated: August 13, 2026</p>
 			<h1 class="legal-title">Privacy Policy</h1>
 			<p class="legal-intro">
-				Your privacy matters to us. This Privacy Policy explains how KudiCall collects, uses, and protects
+				Your privacy matters to us. This Privacy Policy explains how MonieCall collects, uses, and protects
 				your personal information when you use our platform.
 			</p>
 
@@ -37,7 +37,7 @@
 			</div>
 
 			<div class="legal-contact">
-				<p>For privacy-related inquiries, contact our Data Protection Officer at <a href="mailto:privacy@kudicall.com" class="legal-link">privacy@kudicall.com</a></p>
+				<p>For privacy-related inquiries, contact our Data Protection Officer at <a href="mailto:privacy@moniecall.com" class="legal-link">privacy@moniecall.com</a></p>
 			</div>
 		</v-container>
 	</div>
@@ -56,7 +56,7 @@ export default {
 				},
 				{
 					title: "2. How We Use Your Information",
-					body: "We use your information to operate and improve KudiCall, process transactions, send you service-related communications, provide customer support, detect and prevent fraud, and comply with legal obligations. We do not sell your personal data to third parties.",
+					body: "We use your information to operate and improve MonieCall, process transactions, send you service-related communications, provide customer support, detect and prevent fraud, and comply with legal obligations. We do not sell your personal data to third parties.",
 				},
 				{
 					title: "3. Sharing Your Information",
@@ -80,19 +80,19 @@ export default {
 				},
 				{
 					title: "8. Changes to This Policy",
-					body: "We may update this Privacy Policy from time to time. We will notify you of significant changes by posting a notice on our platform or sending you an email. Your continued use of KudiCall after changes take effect constitutes your acceptance of the updated policy.",
+					body: "We may update this Privacy Policy from time to time. We will notify you of significant changes by posting a notice on our platform or sending you an email. Your continued use of MonieCall after changes take effect constitutes your acceptance of the updated policy.",
 				},
 			],
 		};
 	},
 	head() {
 		return {
-			title: "Privacy Policy | KudiCall",
+			title: "Privacy Policy | MonieCall",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
-					content: "Learn how KudiCall collects, uses, and protects your personal information.",
+					content: "Learn how MonieCall collects, uses, and protects your personal information.",
 				},
 			],
 		};

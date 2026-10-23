@@ -7,8 +7,8 @@
 				class="d-flex flex-column flex-md-row align-md-center justify-space-between ga-4 ga-md-0 py-6 py-md-16 px-4"
 			>
 				<img
-					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
-					alt="KudiCall Logo"
+					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbf25caa6-0151-4142-ad53-0085b5b67a02.png?alt=media&token="
+					alt="MonieCall Logo"
 					class="logo"
 					height="24"
 					width="149"
@@ -62,7 +62,7 @@ export default {
 <style scoped>
 .background-container {
 	position: relative;
-	background-image: url("/images/footer-bg.webp"); /* Replace with your image path */
+	background-image: url("https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fe77a0dd5-e979-4b23-82d2-f161426baa01.png?alt=media&token="); /* Replace with your image path */
 	background-size: contain;
 	background-position: center;
 	height: 581px; /* Adjust the height as needed */
@@ -104,7 +104,7 @@ export default {
 
 @media screen and (max-width: 768px) {
 	.background-container {
-		background-image: url("/images/footer-bg.webp");
+		background-image: url("https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fe77a0dd5-e979-4b23-82d2-f161426baa01.png?alt=media&token=");
 		height: 478px;
 	}
 }

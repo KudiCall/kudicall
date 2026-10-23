@@ -11,10 +11,10 @@
 			</v-card-title>
 			<v-card-text class="px-6 pb-6 pt-2">
 				<p class="text-body-1 text-grey-lighten-1 mb-2" style="font-size: 16px;">
-					Be among the first to know when KudiCall launches.
+					Be among the first to know when MonieCall launches.
 				</p>
 				<p class="text-caption text-primary mb-6">
-					Join hundreds of businesses preparing to try KudiCall.
+					Join hundreds of businesses preparing to try MonieCall.
 				</p>
 
 				<v-alert

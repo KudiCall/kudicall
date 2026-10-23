@@ -5,7 +5,7 @@
 	>
 		<div>
 			<h1 class="quote text--white">
-				"Kudicall brings discovery and communication together, so you can find the people or businesses you need and connect with them directly — without the endless messages, waiting, and guesswork."
+				"MonieCall brings discovery and communication together, so you can find the people or businesses you need and connect with them directly — without the endless messages, waiting, and guesswork."
 			</h1>
 		</div>
 		<v-img

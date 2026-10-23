@@ -71,7 +71,7 @@
 			<img
 				class="d-none d-md-block"
 				src="/images/hero-desktop.webp"
-				alt="KudiCall hero image showing the app on desktop"
+				alt="MonieCall hero image showing the app on desktop"
 				width="100%"
 				height="100%"
 				style="object-fit: contain; max-width: 100%; height: auto;"
@@ -80,7 +80,7 @@
 			<img
 				class="d-block d-md-none"
 				src="/images/hero-mobile.webp"
-				alt="KudiCall hero image showing the app on mobile"
+				alt="MonieCall hero image showing the app on mobile"
 				width="100%"
 				height="100%"
 				style="object-fit: contain; max-width: 100%; height: auto;"

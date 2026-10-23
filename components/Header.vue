@@ -3,8 +3,8 @@
 		<v-container class="py-0" style="max-width: 1400px">
 			<div class="d-flex justify-space-between align-center my-5">
 				<img
-					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
-					alt="KudiCall Logo"
+					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbf25caa6-0151-4142-ad53-0085b5b67a02.png?alt=media&token="
+					alt="MonieCall Logo"
 					class="logo"
 					height="24"
 					width="149"
@@ -64,7 +64,7 @@
 		<div class="d-flex align-center justify-space-between px-4 py-4">
 			<img
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
-				alt="KudiCall Logo"
+				alt="MonieCall Logo"
 				class="logo"
 				height="24"
 				style="display: block; max-width: none; object-fit: contain;"
