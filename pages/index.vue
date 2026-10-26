@@ -38,7 +38,7 @@ useSeoMeta({
 	ogTitle: "MonieCall",
 	description: "Discover a new way to Shop, Connect, and Experience!!",
 	ogDescription: "Discover a new way to Shop, Connect, and Experience!!",
-	ogImage: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Ff3ba885c-af01-4894-bd95-74432dd9e775.png?alt=media&token=",
+	ogImage: "https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F312931bf-26e8-4d50-85bb-25890bf4f81d.png?alt=media&token=",
 	twitterCard: "summary_large_image",
 });
 </script>

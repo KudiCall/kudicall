@@ -9,7 +9,7 @@
 				alt="Features section indicator"
 			/>
 			<h1 class="header-title" style="font-weight: 700">
-				Call people. Call businesses. Get things done <span class="text-primary pacifico" style="font-weight: 400">MonieCall</span>
+				Call people. Call businesses. Get things done <span class="text-primary">moniecall</span>
 			</h1>
 		</div>
 		<div class="px-10 text-left my-16 features-section" style="background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); color: #444444">
