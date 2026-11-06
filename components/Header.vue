@@ -61,13 +61,14 @@
 		temporary
 		style="z-index: 2000; position: fixed; background-color: #0c0d0d; color: white"
 	>
-		<div class="d-flex align-center justify-space-between px-4 py-4">
+		<div class="d-flex align-center justify-space-between px-1 py-5">
 			<img
 				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8022b6a3-0c3b-496f-affa-76df7f4d88f2.png?alt=media&token="
 				alt="MonieCall Logo"
 				class="logo"
-				height="44"
-				style="display: block; max-width: none; object-fit: contain;"
+					height="77"
+					width="200"
+				style="display: block; object-fit: contain;"
 			/>
 			<v-btn icon variant="text" size="small" @click.stop="drawer = false" aria-label="Close navigation menu">
 				<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="color: #fff">
@@ -76,7 +77,7 @@
 			</v-btn>
 		</div>
 		<v-divider></v-divider>
-		<div class="d-flex flex-column align-start ga-5">
+		<div class="d-flex flex-column align-start ga-5 py-5">
 			<p
 				@click="$router.push(n.route); drawer = false;"
 				class="mx-4 cursor-pointer"

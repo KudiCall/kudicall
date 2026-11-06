@@ -4,12 +4,12 @@
 		<div class="content-container">
 			<v-container
 				style="width: 100%; max-width: 1400px; color: #fff"
-				class="d-flex flex-column flex-md-row align-md-center justify-space-between ga-4 ga-md-0 py-6 py-md-16 px-4"
+				class="d-flex flex-column flex-md-row align-center justify-space-between ga-4 ga-md-0 py-6 py-md-16 px-4"
 			>
 				<img
 					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8022b6a3-0c3b-496f-affa-76df7f4d88f2.png?alt=media&token="
 					alt="MonieCall Logo"
-					class="logo"
+					class="logo mx-auto mx-md-0"
 					height="77"
 					width="200"
 					style="display: block; max-width: none; object-fit: contain;"
@@ -24,7 +24,7 @@
 						{{ n.title }}
 					</NuxtLink>
 				</div>
-				<div>
+				<div class="d-flex justify-center">
 					<v-avatar v-for="s in social" :key="s.title" class="mx-2" size="40">
 						<v-btn :aria-label="s.title" variant="text" class="d-flex align-center justify-center">
 							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="color: #fff">
