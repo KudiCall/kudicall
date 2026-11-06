@@ -27,14 +27,14 @@
 				width="486"
 				height="44"
 				class="d-none d-md-block mx-auto"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F7d4301b1-b57e-498a-91b8-a22cbf369838.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2a7cec4e-1ba7-4137-abc6-fa61d18b02ee.jpg?alt=media&token="
 				alt="Discover a new way to Call, Connect, and Close!"
 			></v-img>
 			<v-img
 				width="339"
 				height="58"
 				class="d-block d-md-none mx-auto mb-4"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fab412286-27b7-4a8a-9ed4-a80ed45e2159.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F215308b5-b337-44d1-8836-56984122115e.jpg?alt=media&token="
 				alt="Discover a new way to Call, Connect, and Close!"
 			></v-img>
 			<p class="title title1">Discover a new way to</p>

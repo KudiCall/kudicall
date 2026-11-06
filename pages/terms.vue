@@ -7,10 +7,10 @@
 				<div class="d-flex align-center justify-space-between py-4">
 					<NuxtLink to="/" class="d-flex align-center text-decoration-none">
 						<img
-							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc95af990-6f47-4448-8d03-3f724ea2d6df.jpg?alt=media&token="
 							alt="MonieCall Logo"
-							height="24"
-							width="149"
+							height="77"
+							width="200"
 							style="display: block; max-width: none; object-fit: contain;"
 						/>
 					</NuxtLink>

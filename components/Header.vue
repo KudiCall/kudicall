@@ -3,7 +3,7 @@
 		<v-container class="py-0" style="max-width: 1400px">
 			<div class="d-flex justify-space-between align-center my-5">
 				<img
-					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F1ab49f3a-92c6-4b4f-8c6b-2ac394b9d0ff.png?alt=media&token="
+					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc95af990-6f47-4448-8d03-3f724ea2d6df.jpg?alt=media&token="
 					alt="MonieCall Logo"
 					class="logo"
 					height="77"
@@ -63,10 +63,10 @@
 	>
 		<div class="d-flex align-center justify-space-between px-4 py-4">
 			<img
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fd1b3b4d0-5fd7-4898-ab8a-5803e6cfc2fb.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc95af990-6f47-4448-8d03-3f724ea2d6df.jpg?alt=media&token="
 				alt="MonieCall Logo"
 				class="logo"
-				height="24"
+				height="44"
 				style="display: block; max-width: none; object-fit: contain;"
 			/>
 			<v-btn icon variant="text" size="small" @click.stop="drawer = false" aria-label="Close navigation menu">
