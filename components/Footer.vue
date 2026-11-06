@@ -7,7 +7,7 @@
 				class="d-flex flex-column flex-md-row align-md-center justify-space-between ga-4 ga-md-0 py-6 py-md-16 px-4"
 			>
 				<img
-					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc95af990-6f47-4448-8d03-3f724ea2d6df.jpg?alt=media&token="
+					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8022b6a3-0c3b-496f-affa-76df7f4d88f2.png?alt=media&token="
 					alt="MonieCall Logo"
 					class="logo"
 					height="77"

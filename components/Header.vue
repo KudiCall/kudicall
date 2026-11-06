@@ -3,7 +3,7 @@
 		<v-container class="py-0" style="max-width: 1400px">
 			<div class="d-flex justify-space-between align-center my-5">
 				<img
-					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc95af990-6f47-4448-8d03-3f724ea2d6df.jpg?alt=media&token="
+					src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8022b6a3-0c3b-496f-affa-76df7f4d88f2.png?alt=media&token="
 					alt="MonieCall Logo"
 					class="logo"
 					height="77"
@@ -63,7 +63,7 @@
 	>
 		<div class="d-flex align-center justify-space-between px-4 py-4">
 			<img
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc95af990-6f47-4448-8d03-3f724ea2d6df.jpg?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8022b6a3-0c3b-496f-affa-76df7f4d88f2.png?alt=media&token="
 				alt="MonieCall Logo"
 				class="logo"
 				height="44"
