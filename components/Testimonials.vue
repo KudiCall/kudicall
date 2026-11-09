@@ -5,7 +5,7 @@
 				width="181"
 				height="44"
 				class="mx-auto my-5"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F518def6e-6a17-45a6-90ec-88e67d5a9e01.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F34c33a1a-f101-431f-b2ec-65a832a6d862.png?alt=media&token="
 				alt="Testimonials section indicator"
 			/>
 			<h1 class="header-title" style="font-weight: 700">Positive feedback from users</h1>

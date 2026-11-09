@@ -5,7 +5,7 @@
 				width="181"
 				height="44"
 				class="mx-auto my-5"
-				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fcf03bbc9-fe51-4678-81f3-fed12f84dffc.png?alt=media&token="
+				src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F8fbfa6f7-17a1-417e-8acc-7e2e9db4335b.png?alt=media&token="
 				alt="Features section indicator"
 			/>
 			<h1 class="header-title" style="font-weight: 700">
@@ -88,14 +88,14 @@
 					<v-img
 						width="40%"
 						height="100%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F457bdadf-0f2f-4c28-a9bd-3e55d0172885.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fc7c8a2ec-5aab-447e-85dd-61bef5c20031.png?alt=media&token="
 						class="overlay-img uplaod"
 						alt="Upload receipt overlay"
 					></v-img>
 					<v-img
 						width="40%"
 						height="40%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fbb8a9a3e-d2c2-46e5-8bd9-f19a710dace5.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F74a9291a-e6d2-43c4-8a83-86147da245ee.png?alt=media&token="
 						class="overlay-img success"
 						alt="Transaction success overlay"
 					></v-img>
@@ -129,7 +129,7 @@
 					<v-img
 						width="50%"
 						height="40%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F114b77ed-9c1f-4ec7-9db4-ef410bdefe11.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F51a60a54-ff38-45cf-8030-79046cf12b54.png?alt=media&token="
 						class="overlay-img add"
 						alt="Add team member overlay"
 					></v-img>
@@ -156,7 +156,7 @@
 					<v-btn color="#fff" rounded class="download-btn px-6" size="x-large" style="font-size: 16px; line-height: 21.82px">
 						Download Now
 						<v-img
-							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F39772528-0a8f-49e2-a781-01526403fd01.png?alt=media&token="
+							src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fdc191bb8-cefa-440b-ac00-8ff729321ac6.png?alt=media&token="
 							class="ml-2"
 							width="24"
 							height="24"
@@ -172,7 +172,7 @@
 					<v-img
 						width="50%"
 						height="50%"
-						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F2c62b90e-69fd-4cf8-8175-274b16a603dd.png?alt=media&token="
+						src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2Fa9c1fdf6-1862-4559-80f6-1678d622cf0d.png?alt=media&token="
 						class="overlay-img payment"
 						alt="Payment success overlay"
 					></v-img>
@@ -537,7 +537,7 @@ export default {
 
 	.shoe-offer {
 		bottom: 9%;
-		left: -20%;
+		left: -10%;
 	}
 
 	.call {

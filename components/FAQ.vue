@@ -2,7 +2,7 @@
 	<v-container id="faq" style="max-width: 1400px; width: 100%; padding-top: 100px" class="mx-auto">
 		<v-row>
 			<v-col cols="12" md="3" class="faq-header">
-				<v-img eager width="192" height="44" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6d6ef6e1-282f-4277-8d47-106ae274b8e7.png?alt=media&token=" alt="FAQ section indicator" />
+				<v-img eager width="192" height="44" src="https://firebasestorage.googleapis.com/v0/b/inhouse-image-storage.firebasestorage.app/o/uploads%2F9%2F6f00446c-a184-47bf-9d04-1732e1213610.png?alt=media&token=" alt="FAQ section indicator" />
 				<h1 class="mt-5">Frequently asked questions</h1>
 			</v-col>
 			<v-col cols="12" md="9">
